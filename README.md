@@ -25,4 +25,4 @@ Welcome to the **Monster Hunter Guessing Game**! This project is a fun and inter
 ## How to Run the Project
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/monster-hunter-guessing-game.git](https://github.com/Smileanimations/Funny-Haha-quiz-lmao-.git
+   git clone https://github.com/Smileanimations/Funny-Haha-quiz-lmao-.git
