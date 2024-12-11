@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>unnamed guessing game</title>
+    <title>Unnamed Guessing Game</title>
+    <script src="script.js"></script>
 </head>
-<body>
+<body class="">
 
     <div class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
         <header class="w-full bg-gray-900 p-4 text-center text-2xl">
@@ -20,6 +21,7 @@
                 Submit
             </button>
 
+            <p class="font-bold">attemps:</p>
             <div class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
                 <h2 class="text-xl font-bold mb-4">What is the Monster of the Day?</h2>
                 <div class="flex items-center space-x-4">
@@ -30,7 +32,6 @@
                     <div>
                         <h3 class="text-2xl font-bold">Rathalos</h3>
                         <div class="flex items-center space-x-2 mt-2">
-                            <span class="px-3 py-1 bg-blue-500 rounded-full text-sm font-bold">229 Monsters</span>
                             <span class="px-3 py-1 bg-green-500 rounded-full text-sm font-bold">Gen 1-6</span>
                             <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-bold">Flying Wyvern</span>
                             <span class="px-3 py-1 bg-gray-500 rounded-full text-sm font-bold">Large</span>
@@ -44,7 +45,6 @@
             <p>© 2024 Monster Guess Game</p>
         </footer>
     </div>
-    
 
 </body>
 </html>
