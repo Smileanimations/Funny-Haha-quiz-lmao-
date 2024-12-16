@@ -4,7 +4,7 @@
 Welcome to the **Monster Hunter Guessing Game**! This project is a fun and interactive game where players guess monsters from the **Monster Hunter** universe. With **229 monsters** spanning **6 generations**, this game offers a challenging yet entertaining experience for fans and newcomers alike.
 
 ## Features
-- **229 Monsters**: Test your knowledge with a vast selection of monsters.
+- **236 Monsters**: Test your knowledge with a vast selection of monsters.
 - **Generations 1 to 6**: Content spans six generations of the Monster Hunter series.
 - **Monster Classes**: Includes different classes of monsters like Flying Wyverns, Elder Dragons, etc.
 - **Size Categories**: Monsters come in varying sizes to make guessing more exciting.
