@@ -47,9 +47,11 @@ function updateValue(e) {
 function createElement(monster) {
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `
-        <h2>${monster.name}</h2>
-        <img src="jndsks.jpg"></img>
-`
+        <button>
+            <h2>${monster.name}</h2>
+            <img src="jndsks.jpg"></img>
+        </button>
+`       
     attachDiv.appendChild(newDiv);
     if (result == "") {
         newDiv.remove();
