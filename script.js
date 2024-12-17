@@ -1,5 +1,14 @@
 let randomMonster;
 let monster = "";
+let monsters = [];
+let result = "";
+
+const attachDiv = document.getElementById("result");
+let searchBar = document.getElementById("search-bar");
+console.log(searchBar);
+
+searchBar.addEventListener("input", updateValue);
+
 fetch("../data/monsters.json")
 
 .then(response => {
@@ -9,7 +18,7 @@ fetch("../data/monsters.json")
     return response.json();
 })
 .then(data => {
-    const monsters = data.monsters;
+    monsters = data.monsters;
     console.log(monsters);
     console.log(getRandomMonster(monsters));
 })
@@ -22,15 +31,27 @@ function getRandomMonster(monsters) {
     return monsters[randomMonster];
 }
 
-function search() {
-    var text = Document.getElementbyid('search').value;
-    const tr = Document.GetElementsByTagName(tr)
-    for (let i = 1; i < tr.lenght; i++) {
-        if (!tr[i].childeren[1].childeren[1].innerHTML.toLowerCase().includes(text.toLowerCase
-        )) {
-            tr[i].style.display = none;
-        } else {
-            tr[i].style.display = e.e;
-        }
+function updateValue(e) {
+    result = e.target.value.toLowerCase();
+    console.log(result);
+    attachDiv.innerHTML = "";
+    const monsterresult = monsters
+    .filter((monster) => monster.name.toLowerCase().includes(result))
+    .slice(0, 5);
+    monsterresult.forEach(monster => {
+        createElement(monster);
+        console.log(monster);
+    });
+}
+
+function createElement(monster) {
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+        <h2>${monster.name}</h2>
+        <img src="jndsks.jpg"></img>
+`
+    attachDiv.appendChild(newDiv);
+    if (result == "") {
+        newDiv.remove();
     }
 }
