@@ -1,7 +1,7 @@
 # Monster Hunter Guessing Game 🎮🕹️
 
 ## About the Project
-Welcome to the **Monster Hunter Guessing Game**! This project is a fun and interactive game where players guess monsters from the **Monster Hunter** universe. With **229 monsters** spanning **6 generations**, this game offers a challenging yet entertaining experience for fans and newcomers alike.
+Welcome to the **Monster Hunter Guessing Game**! This project is a fun and interactive game where players guess monsters from the **Monster Hunter** universe. With **236 monsters** spanning **6 generations**, this game offers a challenging yet entertaining experience for fans and newcomers alike.
 
 ## Features
 - **236 Monsters**: Test your knowledge with a vast selection of monsters.
