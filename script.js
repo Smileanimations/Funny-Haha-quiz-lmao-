@@ -48,8 +48,8 @@ function createElement(monster) {
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `
         <button>
-            <h2>${monster.name}</h2>
-            <img src="jndsks.jpg"></img>
+            <span>${monster.name}</span>
+            <img src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
         </button>
 `       
     attachDiv.appendChild(newDiv);
