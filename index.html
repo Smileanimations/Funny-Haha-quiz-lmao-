@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Unnamed Guessing Game</title>
+    <script src="script.js" defer></script>
+</head>
+<body class="">
+
+    <div class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
+        <header class="w-full bg-gray-900 p-4 text-center text-2xl">
+            Monster Hunter Guessing Game
+        </header>
+
+        <main class="flex flex-1 flex-col items-center justify-center space-y-6">
+            <h1 class="text-4xl font-bold">Guess the Monster!</h1>
+            <div id="search-bar-div">
+                <input id="search-bar" type="text" placeholder="Your Guess..." class="p-2 rounded-lg bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <div id="result"></div>
+            </div>
+
+            <p class="font-bold">attemps:</p>
+            <div class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">What is the Monster of the Day?</h2>
+                <div class="flex items-center space-x-4">
+                    <div class="w-20 h-20">
+                        <img src="https://via.placeholder.com/80" alt="Monster Image" class="object-contain rounded-full" />
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold">Rathalos</h3>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <span class="px-3 py-1 bg-green-500 rounded-full text-sm font-bold">Gen 1-6</span>
+                            <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-bold">Flying Wyvern</span>
+                            <span class="px-3 py-1 bg-gray-500 rounded-full text-sm font-bold">Large</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-900 w-full p-4 text-center">
+            <p>© 2024 Monster Guess Game</p>
+        </footer>
+    </div>
+
+</body>
+</html>
