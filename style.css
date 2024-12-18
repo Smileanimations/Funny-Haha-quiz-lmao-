@@ -1,0 +1,39 @@
+#result {
+    position: absolute;
+    border: 0px solid white;
+    border-radius: 15px;
+    background-color: white;
+    padding: 1%;
+    margin-top: 10px;
+    z-index: 10;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 20%;
+}
+
+.result-div {
+    display: flex;
+    padding: 2%;
+    
+}
+
+.result-div:hover {
+    background-color: #D1D0CE;
+    border-radius: 12px;
+}
+
+.result-image {
+    max-width: 55px;
+    max-height: 55px;
+
+    float: left;
+}
+
+.result-text {
+    color: black;
+    padding-left: 15px;
+}
+
+.not-found {
+    color: black;
+}
