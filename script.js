@@ -7,7 +7,7 @@ const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
 
-attachDiv.remove();
+removeResults()
 
 searchBar.addEventListener("input", updateValue);
 
@@ -51,10 +51,9 @@ function updateValue(e) {
     }
 }
 
-function startup() {
-    
+function removeResults() {
+    attachDiv.remove();
 }
-
 
 function shownotFound() {
     attachDiv.innerHTML = `
@@ -65,7 +64,7 @@ function createElement(monster) {
     const newDiv = document.createElement("div");
     newDiv.setAttribute("class", "result-div");
     newDiv.innerHTML = `
-        <button class="results">
+        <button class="results" onclick="monsterPressed('${monster.name}')">
             <span class="result-text">${monster.name}</span>
             <img
                 class="result-image" 
@@ -79,6 +78,13 @@ function createElement(monster) {
 
     if (result == "") {
         newDiv.remove();
-        attachDiv.remove();
+        removeResults();
     }
+}
+
+function monsterPressed(monster) {
+    console.log(monster);
+    removeResults()
+
+    
 }
