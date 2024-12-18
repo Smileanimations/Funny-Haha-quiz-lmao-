@@ -6,7 +6,8 @@ let result = "";
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
-console.log(searchBar);
+
+attachDiv.remove();
 
 searchBar.addEventListener("input", updateValue);
 
@@ -50,6 +51,11 @@ function updateValue(e) {
     }
 }
 
+function startup() {
+    
+}
+
+
 function shownotFound() {
     attachDiv.innerHTML = `
     <div class="not-found">No Results</div>`
@@ -68,12 +74,11 @@ function createElement(monster) {
                 onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';" 
             />
         </button>
-`       
+    `       
     attachDiv.appendChild(newDiv);
+
     if (result == "") {
         newDiv.remove();
-        attachDiv.remove();
-    } else if (result === null){
         attachDiv.remove();
     }
 }
