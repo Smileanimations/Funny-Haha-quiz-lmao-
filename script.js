@@ -7,6 +7,8 @@ const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
 
+const guessDiv = document.getElementById("guesses");
+
 removeResults()
 
 searchBar.addEventListener("input", updateValue);
@@ -84,7 +86,30 @@ function createElement(monster) {
 
 function monsterPressed(monster) {
     console.log(monster);
+    let monsterguess = monsters.filter((monsterguess) => monsterguess.name.includes(monster))
+    console.log(monsterguess);
     removeResults()
+    searchBar.value = ""
 
+    let monsterMatch = monsterguess[0];
+
+    const guessElement = document.createElement("div");
+
+
+    guessElement.innerHTML = `
+        <div class="w-20 h-20">
+            <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
+        </div>
+
+        <div>
+            <h3 class="text-2xl font-bold">${monsterMatch.name}</h3>
+            <div class="flex items-center space-x-2 mt-2">
+                <span class="px-3 py-1 bg-green-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
+                <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
+                <span class="px-3 py-1 bg-gray-500 rounded-full text-sm font-bold">Large</span>
+            </div>
+        </div>
+    `
+    guessDiv.appendChild(guessElement);
     
 }
