@@ -86,7 +86,7 @@ function createElement(monster) {
 
 function monsterPressed(monster) {
     console.log(monster);
-    let monsterguess = monsters.filter((monsterguess) => monsterguess.name.includes(monster))
+    let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster)
     console.log(monsterguess);
     removeResults()
     searchBar.value = ""
