@@ -39,7 +39,6 @@ function getRandomMonster(monsters) {
 
 function updateValue(e) {
     result = e.target.value.toLowerCase();
-    console.log(result);
     searchbarDiv.appendChild(attachDiv);
     attachDiv.innerHTML = "";
     const monsterresult = monsters
@@ -48,7 +47,6 @@ function updateValue(e) {
     if (monsterresult.length > 0) {
         monsterresult.forEach(monster => {
             createElement(monster);
-            console.log(monster);
         });
     } else {
         shownotFound();
@@ -86,18 +84,43 @@ function createElement(monster) {
     }
 }
 
-function monsterPressed(monster) {
+function compareMonster(monster) {
+    colors = [];
+
     console.log(monster);
+    console.log(monsters[randomMonster]);
+
+
+    if (monster.generations == monsters[randomMonster].generations) {
+        colors.push("green");
+    } else {
+        colors.push("red");
+    }
+
+    if (monster.class == monsters[randomMonster].class) {
+        colors.push("green");
+    } else {
+        colors.push("red");
+    }
+
+    return colors;
+}
+
+
+function monsterPressed(monster) {
     attempts++;
     let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster)
-    console.log(monsterguess);
     removeResults()
     searchBar.value = ""
 
     let monsterMatch = monsterguess[0];
+    let compareResults = compareMonster(monsterMatch);
+
+    console.log(compareResults);
 
     const guessElement = document.createElement("div");
-    guessElement.setAttribute("class", "flex py-5");
+    guessElement.setAttribute("class",
+        "flex items-center bg-gray-600 p-4 rounded-lg w-full");
     guessElement.innerHTML = `
         <div class="w-20 h-20 object-cover">
             <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
@@ -106,8 +129,8 @@ function monsterPressed(monster) {
         <div>
             <h3 class="text-2xl font-bold">${monsterMatch.name}</h3>
             <div class="flex items-center space-x-2 mt-2">
-                <span class="px-3 py-1 bg-green-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
-                <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
+                <span class="px-3 py-1 bg-${compareResults[0]}-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
+                <span class="px-3 py-1 bg-${compareResults[1]}-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
                 <span class="px-3 py-1 bg-gray-500 rounded-full text-sm font-bold">Large</span>
             </div>
         </div>
