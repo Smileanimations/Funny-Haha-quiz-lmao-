@@ -103,6 +103,12 @@ function compareMonster(monster) {
         colors.push("red");
     }
 
+    if (monster.species == monsters[randomMonster].species) {
+        colors.push("green");
+    } else {
+        colors.push("red");
+    }
+
     return colors;
 }
 
@@ -131,11 +137,11 @@ function monsterPressed(monster) {
             <div class="flex items-center space-x-2 mt-2">
                 <span class="px-3 py-1 bg-${compareResults[0]}-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
                 <span class="px-3 py-1 bg-${compareResults[1]}-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
-                <span class="px-3 py-1 bg-gray-500 rounded-full text-sm font-bold">Large</span>
+                <span class="px-3 py-1 bg-${compareResults[2]}-500 rounded-full text-sm font-bold">${monsterMatch.species}</span>
             </div>
         </div>
     `
-    guessDiv.appendChild(guessElement);
+    guessDiv.prepend(guessElement);
     
     attemptsElement.innerHTML = `Attempts: ${attempts}`
 }
