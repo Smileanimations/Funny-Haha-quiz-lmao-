@@ -2,12 +2,14 @@ let randomMonster;
 let monster = "";
 let monsters = [];
 let result = "";
+let attempts = 0;
 
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
 
 const guessDiv = document.getElementById("guesses");
+let attemptsElement = document.getElementById("attempts");
 
 removeResults()
 
@@ -86,6 +88,7 @@ function createElement(monster) {
 
 function monsterPressed(monster) {
     console.log(monster);
+    attempts++;
     let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster)
     console.log(monsterguess);
     removeResults()
@@ -94,10 +97,9 @@ function monsterPressed(monster) {
     let monsterMatch = monsterguess[0];
 
     const guessElement = document.createElement("div");
-
-
+    guessElement.setAttribute("class", "flex py-5");
     guessElement.innerHTML = `
-        <div class="w-20 h-20">
+        <div class="w-20 h-20 object-cover">
             <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
         </div>
 
@@ -112,4 +114,5 @@ function monsterPressed(monster) {
     `
     guessDiv.appendChild(guessElement);
     
+    attemptsElement.innerHTML = `Attempts: ${attempts}`
 }
