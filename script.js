@@ -85,10 +85,12 @@ function createElement(monster) {
 }
 
 function compareMonster(monster) {
-    colors = [];
+    let colors = [];
+    const ailement = "ailment";
 
     console.log(monster);
     console.log(monsters[randomMonster]);
+
 
 
     if (monster.generations == monsters[randomMonster].generations) {
@@ -109,9 +111,38 @@ function compareMonster(monster) {
         colors.push("red");
     }
 
+    colors.push(compareElement(monster.element, monsters[randomMonster].element));
+    colors.push(compareElement(monster.ailment, monsters[randomMonster].ailment))
     return colors;
 }
 
+function compareElement(monster, randommonster) {
+    let monsterarray = monster.split(", ");
+    let randommonsterarray = randommonster.split(", ");
+
+    let wrong = 0;
+    let correct = 0;
+
+    console.log(monsterarray);
+    console.log(randommonsterarray);
+
+    monsterarray.forEach(element => {
+        if (randommonsterarray == element) {
+            correct += 1;
+        } else {
+            wrong += 1;
+        }
+    });
+
+    if (correct > 0 && wrong == 0) {
+        return "green";
+    } else if (correct == 0 && wrong > 0) {
+        return "red";
+    } else {
+        return "yellow"
+    }
+
+}
 
 function monsterPressed(monster) {
     attempts++;
@@ -138,6 +169,8 @@ function monsterPressed(monster) {
                 <span class="px-3 py-1 bg-${compareResults[0]}-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
                 <span class="px-3 py-1 bg-${compareResults[1]}-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
                 <span class="px-3 py-1 bg-${compareResults[2]}-500 rounded-full text-sm font-bold">${monsterMatch.species}</span>
+                <span class="px-3 py-1 bg-${compareResults[3]}-500 rounded-full text-sm font-bold">${monsterMatch.element}</span>
+                <span class="px-3 py-1 bg-${compareResults[4]}-500 rounded-full text-sm font-bold">${monsterMatch.ailment}</span>
             </div>
         </div>
     `

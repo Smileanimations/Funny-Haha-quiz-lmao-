@@ -5,1648 +5,2110 @@
     "name": "Ashen Lao-Shan Lung",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 2,
     "name": "Azure Rathalos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 3,
     "name": "Basarios",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Poison, Sleep"
    },
    {
     "id": 4,
     "name": "Black Diablos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 5,
     "name": "Black Gravios",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Sleep"
    },
    {
     "id": 6,
     "name": "Blue Yian Kut-Ku",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 7,
     "name": "Cephadrome",
     "generations": 1,
     "class": "Piscine Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Paralysis"
    },
    {
     "id": 8,
     "name": "Crimson Fatalis",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire, Dragon",
+    "ailment": "Blast"
    },
    {
     "id": 9,
     "name": "Diablos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 10,
     "name": "Fatalis",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 11,
     "name": "Gendrome",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 12,
     "name": "Gold Rathian",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Rare Species"
+    "species": "Rare Species",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 13,
     "name": "Gravios",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Sleep"
    },
    {
     "id": 14,
     "name": "Green Plesioth",
     "generations": 1,
     "class": "Piscine Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "Sleep"
    },
    {
     "id": 15,
     "name": "Gypceros",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 16,
     "name": "Iodrome",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 17,
     "name": "Khezu",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 18,
     "name": "Kirin",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 19,
     "name": "Lao-Shan Lung",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 20,
     "name": "Monoblos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 21,
     "name": "Pink Rathian",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 22,
     "name": "Plesioth",
     "generations": 1,
     "class": "Piscine Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Sleep"
    },
    {
     "id": 23,
     "name": "Purple Gypceros",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 24,
     "name": "Rathalos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 25,
     "name": "Rathian",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 26,
     "name": "Red Khezu",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 27,
     "name": "Scarred Yian Garuga",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 28,
     "name": "Silver Rathalos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Rare Species"
+    "species": "Rare Species",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 29,
     "name": "Velocidrome",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 30,
     "name": "White Monoblos",
     "generations": 1,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 31,
     "name": "Yian Kut-ku",
     "generations": 1,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 32,
     "name": "Akantor",
     "generations": 2,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire, Dragon",
+    "ailment": "Defense Down"
    },
    {
     "id": 33,
     "name": "Blangonga",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 34,
     "name": "Bulldrome",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 35,
     "name": "Chameleos",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 36,
     "name": "Congalala",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Soiled"
    },
    {
     "id": 37,
-    "name": "Copper Congalala",
+    "name": "Copper Blangonga",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 38,
     "name": "Daiymo Hermitaur",
     "generations": 2,
     "class": "Carapaceon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 39,
     "name": "Emerald Congalala",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Soiled"
    },
    {
     "id": 40,
     "name": "Furious Rajang",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 41,
     "name": "Giadrome",
     "generations": 2,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 42,
     "name": "Hypnocatrice",
     "generations": 2,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 43,
     "name": "Kushala Daora",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 44,
     "name": "Lavasioth",
     "generations": 2,
     "class": "Piscine Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 45,
     "name": "Lunastra",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 46,
     "name": "Nargacuga",
     "generations": 2,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 47,
     "name": "Plum Daimyo Hermitaur",
     "generations": 2,
     "class": "Carapaceon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 48,
     "name": "Rajang",
     "generations": 2,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 49,
     "name": "Rusted Kushala Daora",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Ice",
+    "ailment": "None"
+    
    },
    {
     "id": 50,
     "name": "Shen Gaoren",
     "generations": 2,
     "class": "Carapaceon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 51,
     "name": "Shogun Ceanataur",
     "generations": 2,
     "class": "Carapaceon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Bleed"
    },
    {
     "id": 52,
     "name": "Teostra",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Blast"
    },
    {
     "id": 53,
     "name": "Terra Shogun Ceanataur",
     "generations": 2,
     "class": "Carapaceon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 54,
     "name": "Tigrex",
     "generations": 2,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 55,
     "name": "Ukanlos",
     "generations": 2,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 56,
     "name": "Vespoid Queen",
     "generations": 2,
     "class": "Neopteron",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis, Defense Down"
    },
    {
     "id": 57,
     "name": "White Fatalis",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder, Dragon",
+    "ailment": "None"
    },
    {
     "id": 58,
     "name": "Yama Tsukami",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 59,
     "name": "Yian Garuga",
     "generations": 2,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 60,
     "name": "Abyssal Lagiacrus",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Rare Species"
+    "species": "Rare Species",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 61,
     "name": "Agnaktor",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 62,
     "name": "Alatreon",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Dragon, Fire, Ice, Thunder, Water",
+    "ailment": "None"
    },
    {
     "id": 63,
     "name": "Amatsu",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 64,
     "name": "Arzuros",
     "generations": 3,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 65,
     "name": "Baleful Gigginox",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 66,
     "name": "Barioth",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 67,
     "name": "Barroth",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Mudded"
    },
    {
     "id": 68,
     "name": "Brachydios",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Blast"
    },
    {
     "id": 69,
     "name": "Brute Tigrex",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 70,
     "name": "Ceadeus",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 71,
     "name": "Crimson Qurupeco",
     "generations": 3,
     "class": "Bird Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 72,
     "name": "Deviljho",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "Defense Down"
    },
    {
     "id": 73,
     "name": "Dire Miralis",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 74,
     "name": "Duramboros",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 75,
     "name": "Gigginox",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 76,
     "name": "Glacial Agnaktor",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Ice, Water",
+    "ailment": "None"
    },
    {
     "id": 77,
     "name": "Gobul",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 78,
     "name": "Goldbeard Ceadeus",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 79,
     "name": "Great Baggi",
     "generations": 3,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 80,
     "name": "Great Jaggi",
     "generations": 3,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 81,
     "name": "Great Wroggi",
     "generations": 3,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 82,
     "name": "Green Nargacuga",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 83,
     "name": "Hallowed Jhen Mohran",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 84,
     "name": "Ivory Lagiacrus",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Thunder, Water",
+    "ailment": "None"
    },
    {
     "id": 85,
     "name": "Jade Barroth",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 86,
     "name": "Jhen Mohran",
     "generations": 3,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 87,
     "name": "Lagiacrus",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 88,
     "name": "Lagombi",
     "generations": 3,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 89,
     "name": "Lucent Nargacuga",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Rare Species"
+    "species": "Rare Species",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 90,
     "name": "Nibelsnarf",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 91,
     "name": "Purple Ludroth",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "Poison"
    },
    {
     "id": 92,
     "name": "Qurupeco",
     "generations": 3,
     "class": "Bird Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Defense Down"
    },
    {
     "id": 93,
     "name": "Royal Ludroth",
     "generations": 3,
     "class": "Leviathan",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 94,
     "name": "Rust Duramboros",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Mudded"
    },
    {
     "id": 95,
     "name": "Sand Barioth",
     "generations": 3,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 96,
     "name": "Savage Deviljho",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Dragon",
+    "ailment": "Defense Down"
    },
    {
     "id": 97,
     "name": "Steel Uragaan",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Soiled"
    },
    {
     "id": 98,
     "name": "Stygian Zinogre",
     "generations": 3,
     "class": "Fanged Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 99,
     "name": "Uragaan",
     "generations": 3,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Sleep"
    },
    {
     "id": 100,
     "name": "Volvidon",
     "generations": 3,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Soiled, Paralysis"
    },
    {
     "id": 101,
     "name": "Zinogre",
     "generations": 3,
     "class": "Fanged Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 102,
     "name": "Ash Kecha Wacha",
     "generations": 4,
     "class": "Fanged Beast",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 103,
     "name": "Berserk Tetsucabra",
     "generations": 4,
     "class": "Amphibian",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 104,
     "name": "Chaotic Gore Magala",
     "generations": 4,
     "class": "???",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "None",
+    "ailment": "Frenzy"
    },
    {
     "id": 105,
     "name": "Dah'ren Mohran",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 106,
     "name": "Dalamadur",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 107,
     "name": "Desert Seltas",
     "generations": 4,
     "class": "Neopteron",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 108,
     "name": "Desert Seltas Queen",
     "generations": 4,
     "class": "Neopteron",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "Soiled"
    },
    {
     "id": 109,
     "name": "Gogmazios",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Tarred"
    },
    {
     "id": 110,
     "name": "Gore Magala",
     "generations": 4,
     "class": "???",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Frenzy"
    },
    {
     "id": 111,
     "name": "Kecha Wacha",
     "generations": 4,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 112,
     "name": "Molten Tigrex",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Rare Species"
+    "species": "Rare Species",
+    "element": "None",
+    "ailment": "Blast"
    },
    {
     "id": 113,
     "name": "Najarala",
     "generations": 4,
     "class": "Snake Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 114,
     "name": "Nerscylla",
     "generations": 4,
     "class": "Temnoceran",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep, Poison, Webbed"
    },
    {
     "id": 115,
     "name": "Orishi Kirin",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 116,
     "name": "Raging Brachydios",
     "generations": 4,
     "class": "Brute Wyvern",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Fire",
+    "ailment": "Blast"
    },
    {
     "id": 117,
     "name": "Ruby Basarios",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Sleep, Poison"
    },
    {
     "id": 118,
     "name": "Seltas",
     "generations": 4,
     "class": "Neopteron",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Defense Down"
    },
    {
     "id": 119,
     "name": "Seltas Queen",
     "generations": 4,
     "class": "Neopteron",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Soiled"
    },
    {
     "id": 120,
     "name": "Seregios",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Bleed"
    },
    {
     "id": 121,
     "name": "Shagaru Magala",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Frenzy"
    },
    {
     "id": 122,
     "name": "Shah Dalamadur",
     "generations": 4,
     "class": "Elder Dragon",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 123,
     "name": "Shrouded Nerscylla",
     "generations": 4,
     "class": "Temnoceran",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Paralysis, Poison, Webbed"
    },
    {
     "id": 124,
     "name": "Tetsucabra",
     "generations": 4,
     "class": "Amphibian",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 125,
     "name": "Tidal Najarala",
     "generations": 4,
     "class": "Snake Wyvern",
-    "species": "Subspecies"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "Paralysis"
    },
    {
     "id": 126,
-    "name": "Zamtrios",
+    "name": "Tigerstripe Zamtrios",
     "generations": 4,
     "class": "Amphibian",
-    "species": "Original"
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "Paralysis"
    },
    {
     "id": 127,
-    "name": "Ahtal-Ka",
+    "name": "Zamtrios",
     "generations": 4,
-    "class": "Neopteron",
-    "species": "Original"
+    "class": "Amphibian",
+    "species": "Original",
+    "element": "Ice, Water",
+    "ailment": "Snowman"
    },
    {
     "id": 128,
-    "name": "Astalos",
+    "name": "Ahtal-Ka",
     "generations": 4,
-    "class": "Flying Wyvern",
-    "species": "Original"
+    "class": "Neopteron",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Defense Down, Webbed"
    },
    {
     "id": 129,
-    "name": "Bloodbath Diablos",
+    "name": "Astalos",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Deviant"
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 130,
-    "name": "Boltreaver Astalos",
+    "name": "Bloodbath Diablos",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Deviant"
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 131,
-    "name": "Crystalbeard Uragaan",
+    "name": "Boltreaver Astalos",
     "generations": 4,
-    "class": "Brute Wyvern",
-    "species": "Deviant"
+    "class": "Flying Wyvern",
+    "species": "Deviant",
+    "element": "Thunder",
+    "ailment": "Paralysis"
    },
    {
     "id": 132,
-    "name": "Deadeye Yian Garuga",
+    "name": "Crystalbeard Uragaan",
     "generations": 4,
-    "class": "Bird Wyvern",
-    "species": "Deviant"
+    "class": "Brute Wyvern",
+    "species": "Deviant",
+    "element": "Fire",
+    "ailment": "Sleep"
    },
    {
     "id": 133,
-    "name": "Dreadking Rathalos",
+    "name": "Deadeye Yian Garuga",
     "generations": 4,
-    "class": "Flying Wyvern",
-    "species": "Deviant"
+    "class": "Bird Wyvern",
+    "species": "Deviant",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 134,
-    "name": "Dreadqueen Rathian",
+    "name": "Dreadking Rathalos",
     "generations": 4,
     "class": "Flying Wyvern",
-    "species": "Deviant"
+    "species": "Deviant",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 135,
-    "name": "Drilltusk Tetsucabra",
+    "name": "Dreadqueen Rathian",
     "generations": 4,
-    "class": "Amphibian",
-    "species": "Deviant"
+    "class": "Flying Wyvern",
+    "species": "Deviant",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 136,
-    "name": "Elderfrost Gammoth",
+    "name": "Drilltusk Tetsucabra",
     "generations": 4,
-    "class": "Fanged Beast",
-    "species": "Deviant"
+    "class": "Amphibian",
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 137,
-    "name": "Gammoth",
+    "name": "Elderfrost Gammoth",
     "generations": 4,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Deviant",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 138,
-    "name": "Glavenus",
+    "name": "Gammoth",
     "generations": 4,
-    "class": "Brute Wyvern",
-    "species": "Original"
+    "class": "Fanged Beast",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 139,
-    "name": "Great Maccao",
+    "name": "Glavenus",
     "generations": 4,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Brute Wyvern",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 140,
-    "name": "Grimclaw Tigrex",
+    "name": "Great Maccao",
     "generations": 4,
-    "class": "Flying Wyvern",
-    "species": "Deviant"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 141,
-    "name": "Hellblade Glavenus",
+    "name": "Grimclaw Tigrex",
     "generations": 4,
-    "class": "Brute Wyvern",
-    "species": "Deviant"
+    "class": "Flying Wyvern",
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 142,
-    "name": "Malfestio",
+    "name": "Hellblade Glavenus",
     "generations": 4,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Brute Wyvern",
+    "species": "Deviant",
+    "element": "Fire",
+    "ailment": "Blast"
    },
    {
     "id": 143,
-    "name": "Mizutsune",
+    "name": "Malfestio",
     "generations": 4,
-    "class": "Leviathan",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep, Confusion"
    },
    {
     "id": 144,
-    "name": "Nakarkos",
+    "name": "Mizutsune",
     "generations": 4,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Leviathan",
+    "species": "Original",
+    "element": "Water",
+    "ailment": "Bubble"
    },
    {
     "id": 145,
-    "name": "Nightcloak Malfestio",
+    "name": "Nakarkos",
     "generations": 4,
-    "class": "Bird Wyvern",
-    "species": "Deviant"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "Mucus, Boned"
    },
    {
     "id": 146,
-    "name": "Redhelm Arzuros",
+    "name": "Nightcloak Malfestio",
     "generations": 4,
-    "class": "Fanged Beast",
-    "species": "Deviant"
+    "class": "Bird Wyvern",
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "Sleep, Confusion"
    },
    {
     "id": 147,
-    "name": "Rustrazor Ceanataur",
+    "name": "Redhelm Arzuros",
     "generations": 4,
-    "class": "Carapaceon",
-    "species": "Deviant"
+    "class": "Fanged Beast",
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 148,
-    "name": "Silverwind Nargacuga",
+    "name": "Rustrazor Ceanataur",
     "generations": 4,
-    "class": "Flying Wyvern",
-    "species": "Deviant"
+    "class": "Carapaceon",
+    "species": "Deviant",
+    "element": "Water",
+    "ailment": "Bleed, Defense Down"
    },
    {
     "id": 149,
-    "name": "Snowbaron Lagombi",
+    "name": "Silverwind Nargacuga",
     "generations": 4,
-    "class": "Fanged Beast",
-    "species": "Deviant"
+    "class": "Flying Wyvern",
+    "species": "Deviant",
+    "element": "None",
+    "ailment": "Bleed"
    },
    {
     "id": 150,
-    "name": "Soulseer Mizutsune",
+    "name": "Snowbaron Lagombi",
     "generations": 4,
-    "class": "Leviathan",
-    "species": "Deviant"
+    "class": "Fanged Beast",
+    "species": "Deviant",
+    "element": "Ice",
+    "ailment": "Snowman"
    },
    {
     "id": 151,
-    "name": "Stonefist Hermitaur",
+    "name": "Soulseer Mizutsune",
     "generations": 4,
-    "class": "Carapaceon",
-    "species": "Deviant"
+    "class": "Leviathan",
+    "species": "Deviant",
+    "element": "Water, Fire",
+    "ailment": "Bubble"
    },
    {
     "id": 152,
-    "name": "Thunderlord Zinogre",
+    "name": "Stonefist Hermitaur",
     "generations": 4,
-    "class": "Fanged Wyvern",
-    "species": "Deviant"
+    "class": "Carapaceon",
+    "species": "Deviant",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 153,
-    "name": "Valstrax",
+    "name": "Thunderlord Zinogre",
     "generations": 4,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Deviant",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 154,
-    "name": "Acidic Glavenus",
-    "generations": 5,
-    "class": "Brute Wyvern",
-    "species": "Subspecies"
+    "name": "Valstrax",
+    "generations": 4,
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 155,
-    "name": "Anjanath",
+    "name": "Acidic Glavenus",
     "generations": 5,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Defense Down"
    },
    {
     "id": 156,
-    "name": "Banbaro",
+    "name": "Anjanath",
     "generations": 5,
     "class": "Brute Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 157,
-    "name": "Bazelguese",
+    "name": "Banbaro",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Original"
+    "class": "Brute Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 158,
-    "name": "Beotodus",
+    "name": "Bazelguese",
     "generations": 5,
-    "class": "Piscine Wyvern",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 159,
-    "name": "Blackveil Vaal Hazak",
+    "name": "Beotodus",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Variant"
+    "class": "Piscine Wyvern",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 160,
-    "name": "Coral Pukei-Pukei",
+    "name": "Blackveil Vaal Hazak",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Subspecies"
+    "class": "Elder Dragon",
+    "species": "Variant",
+    "element": "None",
+    "ailment": "Effluvium"
    },
    {
     "id": 161,
-    "name": "Dodogama",
+    "name": "Coral Pukei-Pukei",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Subspecies",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 162,
-    "name": "Ebony Odogaron",
+    "name": "Dodogama",
     "generations": 5,
     "class": "Fanged Wyvern",
-    "species": "Subspecies"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Blast"
    },
    {
     "id": 163,
-    "name": "Frostfang Barioth",
+    "name": "Ebony Odogaron",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Variant"
+    "class": "Fanged Wyvern",
+    "species": "Subspecies",
+    "element": "Dragon",
+    "ailment": "Bleed"
    },
    {
     "id": 164,
-    "name": "Fulgur Anjanath",
+    "name": "Frostfang Barioth",
     "generations": 5,
-    "class": "Brute Wyvern",
-    "species": "Subspecies"
+    "class": "Flying Wyvern",
+    "species": "Variant",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 165,
-    "name": "Great Girros",
+    "name": "Fulgur Anjanath",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Original"
+    "class": "Brute Wyvern",
+    "species": "Subspecies",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 166,
-    "name": "Great Jagras",
+    "name": "Great Girros",
     "generations": 5,
     "class": "Fanged Wyvern",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Paralysis"
    },
    {
     "id": 167,
-    "name": "Jyuratodus",
+    "name": "Great Jagras",
     "generations": 5,
-    "class": "Piscine Wyvern",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 168,
-    "name": "Kulu-Ya-Ku",
+    "name": "Jyuratodus",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Piscine Wyvern",
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 169,
-    "name": "Kulve Taroth",
+    "name": "Kulu-Ya-Ku",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 170,
-    "name": "Legiana",
+    "name": "Kulve Taroth",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Original"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 171,
-    "name": "Namielle",
+    "name": "Legiana",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 172,
-    "name": "Nergigante",
+    "name": "Namielle",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Water, Thunder",
+    "ailment": "None"
    },
    {
     "id": 173,
-    "name": "Nightshade Paolumu",
+    "name": "Nergigante",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 174,
-    "name": "Odogaron",
+    "name": "Nightshade Paolumu",
     "generations": 5,
-    "class": "Fanged Beast",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 175,
-    "name": "Paolumu",
+    "name": "Odogaron",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Original"
+    "class": "Fanged Beast",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 176,
-    "name": "Pukei-Pukei",
+    "name": "Paolumu",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 177,
-    "name": "Radobaan",
+    "name": "Pukei-Pukei",
     "generations": 5,
-    "class": "Brute Wyvern",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 178,
-    "name": "Ruiner Nergigante",
+    "name": "Radobaan",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Variant"
+    "class": "Brute Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 179,
-    "name": "Safi'Jiiva",
+    "name": "Ruiner Nergigante",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Variant",
+    "element": "None",
+    "ailment": "Bleed"
    },
    {
     "id": 180,
-    "name": "Seething Bazelgeuse",
+    "name": "Safi'Jiiva",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Variant"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 181,
-    "name": "Shara Ishvalda",
+    "name": "Seething Bazelgeuse",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Variant",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 182,
-    "name": "Shrieking Legiana",
+    "name": "Shara Ishvalda",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Variant"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 183,
-    "name": "Tobi-Kadachi",
+    "name": "Shrieking Legiana",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Variant",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 184,
-    "name": "Tzitzi-Ya-Ku",
+    "name": "Tobi-Kadachi",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 185,
-    "name": "Vaal Hazak",
+    "name": "Tzitzi-Ya-Ku",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 186,
-    "name": "Velkhana",
+    "name": "Vaal Hazak",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Effluvium"
    },
    {
     "id": 187,
-    "name": "Viper Tobi-Kadachi",
+    "name": "Velkhana",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Subspecies"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 188,
-    "name": "Xeno'Jiiva",
+    "name": "Viper Tobi-Kadachi",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Subspecies",
+    "element": "None",
+    "ailment": "Poison, Paralysis"
    },
    {
     "id": 189,
-    "name": "Zorah Magdaros",
+    "name": "Xeno'Jiiva",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Original"
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 190,
-    "name": "Aknosom",
+    "name": "Zorah Magdaros",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 191,
-    "name": "Almudron",
+    "name": "Aknosom",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 192,
-    "name": "Apex Arzuros",
+    "name": "Almudron",
     "generations": 5,
-    "class": "Fanged Beast",
-    "species": "Apex"
+    "class": "Leviathan",
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 193,
-    "name": "Apex Diablos",
+    "name": "Apex Arzuros",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Apex"
+    "class": "Fanged Beast",
+    "species": "Apex",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 194,
-    "name": "Apex Mizutsune",
+    "name": "Apex Diablos",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Apex"
+    "class": "Flying Wyvern",
+    "species": "Apex",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 195,
-    "name": "Apex Rathalos",
+    "name": "Apex Mizutsune",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Apex"
+    "class": "Leviathan",
+    "species": "Apex",
+    "element": "Fire",
+    "ailment": "Hellfire"
    },
    {
     "id": 196,
-    "name": "Apex Rathian",
+    "name": "Apex Rathalos",
     "generations": 5,
     "class": "Flying Wyvern",
-    "species": "Apex"
+    "species": "Apex",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 197,
-    "name": "Apex Zinogre",
+    "name": "Apex Rathian",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Apex"
+    "class": "Flying Wyvern",
+    "species": "Apex",
+    "element": "Fire",
+    "ailment": "Poison"
    },
    {
     "id": 198,
-    "name": "Aurora Somnacanth",
+    "name": "Apex Zinogre",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Subspecies"
+    "class": "Fanged Wyvern",
+    "species": "Apex",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 199,
-    "name": "Bishaten",
+    "name": "Aurora Somnacanth",
     "generations": 5,
-    "class": "Fanged Beast",
-    "species": "Original"
+    "class": "Leviathan",
+    "species": "Subspecies",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 200,
-    "name": "Blood Orange Bishaten",
+    "name": "Bishaten",
     "generations": 5,
     "class": "Fanged Beast",
-    "species": "Subspecies"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Poison, Paralysis"
    },
    {
     "id": 201,
-    "name": "Crimson Glow Valstrax",
+    "name": "Blood Orange Bishaten",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Variant"
+    "class": "Fanged Beast",
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 202,
-    "name": "Espinas",
+    "name": "Crimson Glow Valstrax",
     "generations": 5,
-    "class": "Flying Wyvern",
-    "species": "Original"
+    "class": "Elder Dragon",
+    "species": "Variant",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 203,
-    "name": "Flaming Espinas",
+    "name": "Espinas",
     "generations": 5,
     "class": "Flying Wyvern",
-    "species": "Subspecies"
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Poison, Paralysis"
    },
    {
     "id": 204,
-    "name": "Gaismagorm",
+    "name": "Flaming Espinas",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Flying Wyvern",
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Poison, Defense Down"
    },
    {
     "id": 205,
-    "name": "Garangolm",
+    "name": "Gaismagorm",
     "generations": 5,
-    "class": "Fanged Beast",
-    "species": "Original"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Blast, Blood"
    },
    {
     "id": 206,
-    "name": "Goss Harag",
+    "name": "Garangolm",
     "generations": 5,
     "class": "Fanged Beast",
-    "species": "Original"
+    "species": "Original",
+    "element": "Fire, Ice",
+    "ailment": "Blast"
    },
    {
     "id": 207,
-    "name": "Great Izuchi",
+    "name": "Goss Harag",
     "generations": 5,
-    "class": "Bird Wyvern",
-    "species": "Original"
+    "class": "Fanged Beast",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 208,
-    "name": "Lunagaron",
+    "name": "Great Izuchi",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Original"
+    "class": "Bird Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
    },
    {
     "id": 209,
-    "name": "Magma Almudron",
+    "name": "Lunagaron",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Subspecies"
+    "class": "Fanged Wyvern",
+    "species": "Original",
+    "element": "Ice",
+    "ailment": "None"
    },
    {
     "id": 210,
-    "name": "Magnamalo",
+    "name": "Magma Almudron",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Original"
+    "class": "Leviathan",
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "None"
    },
    {
     "id": 211,
-    "name": "Malzeno",
+    "name": "Magnamalo",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Hellfire"
    },
    {
     "id": 212,
-    "name": "Narwa the Allmother",
+    "name": "Malzeno",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Variant"
+    "species": "Original",
+    "element": "None",
+    "ailment": "Blood"
    },
    {
     "id": 213,
-    "name": "Primordial Malzeno",
+    "name": "Narwa the Allmother",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Variant"
+    "species": "Variant",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 214,
-    "name": "Pyre Rakna-Kadaki",
+    "name": "Primordial Malzeno",
     "generations": 5,
-    "class": "Temnoceran",
-    "species": "Subspecies"
+    "class": "Elder Dragon",
+    "species": "Variant",
+    "element": "Dragon",
+    "ailment": "Blood"
    },
    {
     "id": 215,
-    "name": "Rakna-Kadaki",
+    "name": "Pyre Rakna-Kadaki",
     "generations": 5,
     "class": "Temnoceran",
-    "species": "Original"
+    "species": "Subspecies",
+    "element": "Fire",
+    "ailment": "Blast, Webbed"
    },
    {
     "id": 216,
-    "name": "Risen Chameleos",
+    "name": "Rakna-Kadaki",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Risen"
+    "class": "Temnoceran",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Webbed"
    },
    {
     "id": 217,
-    "name": "Risen Crimson Glow Valstrax",
+    "name": "Risen Chameleos",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Risen"
+    "species": "Risen",
+    "element": "None",
+    "ailment": "Poison"
    },
    {
     "id": 218,
-    "name": "Risen Kushala Daora",
+    "name": "Risen Crimson Glow Valstrax",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Risen"
+    "species": "Risen",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 219,
-    "name": "Risen Shagaru Magala",
+    "name": "Risen Kushala Daora",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Risen"
+    "species": "Risen",
+    "element": "Dragon",
+    "ailment": "None"
    },
    {
     "id": 220,
-    "name": "Risen Teostra",
+    "name": "Risen Shagaru Magala",
     "generations": 5,
     "class": "Elder Dragon",
-    "species": "Risen"
+    "species": "Risen",
+    "element": "None",
+    "ailment": "Frenzy"
    },
    {
     "id": 221,
-    "name": "Scorned Magnamalo",
+    "name": "Risen Teostra",
     "generations": 5,
-    "class": "Fanged Wyvern",
-    "species": "Variant"
+    "class": "Elder Dragon",
+    "species": "Risen",
+    "element": "Fire",
+    "ailment": "Blast"
    },
    {
     "id": 222,
-    "name": "Somnacanth",
+    "name": "Scorned Magnamalo",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Original"
+    "class": "Fanged Wyvern",
+    "species": "Variant",
+    "element": "Dragon",
+    "ailment": "Hellfire"
    },
    {
     "id": 223,
-    "name": "Tetranadon",
+    "name": "Somnacanth",
     "generations": 5,
-    "class": "Amphibian",
-    "species": "Original"
+    "class": "Leviathan",
+    "species": "Original",
+    "element": "None",
+    "ailment": "Sleep"
    },
    {
     "id": 224,
-    "name": "Thunder Serpent Narwa",
+    "name": "Tetranadon",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Amphibian",
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
    },
    {
     "id": 225,
-    "name": "Violet Mizutsune",
+    "name": "Thunder Serpent Narwa",
     "generations": 5,
-    "class": "Leviathan",
-    "species": "Rare Species"
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Thunder",
+    "ailment": "None"
    },
    {
     "id": 226,
-    "name": "Wind Serpent Ibushi",
+    "name": "Violet Mizutsune",
     "generations": 5,
-    "class": "Elder Dragon",
-    "species": "Original"
+    "class": "Leviathan",
+    "species": "Rare Species",
+    "element": "Fire",
+    "ailment": "Resistance Down"
    },
    {
     "id": 227,
+    "name": "Wind Serpent Ibushi",
+    "generations": 5,
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
+   },
+   {
+    "id": 228,
     "name": "Ajarakan",
     "generations": 6,
     "class": "Fanged Beast",
     "species": "Original"
    },
    {
-    "id": 228,
+    "id": 229,
     "name": "Arkveld",
     "generations": 6,
     "class": "Flying Wyvern",
     "species": "Original"
    },
    {
-    "id": 229,
+    "id": 230,
     "name": "Balahara",
     "generations": 6,
     "class": "Leviathan",
     "species": "Original"
    },
    {
-    "id": 230,
+    "id": 231,
     "name": "Chatacabra",
     "generations": 6,
     "class": "Amphibian",
     "species": "Original"
    },
    {
-    "id": 231,
+    "id": 232,
     "name": "Doshaguma",
     "generations": 6,
     "class": "Fanged Beast",
     "species": "Original"
    },
    {
-    "id": 232,
+    "id": 233,
     "name": "Lala Barina",
     "generations": 6,
     "class": "Temnoceran",
     "species": "Original"
    },
    {
-    "id": 233,
+    "id": 234,
     "name": "Quematrice",
     "generations": 6,
     "class": "Fanged Beast",
     "species": "Original"
    },
    {
-    "id": 234,
+    "id": 235,
     "name": "Rompopolo",
     "generations": 6,
     "class": "Bird Wyvern",
     "species": "Original"
    },
    {
-    "id": 235,
+    "id": 236,
     "name": "Rey Dau",
     "generations": 6,
     "class": "Flying Wyvern",
     "species": "Original"
    },
    {
-    "id": 236,
+    "id": 237,
     "name": "Uth Duna",
     "generations": 6,
     "class": "Leviathan",
