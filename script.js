@@ -127,7 +127,7 @@ function compareElement(monster, randommonster) {
     console.log(randommonsterarray);
 
     monsterarray.forEach(element => {
-        if (randommonsterarray == element) {
+        if (randommonsterarray.includes(element)) {
             correct += 1;
         } else {
             wrong += 1;
