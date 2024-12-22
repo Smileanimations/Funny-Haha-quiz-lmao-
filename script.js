@@ -86,7 +86,6 @@ function createElement(monster) {
 
 function compareMonster(monster) {
     let colors = [];
-    const ailement = "ailment";
 
     console.log(monster);
     console.log(monsters[randomMonster]);
@@ -134,7 +133,7 @@ function compareElement(monster, randommonster) {
         }
     });
 
-    if (correct > 0 && wrong == 0) {
+    if (correct === randommonsterarray.length && wrong == 0) {
         return "green";
     } else if (correct == 0 && wrong > 0) {
         return "red";
