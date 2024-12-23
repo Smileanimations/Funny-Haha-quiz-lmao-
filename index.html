@@ -10,12 +10,12 @@
 </head>
 <body class="">
 
-    <div class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
+    <div id="maindiv" class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
         <header class="w-full bg-gray-900 p-4 text-center text-2xl">
             Monster Hunter Guessing Game
         </header>
 
-        <main class="flex flex-1 flex-col items-center justify-center space-y-6">
+        <main  id="mainscreen" class="flex flex-1 flex-col items-center justify-center space-y-6">
             <h1 class="text-4xl font-bold">Guess the Monster!</h1>
             <div id="search-bar-div">
                 <input id="search-bar" type="text" placeholder="Your Guess..." class="p-3 ps-10 rounded-lg bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 justify-center align items-center" />
@@ -23,10 +23,9 @@
             </div>
 
             <p id="attempts" class="font-bold">Attempts:</p>
-            <div class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
+            <div id="guessbackground" class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
                 <div id="guesses" class="flex flex-col items-center space-y-4">
                 </div>
-            </div>
         </main>
 
         <footer style="z-index: 2;" class="bg-gray-900 w-full p-4 text-center">

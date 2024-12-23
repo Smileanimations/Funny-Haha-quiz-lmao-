@@ -4,13 +4,17 @@ let monsters = [];
 let result = "";
 let attempts = 0;
 
+const mainscreen = document.getElementById("mainscreen");
+
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
 
 const guessDiv = document.getElementById("guesses");
+const guessDivBackground = document.getElementById("guessbackground")
 let attemptsElement = document.getElementById("attempts");
 
+guessDivBackground.style.visibility = "hidden";
 removeResults()
 
 searchBar.addEventListener("input", updateValue);
@@ -128,7 +132,7 @@ function compareElement(monster, randommonster) {
     monsterarray.forEach(element => {
         if (randommonsterarray.includes(element)) {
             correct += 1;
-        } else {
+        } else { 
             wrong += 1;
         }
     });
@@ -145,12 +149,20 @@ function compareElement(monster, randommonster) {
 
 function monsterPressed(monster) {
     attempts++;
-    let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster)
-    removeResults()
-    searchBar.value = ""
+    guessDivBackground.style.visibility = "visible";
+    let bottomBorder = "";
+    let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
+    removeResults();
+    searchBar.value = "";
 
     let monsterMatch = monsterguess[0];
     let compareResults = compareMonster(monsterMatch);
+
+    if (compareResults.every((result) => result.includes("green")) && monsterMatch != monsters[randomMonster]) {
+        bottomBorder = "border-b-4 border-yellow-500"
+    } else if (monsterMatch === monsters[randomMonster]) {
+        victoryScreen(monsterMatch);
+    }
 
     console.log(compareResults);
 
@@ -163,7 +175,7 @@ function monsterPressed(monster) {
         </div>
 
         <div>
-            <h3 class="text-2xl font-bold">${monsterMatch.name}</h3>
+            <h3 class="text-2xl font-bold ${bottomBorder}">${monsterMatch.name}</h3>
             <div class="flex items-center space-x-2 mt-2">
                 <span class="px-3 py-1 bg-${compareResults[0]}-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
                 <span class="px-3 py-1 bg-${compareResults[1]}-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
@@ -176,4 +188,28 @@ function monsterPressed(monster) {
     guessDiv.prepend(guessElement);
     
     attemptsElement.innerHTML = `Attempts: ${attempts}`
+}
+
+function victoryScreen(monster) {
+    searchBar.disabled = true;
+
+    const victoryDiv = document.createElement("div");
+
+    victoryDiv.setAttribute("class", 
+        "absolute justify-center items-center"
+    )
+
+    victoryDiv.innerHTML = `
+        <div class="rounded-3xl bg-white w-[800px] h-[600px]">
+            <h1 class="text-center text-black text-2xl font-medium">You Guessed Correctly!</h1>
+            <div class="flex-col justify-self-center">
+                <img class ="size-44" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
+                <h2 class="text-4xl font-medium antialiased text-black">${monster.name}</h2>
+            </div>
+
+           <div class="absolute inset-x-0 bottom-0 h-20 bg-green-500 rounded-b-3xl"></div>
+        </div>
+    `
+
+    mainscreen.appendChild(victoryDiv);
 }
