@@ -3,6 +3,7 @@ let monster = "";
 let monsters = [];
 let result = "";
 let attempts = 0;
+let victoryDiv;
 
 const mainscreen = document.getElementById("mainscreen");
 
@@ -10,7 +11,7 @@ const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
 
-const guessDiv = document.getElementById("guesses");
+let guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
 let attemptsElement = document.getElementById("attempts");
 
@@ -39,6 +40,16 @@ fetch("../data/monsters.json")
 function getRandomMonster(monsters) {
     randomMonster = Math.floor(Math.random() * monsters.length);
     return monsters[randomMonster];
+}
+
+function resetGame() {
+    guessDiv.innerHTML = '';
+    guessDivBackground.style.visibility = "hidden";
+    getRandomMonster(monsters);
+    removevictoryScreen();
+    searchBar.disabled = false;
+    attempts = 0;
+    attemptsElement.innerHTML = 'Attempts:'
 }
 
 function updateValue(e) {
@@ -193,7 +204,7 @@ function monsterPressed(monster) {
 function victoryScreen(monster) {
     searchBar.disabled = true;
 
-    const victoryDiv = document.createElement("div");
+    victoryDiv = document.createElement("div");
 
     victoryDiv.setAttribute("class", 
         "absolute justify-center items-center"
@@ -201,14 +212,15 @@ function victoryScreen(monster) {
 
     victoryDiv.innerHTML = `
 <div class="rounded-3xl bg-white w-[800px] h-[600px] relative">
-    <div class="flex flex-col justify-center items-center h-full mt-2">
-        <h1 class="text-center text-black text-2xl font-medium">You Guessed Correctly!</h1>
+    <div class="flex flex-col justify-center items-center">
+        <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
         <img class="size-44 mt-12" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
-        <h2 class="text-4xl font-medium antialiased text-black">${monster.name}</h2>
+        <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
+        <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
     </div>
     <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
-        <button class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-        <button class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+        <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
+        <button onclick="removevictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
     </div>
     <div class="absolute inset-x-0 bottom-0 h-20 bg-green-500 rounded-b-3xl">
     </div>
@@ -216,4 +228,8 @@ function victoryScreen(monster) {
     `
 
     mainscreen.appendChild(victoryDiv);
+}
+
+function removevictoryScreen() {
+    victoryDiv.remove();
 }
