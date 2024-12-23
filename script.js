@@ -200,15 +200,19 @@ function victoryScreen(monster) {
     )
 
     victoryDiv.innerHTML = `
-        <div class="rounded-3xl bg-white w-[800px] h-[600px]">
-            <h1 class="text-center text-black text-2xl font-medium">You Guessed Correctly!</h1>
-            <div class="flex-col justify-self-center">
-                <img class ="size-44" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
-                <h2 class="text-4xl font-medium antialiased text-black">${monster.name}</h2>
-            </div>
-
-           <div class="absolute inset-x-0 bottom-0 h-20 bg-green-500 rounded-b-3xl"></div>
-        </div>
+<div class="rounded-3xl bg-white w-[800px] h-[600px] relative">
+    <div class="flex flex-col justify-center items-center h-full mt-2">
+        <h1 class="text-center text-black text-2xl font-medium">You Guessed Correctly!</h1>
+        <img class="size-44 mt-12" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
+        <h2 class="text-4xl font-medium antialiased text-black">${monster.name}</h2>
+    </div>
+    <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
+        <button class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 h-20 bg-green-500 rounded-b-3xl">
+    </div>
+</div>
     `
 
     mainscreen.appendChild(victoryDiv);
