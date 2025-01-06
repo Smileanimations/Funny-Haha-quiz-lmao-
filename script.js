@@ -20,7 +20,7 @@ removeResults()
 
 searchBar.addEventListener("input", updateValue);
 
-fetch("../data/monsters.json")
+fetch("./Data/monsters.json")
 
 .then(response => {
     if (!response.ok) {
