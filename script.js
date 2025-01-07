@@ -181,7 +181,7 @@ function monsterPressed(monster) {
     guessElement.setAttribute("class",
         "flex items-center bg-gray-600 p-4 rounded-lg w-full");
     guessElement.innerHTML = `
-        <div class="w-20 h-20 object-cover">
+        <div class="w-20 h-20 object-cover m-0">
             <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
         </div>
 
@@ -232,4 +232,7 @@ function victoryScreen(monster) {
 
 function removevictoryScreen() {
     victoryDiv.remove();
+}
+function Giveup() {
+    addEventListener(onclick)
 }

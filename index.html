@@ -15,17 +15,28 @@
             Monster Hunter Guessing Game
         </header>
 
-        <main  id="mainscreen" class="flex flex-1 flex-col items-center justify-center space-y-6">
+        <main id="mainscreen" class="flex flex-1 flex-col items-center justify-center space-y-6">
             <h1 class="text-4xl font-bold">Guess the Monster!</h1>
-            <div id="search-bar-div">
-                <input id="search-bar" type="text" placeholder="Your Guess..." class="p-3 ps-10 rounded-lg bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 justify-center align items-center" />
-                <div id="result"></div>
-            </div>
 
+            <div id="search-bar-div" class="flex flex-col items-center space-y-4 w-full max-w-md">
+                <input
+                    id="search-bar"
+                    type="text"
+                    placeholder="Your Guess..."
+                    class="p-3 ps-10 rounded-lg bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                />
+                <button id="Giveup" class="bg-red-700 rounded-lg text-center px-4 py-2 hover:bg-red-600 font-bold">
+                    Give up
+                </button>
+                <div id="result" class="w-full"></div>
+            </div>
+        
             <p id="attempts" class="font-bold">Attempts:</p>
-            <div id="guessbackground" class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
-                <div id="guesses" class="flex flex-col items-center space-y-4">
+        
+            <div id="guessbackground" class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md space-y-4">
+                <div id="guesses" class="flex flex-wrap justify-center gap-4 w-full">
                 </div>
+            </div>
         </main>
 
         <footer style="z-index: 2;" class="bg-gray-900 w-full p-4 text-center">
