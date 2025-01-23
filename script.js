@@ -4,12 +4,16 @@ let monsters = [];
 let result = "";
 let attempts = 0;
 let victoryDiv;
+let backgroundColor = "green";
+let resetvalue = true;
 
 const mainscreen = document.getElementById("mainscreen");
 
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 let searchBar = document.getElementById("search-bar");
+
+let resetbutton = document.getElementById("resetbutton");
 
 let guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
@@ -43,13 +47,24 @@ function getRandomMonster(monsters) {
 }
 
 function resetGame() {
+    resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
+    resetbutton.setAttribute("onclick", "giveUp()");
+    resetbutton.innerHTML = "Give Up";
+
+    backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
     getRandomMonster(monsters);
-    removevictoryScreen();
+    removevictoryScreen(resetvalue);
     searchBar.disabled = false;
     attempts = 0;
     attemptsElement.innerHTML = 'Attempts:'
+}
+
+function giveUp() {
+    backgroundColor = "red";
+    victoryScreen(monsters[randomMonster], backgroundColor);
+
 }
 
 function updateValue(e) {
@@ -172,7 +187,7 @@ function monsterPressed(monster) {
     if (compareResults.every((result) => result.includes("green")) && monsterMatch != monsters[randomMonster]) {
         bottomBorder = "border-b-4 border-yellow-500"
     } else if (monsterMatch === monsters[randomMonster]) {
-        victoryScreen(monsterMatch);
+        victoryScreen(monsterMatch, backgroundColor);
     }
 
     console.log(compareResults);
@@ -201,8 +216,12 @@ function monsterPressed(monster) {
     attemptsElement.innerHTML = `Attempts: ${attempts}`
 }
 
-function victoryScreen(monster) {
+function victoryScreen(monster, backgroundColor) {
     searchBar.disabled = true;
+
+    resetbutton.setAttribute("class", "bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600");
+    resetbutton.setAttribute("onclick", "resetGame()");
+    resetbutton.innerHTML = "Play Again";
 
     victoryDiv = document.createElement("div");
 
@@ -211,25 +230,25 @@ function victoryScreen(monster) {
     )
 
     victoryDiv.innerHTML = `
-<div class="rounded-3xl bg-white w-[800px] h-[600px] relative">
-    <div class="flex flex-col justify-center items-center">
-        <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
-        <img class="size-44 mt-12" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp"></img>
-        <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
-        <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
-    </div>
-    <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
-        <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-        <button onclick="removevictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 h-20 bg-green-500 rounded-b-3xl">
-    </div>
-</div>
+        <div class="rounded-3xl bg-white w-[800px] h-[600px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
+                <img class="size-44 mt-12" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';"></img>
+                <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
+                <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
+            </div>
+            <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
+                <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
+                <button onclick="removevictoryScreen(resetvalue)" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 h-20 bg-${backgroundColor}-500 rounded-b-3xl">
+            </div>
+        </div>
     `
 
     mainscreen.appendChild(victoryDiv);
 }
 
-function removevictoryScreen() {
+function removevictoryScreen(resetvalue) {
     victoryDiv.remove();
 }
