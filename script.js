@@ -1,17 +1,16 @@
+import { searchBarClass } from "./Data/class.js";
+
+let searchbar;
 let randomMonster;
-let monster = "";
 let monsters = [];
-let result = "";
 let attempts = 0;
 let victoryDiv;
 let backgroundColor = "green";
-let resetvalue = true;
 
 const mainscreen = document.getElementById("mainscreen");
 
-const attachDiv = document.getElementById("result");
-const searchbarDiv = document.getElementById("search-bar-div");
-let searchBar = document.getElementById("search-bar");
+let attachDiv;
+let searchbarDiv;
 
 let resetbutton = document.getElementById("resetbutton");
 
@@ -20,9 +19,6 @@ const guessDivBackground = document.getElementById("guessbackground")
 let attemptsElement = document.getElementById("attempts");
 
 guessDivBackground.style.visibility = "hidden";
-removeResults()
-
-searchBar.addEventListener("input", updateValue);
 
 fetch("./Data/monsters.json")
 
@@ -36,6 +32,10 @@ fetch("./Data/monsters.json")
     monsters = data.monsters;
     console.log(monsters);
     console.log(getRandomMonster(monsters));
+
+    attachDiv = document.getElementById("result");
+    searchbarDiv = document.getElementById("search-bar-div");
+    searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -46,7 +46,7 @@ function getRandomMonster(monsters) {
     return monsters[randomMonster];
 }
 
-function resetGame() {
+window.resetGame = function() {
     resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
     resetbutton.setAttribute("onclick", "giveUp()");
     resetbutton.innerHTML = "Give Up";
@@ -55,63 +55,16 @@ function resetGame() {
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
     getRandomMonster(monsters);
-    removevictoryScreen(resetvalue);
-    searchBar.disabled = false;
+    removevictoryScreen();
+    searchbar.searchBar.disabled = false;
     attempts = 0;
     attemptsElement.innerHTML = 'Attempts:'
 }
 
-function giveUp() {
+window.giveUp = function() {
     backgroundColor = "red";
     victoryScreen(monsters[randomMonster], backgroundColor);
 
-}
-
-function updateValue(e) {
-    result = e.target.value.toLowerCase();
-    searchbarDiv.appendChild(attachDiv);
-    attachDiv.innerHTML = "";
-    const monsterresult = monsters
-    .filter((monster) => monster.name.toLowerCase().includes(result))
-    .slice(0, 5);
-    if (monsterresult.length > 0) {
-        monsterresult.forEach(monster => {
-            createElement(monster);
-        });
-    } else {
-        shownotFound();
-    }
-}
-
-function removeResults() {
-    attachDiv.remove();
-}
-
-function shownotFound() {
-    attachDiv.innerHTML = `
-    <div class="not-found">No Results</div>`
-}
-
-function createElement(monster) {
-    const newDiv = document.createElement("div");
-    newDiv.setAttribute("class", "result-div");
-    newDiv.innerHTML = `
-        <button class="results" onclick="monsterPressed('${monster.name}')">
-            <span class="result-text">${monster.name}</span>
-            <img
-                class="result-image" 
-                src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
-                alt="${monster.name}" 
-                onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';" 
-            />
-        </button>
-    `       
-    attachDiv.appendChild(newDiv);
-
-    if (result == "") {
-        newDiv.remove();
-        removeResults();
-    }
 }
 
 function compareMonster(monster) {
@@ -173,13 +126,13 @@ function compareElement(monster, randommonster) {
 
 }
 
-function monsterPressed(monster) {
+window.monsterPressed = function(monster) {
     attempts++;
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
-    removeResults();
-    searchBar.value = "";
+    searchbar.removeResults();
+    searchbar.searchBar.value = "";
 
     let monsterMatch = monsterguess[0];
     let compareResults = compareMonster(monsterMatch);
@@ -217,7 +170,7 @@ function monsterPressed(monster) {
 }
 
 function victoryScreen(monster, backgroundColor) {
-    searchBar.disabled = true;
+    searchbar.searchBar.disabled = true;
 
     resetbutton.setAttribute("class", "bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600");
     resetbutton.setAttribute("onclick", "resetGame()");
@@ -233,13 +186,13 @@ function victoryScreen(monster, backgroundColor) {
         <div class="rounded-3xl bg-white w-[800px] h-[600px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
-                <img class="size-44 mt-12" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';"></img>
+                <img class="size-64 object-contain mt-12" src="/Images/Renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';"></img>
                 <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
                 <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
             </div>
             <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
                 <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-                <button onclick="removevictoryScreen(resetvalue)" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+                <button onclick="removevictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
             </div>
             <div class="absolute inset-x-0 bottom-0 h-20 bg-${backgroundColor}-500 rounded-b-3xl">
             </div>
@@ -249,6 +202,6 @@ function victoryScreen(monster, backgroundColor) {
     mainscreen.appendChild(victoryDiv);
 }
 
-function removevictoryScreen(resetvalue) {
+window.removevictoryScreen = function() {
     victoryDiv.remove();
 }
