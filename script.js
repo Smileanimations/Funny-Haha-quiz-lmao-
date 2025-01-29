@@ -20,6 +20,7 @@ let attemptsElement = document.getElementById("attempts");
 
 guessDivBackground.style.visibility = "hidden";
 
+// Fetch the JSON file
 fetch("./Data/monsters.json")
 
 .then(response => {
@@ -35,17 +36,20 @@ fetch("./Data/monsters.json")
 
     attachDiv = document.getElementById("result");
     searchbarDiv = document.getElementById("search-bar-div");
+    // Imports the searchBarClass from the class.js file and creates a new instance of it.
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
 });
 
+// Function that gets a random monster from the monsters array.
 function getRandomMonster(monsters) {
     randomMonster = Math.floor(Math.random() * monsters.length);
     return monsters[randomMonster];
 }
 
+// Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function() {
     resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
     resetbutton.setAttribute("onclick", "giveUp()");
@@ -61,12 +65,14 @@ window.resetGame = function() {
     attemptsElement.innerHTML = 'Attempts:'
 }
 
+// Function that shows the victory screen with a red bar instead of a green one.
 window.giveUp = function() {
     backgroundColor = "red";
     victoryScreen(monsters[randomMonster], backgroundColor);
 
 }
 
+// Function that compares the monster with the random monster and returns an array with the colors of the results.
 function compareMonster(monster) {
     let colors = [];
 
@@ -98,6 +104,7 @@ function compareMonster(monster) {
     return colors;
 }
 
+// Function that compares the elements of the monster and the random monster, it does by checking each element and creating a point system and by comparing those points returns a color.
 function compareElement(monster, randommonster) {
     let monsterarray = monster.split(", ");
     let randommonsterarray = randommonster.split(", ");
@@ -125,7 +132,7 @@ function compareElement(monster, randommonster) {
     }
 
 }
-
+// Function that is called when a monster is pressed, it compares the monster with the random monster and shows the results in the results.
 window.monsterPressed = function(monster) {
     attempts++;
     guessDivBackground.style.visibility = "visible";
@@ -169,6 +176,7 @@ window.monsterPressed = function(monster) {
     attemptsElement.innerHTML = `Attempts: ${attempts}`
 }
 
+// Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
 function victoryScreen(monster, backgroundColor) {
     searchbar.searchBar.disabled = true;
 
@@ -202,6 +210,7 @@ function victoryScreen(monster, backgroundColor) {
     mainscreen.appendChild(victoryDiv);
 }
 
+// Function that removes the victory screen.	
 window.removevictoryScreen = function() {
     victoryDiv.remove();
 }
