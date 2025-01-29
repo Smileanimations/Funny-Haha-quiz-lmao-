@@ -9,6 +9,8 @@ let guessedMonstrs = [];
 let monstercount = document.getElementById("monstercount");
 let generation = document.getElementById("generation");
 
+let griddiv = document.getElementById("grid");
+
 fetch("../Data/monsters.json")
 .then(response => {
     if (!response.ok) {
@@ -81,8 +83,18 @@ window.monsterPressed = function(monster) {
     }
     searchBar.searchBar.value = "";
     searchBar.removeResults();
+
+    createGuessedMonsters(monster);
 }
 
-function createGuessedMonsters() {
-    
+function createGuessedMonsters(monster) {
+    let pickedMonster = monsters.find(mon => mon.name === monster);
+    let guessdiv = document.createElement('div');
+    guessdiv.setAttribute('class', 'grid grid-row text-center bg-gray-600 p-6 rounded-lg w-full');
+    guessdiv.innerHTML = `
+        <img src = "../Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt ="${monster}" class="w-24 h-24">
+        <h1 class = "text-white text-2xl">${monster}</h1>
+        <h3 class = "text-white text-xl">Gen ${pickedMonster.generations}</h3>
+    `;
+    griddiv.appendChild(guessdiv);
 }
