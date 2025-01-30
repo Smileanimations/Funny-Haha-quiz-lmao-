@@ -1029,7 +1029,7 @@
    },
    {
     "id": 115,
-    "name": "Orishi Kirin",
+    "name": "Oroshi Kirin",
     "generations": 4,
     "class": "Elder Dragon",
     "species": "Subspecies",
@@ -1574,7 +1574,7 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "None",
-    "ailment": "None"
+    "ailment": "Bleed"
    },
    {
     "id": 176,
