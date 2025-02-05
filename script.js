@@ -45,8 +45,8 @@ fetch("./Data/monsters.json")
 
 // Function that gets a random monster from the monsters array.
 function getRandomMonster(monsters) {
-    randomMonster = Math.floor(Math.random() * monsters.length);
-    return monsters[randomMonster];
+    randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    return randomMonster;
 }
 
 // Function that clears the the search bar and results and pick a new random monster.
@@ -68,7 +68,7 @@ window.resetGame = function() {
 // Function that shows the victory screen with a red bar instead of a green one.
 window.giveUp = function() {
     backgroundColor = "red";
-    victoryScreen(monsters[randomMonster], backgroundColor);
+    victoryScreen(randomMonster, backgroundColor);
 
 }
 
@@ -77,30 +77,30 @@ function compareMonster(monster) {
     let colors = [];
 
     console.log(monster);
-    console.log(monsters[randomMonster]);
+    console.log(randomMonster);
 
 
 
-    if (monster.generations == monsters[randomMonster].generations) {
+    if (monster.generations == randomMonster.generations) {
         colors.push("green");
     } else {
         colors.push("red");
     }
 
-    if (monster.class == monsters[randomMonster].class) {
+    if (monster.class == randomMonster.class) {
         colors.push("green");
     } else {
         colors.push("red");
     }
 
-    if (monster.species == monsters[randomMonster].species) {
+    if (monster.species == randomMonster.species) {
         colors.push("green");
     } else {
         colors.push("red");
     }
 
-    colors.push(compareElement(monster.element, monsters[randomMonster].element));
-    colors.push(compareElement(monster.ailment, monsters[randomMonster].ailment))
+    colors.push(compareElement(monster.element, randomMonster.element));
+    colors.push(compareElement(monster.ailment, randomMonster.ailment))
     return colors;
 }
 
@@ -144,9 +144,9 @@ window.monsterPressed = function(monster) {
     let monsterMatch = monsterguess[0];
     let compareResults = compareMonster(monsterMatch);
 
-    if (compareResults.every((result) => result.includes("green")) && monsterMatch != monsters[randomMonster]) {
+    if (compareResults.every((result) => result.includes("green")) && monsterMatch != randomMonster) {
         bottomBorder = "border-b-4 border-yellow-500"
-    } else if (monsterMatch === monsters[randomMonster]) {
+    } else if (monsterMatch === randomMonster) {
         victoryScreen(monsterMatch, backgroundColor);
     }
 
