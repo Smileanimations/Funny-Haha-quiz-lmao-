@@ -39,7 +39,7 @@ function getMonsterCount(monsters, generation) {
 
 
 function setgenerationDisplay(generation, generationArray, monstercount) {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= correctguessed.length; i++) {
         
         let currentgen = document.createElement('th');
         currentgen.setAttribute('class', 'bg-gray-700 border border-gray-600');
