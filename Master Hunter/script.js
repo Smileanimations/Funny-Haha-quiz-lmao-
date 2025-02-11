@@ -1,7 +1,9 @@
 import {searchBarClass} from '../Data/class.js';
 
+let classdiv;
 let searchBar;
 let generationArray = [];
+let classarray = [];
 let monsters = [];
 let correctguessed = [0, 0, 0, 0, 0];
 let guessedMonstrs = [];
@@ -25,8 +27,9 @@ fetch("../Data/monsters.json")
     const searchbarDiv = document.getElementById('search-bar-div');
     const attachDiv = document.getElementById('result');
     searchBar = new searchBarClass(document.getElementById('search-bar'), searchbarDiv, attachDiv, monsters);
-
+    getMonsterClasses(monsters);
     setgenerationDisplay(generation, generationArray, monstercount);
+    setclassDisplay(classarray);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -36,6 +39,16 @@ function getMonsterCount(monsters, generation) {
     const filteredmonster = monsters.filter(monster => monster.generations === generation);
     return filteredmonster.length;
 }
+
+function getMonsterClasses(monsters) {
+    monsters.forEach(monster => {
+        if (!classarray.includes(monster.class)) {
+            classarray.push(monster.class);
+        }
+    });
+    classarray.sort();
+    console.log(classarray);
+} 
 
 
 function setgenerationDisplay(generation, generationArray, monstercount) {
@@ -56,6 +69,16 @@ function setgenerationDisplay(generation, generationArray, monstercount) {
         monstercount.appendChild(generationcount);
     }
     console.log(generationArray);
+}
+
+function setclassDisplay(classarray) {
+    classarray.forEach(monsterclass => {
+        classdiv = document.createElement("div");
+        classdiv.setAttribute('id', `${monsterclass}`);
+        classdiv.setAttribute('class', 'flex flex-wrap justify-center items-center gap-4');
+        classdiv.innerHTML = `<h1 class="flex font-semibold text-xl h-64">${monsterclass}:</h1>`
+        griddiv.appendChild(classdiv);
+    });
 }
 
 function updategenerationDisplay() {
@@ -109,5 +132,5 @@ function createGuessedMonsters(monster) {
             <h4 class = "text-base">${pickedMonster.class}</h3>
         </div>
     `;
-    griddiv.appendChild(guessdiv);
+    document.getElementById(`${pickedMonster.class}`).appendChild(guessdiv);
 }
