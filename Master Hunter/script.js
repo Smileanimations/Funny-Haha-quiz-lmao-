@@ -1,15 +1,16 @@
 import {searchBarClass} from '../Data/class.js';
 
-let classdiv;
 let searchBar;
 let generationArray = [];
 let classarray = [];
 let monsters = [];
-let correctguessed = [0, 0, 0, 0, 0];
+let correctguessed = [];
 let guessedMonstrs = [];
 
+let chosenCategory = classarray;
+
 let monstercount = document.getElementById("monstercount");
-let generation = document.getElementById("generation");
+let table = document.getElementById("table");
 
 let griddiv = document.getElementById("grid");
 
@@ -27,17 +28,18 @@ fetch("../Data/monsters.json")
     const searchbarDiv = document.getElementById('search-bar-div');
     const attachDiv = document.getElementById('result');
     searchBar = new searchBarClass(document.getElementById('search-bar'), searchbarDiv, attachDiv, monsters);
+    getGenerationsCount(monsters);
     getMonsterClasses(monsters);
-    setgenerationDisplay(generation, generationArray, monstercount);
-    setclassDisplay(classarray);
+    setTableDisplay(table, chosenCategory, monstercount);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
 });
 
-function getMonsterCount(monsters, generation) {
-    const filteredmonster = monsters.filter(monster => monster.generations === generation);
-    return filteredmonster.length;
+function getGenerationsCount(monsters) {
+    for (let i = 1; i <= 5; i++) {
+        generationArray.push(monsters.filter(monster => monster.generations === i).length);
+    }
 }
 
 function getMonsterClasses(monsters) {
@@ -52,61 +54,65 @@ function getMonsterClasses(monsters) {
     classarray.sort();
 } 
 
-
-function setgenerationDisplay(generation, generationArray, monstercount) {
-    for (let i = 1; i <= correctguessed.length; i++) {
-        
-        let currentgen = document.createElement('th');
-        currentgen.setAttribute('class', 'bg-gray-700 border border-gray-600');
-        currentgen.innerHTML = `${i}`;
-        
-        generation.appendChild(currentgen);
-
-        generationArray.push(getMonsterCount(monsters, i));
-
-        let generationcount = document.createElement('td');
-        generationcount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
-        generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-
-        monstercount.appendChild(generationcount);
-    }
-    console.log(generationArray);
-}
-
-function setclassDisplay(classarray) {
-    classarray.forEach(monsterclass => {
-        classdiv = document.createElement("div");
-        classdiv.setAttribute('id', `${monsterclass}`);
-        classdiv.setAttribute('class', 'flex flex-col');
-        classdiv.innerHTML = `
-            <div class="py-4">
-                <h1 class="text-xl text-gray-400">${monsterclass} - 0 / ${classarray[monsterclass]}:</h1>
-            </div>
-            <div id="${monsterclass}-guessdiv" class="flex flex-row gap-4 pl-4"></div>
-        `;
-        griddiv.appendChild(classdiv);
+function setCorrectGuessed(typeArray) {
+    typeArray.forEach(element => {
+        correctguessed.push(0);
     });
+    console.log(correctguessed);
 }
 
-function updategenerationDisplay() {
+function setTableHeader(element, typeArray) {
+    if (!Number(element)) {
+        return element;
+    } else {
+        return `${typeArray.indexOf(element) + 1}`;
+    }
+}
+
+function setTableData(element, typeArray) {
+    if (!Number(element)) {
+        return `${classarray[element]}`;
+    } else {
+        return `${generationArray[typeArray.indexOf(element)]}`;
+    }
+}
+
+function setTableDisplay(table, typeArray, monstercount) {
+    console.log(typeArray);
+    setCorrectGuessed(typeArray);
+    typeArray.forEach(element => {
+        let currenttype = document.createElement('th');
+        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600');
+        currenttype.innerHTML = `${setTableHeader(element, typeArray)}`;
+        
+        table.appendChild(currenttype);
+
+        let typecount = document.createElement('td');
+        typecount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
+        typecount.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
+
+        monstercount.appendChild(typecount);
+    })
+}
+
+function updateTableDisplay(typeArray) {
 
     while (monstercount.firstChild) {
         monstercount.removeChild(monstercount.firstChild);
     }
 
-    for (let i = 1; i <= 5; i++) {
-        if (correctguessed[i - 1] === generationArray[i - 1]) {
-            let generationcount = document.createElement('td');
-            generationcount.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
-            generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-            monstercount.appendChild(generationcount);
+    typeArray.forEach(element => {
+        let tabledata = document.createElement('td');
+        if (correctguessed[typeArray.indexOf(element)] === typeArray[typeArray.indexOf(element)]) {
+            tabledata.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
+            tabledata.innerHTML = `${correctguessed[element]} / ${setTableData(element, typeArray)}`;
+            monstercount.appendChild(tabledata);
         } else {
-            let generationcount = document.createElement('td');
-            generationcount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
-            generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-            monstercount.appendChild(generationcount);
+            tabledata.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
+            tabledata.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
+            monstercount.appendChild(tabledata);
         }
-    }
+    })
 
     console.log(correctguessed);
 }
@@ -116,8 +122,9 @@ window.monsterPressed = function(monster) {
         return;
     } else {
         guessedMonstrs.push(monsters.find(mon => mon.name === monster));
-        correctguessed[monsters.find(mon => mon.name === monster).generations - 1]++;
-        updategenerationDisplay();
+        correctguessed[updateCorrectguessScore(monster, chosenCategory)]++;
+        console.log(correctguessed);
+        updateTableDisplay(chosenCategory);
     }
     searchBar.searchBar.value = "";
     searchBar.removeResults();
@@ -138,5 +145,17 @@ function createGuessedMonsters(monster) {
             <h2 class = "text-base">${monster}</h2>
         </div>
     `;
-    document.getElementById(`${pickedMonster.class}-guessdiv`).appendChild(monsterguess);
+    document.getElementById(`monsters`).appendChild(monsterguess);
+}
+
+function updateCorrectguessScore(monster, typeArray) {
+    if (typeArray == classarray) {
+        let chosenMonster = monsters.find(mon => mon.name === monster);
+        console.log(chosenMonster.class);
+        return typeArray.indexOf(chosenMonster.class);
+    } else {
+        let chosenMonster = monsters.find(mon => mon.name === monster);
+        console.log(chosenMonster.generations);
+        return typeArray.indexOf(chosenMonster.generations) + 1;
+    }
 }
