@@ -4,7 +4,6 @@ let classdiv;
 let searchBar;
 let generationArray = [];
 let classarray = [];
-let classcount = {};
 let monsters = [];
 let correctguessed = [0, 0, 0, 0, 0];
 let guessedMonstrs = [];
@@ -78,12 +77,12 @@ function setclassDisplay(classarray) {
     classarray.forEach(monsterclass => {
         classdiv = document.createElement("div");
         classdiv.setAttribute('id', `${monsterclass}`);
-        classdiv.setAttribute('class', 'flex flex-row justify-start');
+        classdiv.setAttribute('class', 'flex flex-col');
         classdiv.innerHTML = `
-            <div class="flex flex-wrap align-end">
+            <div class="py-4">
                 <h1 class="text-xl text-gray-400">${monsterclass} - 0 / ${classarray[monsterclass]}:</h1>
             </div>
-            <div id="${monsterclass}-guessdiv" class="flex flex-col"></div>
+            <div id="${monsterclass}-guessdiv" class="flex flex-row gap-4 pl-4"></div>
         `;
         griddiv.appendChild(classdiv);
     });
