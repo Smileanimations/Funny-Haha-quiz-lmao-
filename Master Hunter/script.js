@@ -82,7 +82,7 @@ function setTableDisplay(table, typeArray, monstercount) {
     setCorrectGuessed(typeArray);
     typeArray.forEach(element => {
         let currenttype = document.createElement('th');
-        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600');
+        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600 w-28 px-2 py-2');
         currenttype.innerHTML = `${setTableHeader(element, typeArray)}`;
         
         table.appendChild(currenttype);
@@ -96,16 +96,15 @@ function setTableDisplay(table, typeArray, monstercount) {
 }
 
 function updateTableDisplay(typeArray) {
-
     while (monstercount.firstChild) {
         monstercount.removeChild(monstercount.firstChild);
     }
 
     typeArray.forEach(element => {
         let tabledata = document.createElement('td');
-        if (correctguessed[typeArray.indexOf(element)] === typeArray[typeArray.indexOf(element)]) {
+        if (correctguessed[typeArray.indexOf(element)] == setTableData(element, typeArray)) {
             tabledata.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
-            tabledata.innerHTML = `${correctguessed[element]} / ${setTableData(element, typeArray)}`;
+            tabledata.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
             monstercount.appendChild(tabledata);
         } else {
             tabledata.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
@@ -135,17 +134,18 @@ window.monsterPressed = function(monster) {
 function createGuessedMonsters(monster) {
     let pickedMonster = monsters.find(mon => mon.name === monster);
     let monsterguess = document.createElement('div');
-    monsterguess.setAttribute('class', 'flex flex-col place-items-center text-center bg-gray-600 rounded-lg w-32 h-40');
+    monsterguess.setAttribute('class', 'flex flex-col place-items-center text-center bg-gray-600 rounded-lg w-40 h-48');
     monsterguess.innerHTML = `
         <img src = "../Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt ="${monster}" class="w-20 h-20 p-1" onerror="this.onerror=null; this.src='../Images/Icons/Default_${pickedMonster.generations}_Icon.webp';" />
         <div class="pt-1">
             <p class="text-gray-300 text-sm">Gen ${pickedMonster.generations}</p>
         </div>
         <div class="text-white pt-1">
-            <h2 class = "text-base">${monster}</h2>
+            <h2 class = "text-lg">${monster}</h2>
+            <p class="text-base">${pickedMonster.class}</p>
         </div>
     `;
-    document.getElementById(`monsters`).appendChild(monsterguess);
+    document.getElementById(`grid`).appendChild(monsterguess);
 }
 
 function updateCorrectguessScore(monster, typeArray) {
