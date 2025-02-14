@@ -6,12 +6,10 @@ let classarray = [];
 let monsters = [];
 let correctguessed = [];
 let guessedMonstrs = [];
-
 let chosenCategory = classarray;
 
 let monstercount = document.getElementById("monstercount");
 let table = document.getElementById("table");
-
 let griddiv = document.getElementById("grid");
 
 fetch("../Data/monsters.json")
@@ -55,6 +53,7 @@ function getMonsterClasses(monsters) {
 } 
 
 function setCorrectGuessed(typeArray) {
+    correctguessed = [];
     typeArray.forEach(element => {
         correctguessed.push(0);
     });
@@ -102,6 +101,11 @@ function updateTableDisplay(typeArray) {
 
     typeArray.forEach(element => {
         let tabledata = document.createElement('td');
+
+        let currenttype = document.createElement('th');
+        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600 w-28 px-2 py-2');
+        currenttype.innerHTML = `${setTableHeader(element, typeArray)}`;
+
         if (correctguessed[typeArray.indexOf(element)] == setTableData(element, typeArray)) {
             tabledata.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
             tabledata.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
@@ -118,6 +122,7 @@ function updateTableDisplay(typeArray) {
 
 window.monsterPressed = function(monster) {
     if (guessedMonstrs.includes(monsters.find(mon => mon.name === monster))) {
+        console.log(`Already Guessed ${monster}`);	
         return;
     } else {
         guessedMonstrs.push(monsters.find(mon => mon.name === monster));
@@ -145,7 +150,7 @@ function createGuessedMonsters(monster) {
             <p class="text-base">${pickedMonster.class}</p>
         </div>
     `;
-    document.getElementById(`grid`).appendChild(monsterguess);
+    griddiv.appendChild(monsterguess);
 }
 
 function updateCorrectguessScore(monster, typeArray) {
@@ -158,4 +163,23 @@ function updateCorrectguessScore(monster, typeArray) {
         console.log(chosenMonster.generations);
         return typeArray.indexOf(chosenMonster.generations) + 1;
     }
+}
+
+window.toggleGameMode = function() {
+    while (griddiv.firstChild) {
+        griddiv.removeChild(griddiv.firstChild);
+    }
+
+    if (chosenCategory == classarray) {
+        chosenCategory = generationArray;
+    } else {
+        chosenCategory = classarray;
+    }
+
+    setCorrectGuessed(chosenCategory);
+
+    guessedMonstrs.forEach(monster => {
+        guessedMonstrs.splice(guessedMonstrs.indexOf(monster), 1);
+        window.monsterPressed(monster.name);
+    });
 }
