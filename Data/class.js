@@ -33,22 +33,22 @@ export class searchBarClass {
 
     shownotFound() {
         this.attachDiv.innerHTML = `
-        <div class="text-black">No Results</div>`
+        <div class="text-black w-80">No Results</div>`
     }
 
     createElement(monster) {
-        const newDiv = document.createElement("div");
-        newDiv.setAttribute("class", "flex py-4 hover:bg-gray-300 hover:rounded-lg");
+        const newDiv = document.createElement("Button");
+        newDiv.setAttribute('onclick', `monsterPressed('${monster.name}')`)
+        newDiv.setAttribute("class", "flex py-4 hover:bg-gray-300 hover:rounded-lg w-80");
         newDiv.innerHTML = `
-            <button onclick="monsterPressed('${monster.name}')">
-                <span class="text-black pl-4">${monster.name}</span>
-                <img
-                    class="max-w-[55px] max-h-[55px] float-left" 
-                    src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
-                    alt="${monster.name}" 
-                    onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';" 
-                />
-            </button>
+            <img
+                class="max-w-[55px] max-h-[55px] float-left" 
+                src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
+                alt="${monster.name}" 
+                onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';" 
+            />
+            <span class="text-black pl-4">${monster.name}</span>
+
         `        
         this.attachDiv.appendChild(newDiv);
     

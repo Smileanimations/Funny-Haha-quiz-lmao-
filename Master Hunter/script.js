@@ -2,13 +2,14 @@ import {searchBarClass} from '../Data/class.js';
 
 let searchBar;
 let generationArray = [];
+let classarray = [];
 let monsters = [];
-let correctguessed = [0, 0, 0, 0, 0];
+let correctguessed = [];
 let guessedMonstrs = [];
+let chosenCategory = generationArray;
 
 let monstercount = document.getElementById("monstercount");
-let generation = document.getElementById("generation");
-
+let table = document.getElementById("table");
 let griddiv = document.getElementById("grid");
 
 fetch("../Data/monsters.json")
@@ -25,69 +26,110 @@ fetch("../Data/monsters.json")
     const searchbarDiv = document.getElementById('search-bar-div');
     const attachDiv = document.getElementById('result');
     searchBar = new searchBarClass(document.getElementById('search-bar'), searchbarDiv, attachDiv, monsters);
-
-    setgenerationDisplay(generation, generationArray, monstercount);
+    getGenerationsCount(monsters);
+    getMonsterClasses(monsters);
+    setTableDisplay(table, chosenCategory, monstercount);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
 });
 
-function getMonsterCount(monsters, generation) {
-    const filteredmonster = monsters.filter(monster => monster.generations === generation);
-    return filteredmonster.length;
-}
-
-
-function setgenerationDisplay(generation, generationArray, monstercount) {
+function getGenerationsCount(monsters) {
     for (let i = 1; i <= 5; i++) {
-        
-        let currentgen = document.createElement('th');
-        currentgen.setAttribute('class', 'bg-gray-700 border border-gray-600');
-        currentgen.innerHTML = `${i}`;
-        
-        generation.appendChild(currentgen);
-
-        generationArray.push(getMonsterCount(monsters, i));
-
-        let generationcount = document.createElement('td');
-        generationcount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
-        generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-
-        monstercount.appendChild(generationcount);
+        generationArray.push(monsters.filter(monster => monster.generations === i).length);
     }
-    console.log(generationArray);
 }
 
-function updategenerationDisplay() {
+function getMonsterClasses(monsters) {
+    monsters.forEach(monster => {
+        if (!classarray.includes(monster.class)) {
+            classarray.push(monster.class)
+            classarray[monster.class] = 1;
+        } else {
+            classarray[monster.class]++;
+        }
+    });
+    classarray.sort();
+} 
 
+function setCorrectGuessed(typeArray) {
+    correctguessed = [];
+    typeArray.forEach(element => {
+        correctguessed.push(0);
+    });
+    console.log(correctguessed);
+}
+
+function setTableHeader(element, typeArray) {
+    if (!Number(element)) {
+        return element;
+    } else {
+        return `${typeArray.indexOf(element) + 1}`;
+    }
+}
+
+function setTableData(element, typeArray) {
+    if (!Number(element)) {
+        return `${classarray[element]}`;
+    } else {
+        return `${generationArray[typeArray.indexOf(element)]}`;
+    }
+}
+
+function setTableDisplay(table, typeArray, monstercount) {
+    setCorrectGuessed(typeArray);
+    typeArray.forEach(element => {
+        let currenttype = document.createElement('th');
+        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600 w-28 px-2 py-2');
+        currenttype.innerHTML = `${setTableHeader(element, typeArray)}`;
+        
+        table.appendChild(currenttype);
+
+        let typecount = document.createElement('td');
+        typecount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
+        typecount.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
+
+        monstercount.appendChild(typecount);
+    })
+}
+
+function updateTableDisplay(typeArray) {
     while (monstercount.firstChild) {
         monstercount.removeChild(monstercount.firstChild);
+        table.removeChild(table.firstChild);
     }
 
-    for (let i = 1; i <= 5; i++) {
-        if (correctguessed[i - 1] === generationArray[i - 1]) {
-            let generationcount = document.createElement('td');
-            generationcount.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
-            generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-            monstercount.appendChild(generationcount);
+    typeArray.forEach(element => {
+        let tabledata = document.createElement('td');
+
+        let currenttype = document.createElement('th');
+        currenttype.setAttribute('class', 'bg-gray-700 border border-gray-600 w-28 px-2 py-2');
+        currenttype.innerHTML = `${setTableHeader(element, typeArray)}`;
+        table.appendChild(currenttype);
+
+        if (correctguessed[typeArray.indexOf(element)] == setTableData(element, typeArray)) {
+            tabledata.setAttribute('class', 'bg-green-500 border border-green-700 text-white px-4 py-2');
+            tabledata.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
+            monstercount.appendChild(tabledata);
         } else {
-            let generationcount = document.createElement('td');
-            generationcount.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
-            generationcount.innerHTML = `${correctguessed[i - 1]}/${generationArray[i - 1]}`;
-            monstercount.appendChild(generationcount);
+            tabledata.setAttribute('class', 'bg-gray-700 border border-gray-600 text-white px-4 py-2');
+            tabledata.innerHTML = `${correctguessed[typeArray.indexOf(element)]} / ${setTableData(element, typeArray)}`;
+            monstercount.appendChild(tabledata);
         }
-    }
+    })
 
     console.log(correctguessed);
 }
 
 window.monsterPressed = function(monster) {
     if (guessedMonstrs.includes(monsters.find(mon => mon.name === monster))) {
+        console.log(`Already Guessed ${monster}`);	
         return;
     } else {
         guessedMonstrs.push(monsters.find(mon => mon.name === monster));
-        correctguessed[monsters.find(mon => mon.name === monster).generations - 1]++;
-        updategenerationDisplay();
+        correctguessed[updateCorrectguessScore(monster, chosenCategory)]++;
+        console.log(correctguessed);
+        updateTableDisplay(chosenCategory);
     }
     searchBar.searchBar.value = "";
     searchBar.removeResults();
@@ -97,17 +139,48 @@ window.monsterPressed = function(monster) {
 
 function createGuessedMonsters(monster) {
     let pickedMonster = monsters.find(mon => mon.name === monster);
-    let guessdiv = document.createElement('div');
-    guessdiv.setAttribute('class', 'flex flex-col place-items-center text-center bg-gray-600 rounded-lg w-40 h-48');
-    guessdiv.innerHTML = `
+    let monsterguess = document.createElement('div');
+    monsterguess.setAttribute('class', 'flex flex-col place-items-center text-center bg-gray-600 rounded-lg w-40 h-48');
+    monsterguess.innerHTML = `
         <img src = "../Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt ="${monster}" class="w-20 h-20 p-1" onerror="this.onerror=null; this.src='../Images/Icons/Default_${pickedMonster.generations}_Icon.webp';" />
         <div class="pt-1">
             <p class="text-gray-300 text-sm">Gen ${pickedMonster.generations}</p>
         </div>
         <div class="text-white pt-1">
-            <h2 class = "text-xl">${monster}</h2>
-            <h4 class = "text-base">${pickedMonster.class}</h3>
+            <h2 class = "text-lg">${monster}</h2>
+            <p class="text-base">${pickedMonster.class}</p>
         </div>
     `;
-    griddiv.appendChild(guessdiv);
+    griddiv.appendChild(monsterguess);
+}
+
+function updateCorrectguessScore(monster, typeArray) {
+    let chosenMonster = monsters.find(mon => mon.name === monster);
+    if (!chosenMonster) {
+        console.error(`Monster not found: ${monster}`);
+        return -1;
+    }
+
+    if (typeArray == classarray) { 
+        return typeArray.indexOf(chosenMonster.class);
+    } else {
+        console.log(chosenMonster.generations);
+        return chosenMonster.generations - 1;
+    }
+}
+
+window.toggleGameMode = function() {
+    if (chosenCategory == classarray) {
+        chosenCategory = generationArray;
+    } else {
+        chosenCategory = classarray;
+    }
+
+    setCorrectGuessed(chosenCategory);
+
+    guessedMonstrs.forEach(monster => {
+        correctguessed[updateCorrectguessScore(monster.name, chosenCategory)]++;
+    });
+    
+    updateTableDisplay(chosenCategory);
 }
