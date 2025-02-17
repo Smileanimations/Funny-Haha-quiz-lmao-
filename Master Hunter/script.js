@@ -7,6 +7,7 @@ let monsters = [];
 let correctguessed = [];
 let guessedMonstrs = [];
 let chosenCategory = generationArray;
+let sortnumber = 0;
 
 let monstercount = document.getElementById("monstercount");
 let table = document.getElementById("table");
@@ -183,4 +184,43 @@ window.toggleGameMode = function() {
     });
     
     updateTableDisplay(chosenCategory);
+}
+
+window.sortArray = function() {
+    switch (sortnumber) {
+        case 1:
+            guessedMonstrs.sort((a, b) => a.name.localeCompare(b.name));
+            guessedMonstrs.sort((a, b) => a.class.localeCompare(b.class));
+            break;
+        case 2:
+            guessedMonstrs.sort((a, b) => a.name.localeCompare(b.name));
+            guessedMonstrs.sort((a, b) => a.generations - b.generations);
+            break;
+        default:
+            guessedMonstrs.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+    }
+    console.log(sortnumber);
+
+    guessedMonstrs.sort();
+    while (griddiv.firstChild) {
+        griddiv.removeChild(griddiv.firstChild);
+    }
+
+    guessedMonstrs.forEach(monster => {
+        createGuessedMonsters(monster.name);
+    });
+
+    if (sortnumber >= 2) {
+        sortnumber = 0;
+    } else {
+        sortnumber++;
+    }
+}
+
+window.fillresults = function() {
+    for (let i = 0; i < 230; i++) {
+        let randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
+        monsterPressed(randomMonster.name);
+    }
 }
