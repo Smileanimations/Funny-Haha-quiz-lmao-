@@ -219,7 +219,7 @@ window.sortArray = function() {
 }
 
 window.fillresults = function() {
-    for (let i = 0; i < 230; i++) {
+    for (let i = 0; i < 200; i++) {
         let randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
         monsterPressed(randomMonster.name);
     }
