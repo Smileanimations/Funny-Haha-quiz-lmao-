@@ -1,5 +1,5 @@
 import { searchBarClass } from "./Modules/Search Bar/class.js";
-import { filterContainerClass  } from "./Modules/Filter/class.js";
+import { FilterContainerClass  } from "./Modules/Filter/class.js";
 
 let searchbar;
 let randomMonster;
@@ -39,8 +39,6 @@ fetch("./Data/monsters.json")
     searchbarDiv = document.getElementById("search-bar-div");
     // Imports the searchBarClass from the class.js file and creates a new instance of it.
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-    // Imports the filterContainerClass from the class.js file and creates a new instance of it.
-    new filterContainerClass(document.getElementById("filter"), monsters);
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -217,3 +215,10 @@ function victoryScreen(monster, backgroundColor) {
 window.removevictoryScreen = function() {
     victoryDiv.remove();
 }
+
+window.instanceFilterMenu = function() {
+    // Imports the filterContainerClass from the class.js file and creates a new instance of it.
+    let filterclass = new FilterContainerClass(monsters);
+    document.getElementById("mainscreen").appendChild(filterclass.filterContainer);
+    console.log("Container Created");
+}  
