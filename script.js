@@ -1,4 +1,4 @@
-import { searchBarClass } from "./Data/class.js";
+import { searchBarClass } from "./Modules/Search Bar/class.js";
 
 let searchbar;
 let randomMonster;
