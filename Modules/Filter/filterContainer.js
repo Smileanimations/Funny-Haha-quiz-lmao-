@@ -1,6 +1,0 @@
-class filterContainer {
-    constructor() {
-        
-    }
-
-}
