@@ -3,11 +3,6 @@
 ## About the Project
 This is a small on-going project i am working mostly because i am very bored, but also because I love Monster Hunter!!!Most of the website is inspired by [Monkepo](https://monkepo.online/), and you will notice many similarities. I will most likely work on this project on and off. maybe one day i'll host this website when i know more about web development and hosting. currently this is mostly something to learn Javascript. and if you take a gander, you'll see that its mostly just raw JS (because i am simply quirky like that). 
 
-## Technologies Used
-- **HTML**: For structuring the web pages.
-- **TailwindCSS**: For fast and responsive styling.
-- **JavaScript**: Basically the entire reason i started this project.
-
 ## Monstie Guesser
 When you load/refresh the page a random monster is chosen and you can start guessing! Simply type in your guess and use the information given to guess the chosen monster. You have an unlimited amount of attempts and can give up any time. 
 
