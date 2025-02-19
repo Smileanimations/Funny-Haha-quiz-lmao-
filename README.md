@@ -17,6 +17,7 @@ When you load/refresh the page a random monster is chosen and you can start gues
 
    ### What does Yellow mean?
    A hint will mostly show up green or red, indicating correct or incorrect, but there are cases where it will appear yellow (mostly in element or ailment cases) this means that your guess is partially correct. So if you pick a monster with multiple elements for example and it turns yellow it means that either one of them can be correct. Or you pick a monster with one element and it turns yellow it means the random monster includes that element. 
+   
    Another rare case is when you have everything correct except it doesn't show you the result. This is indicated with a yellow line under the monster's name and means that you indeed have all the hints correct but not the right monster. For example, Rathian and Rathalos practically have the same hints but are not the same monster.
 
 ## Master Hunter
