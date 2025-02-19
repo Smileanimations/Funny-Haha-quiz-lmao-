@@ -160,7 +160,7 @@ window.monsterPressed = function(monster) {
         "flex items-center bg-gray-600 p-4 rounded-lg w-full");
     guessElement.innerHTML = `
         <div class="w-20 h-20 object-cover">
-            <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
+            <img src="./Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
         </div>
 
         <div>
@@ -197,7 +197,7 @@ function victoryScreen(monster, backgroundColor) {
         <div class="rounded-3xl bg-white w-[800px] h-[600px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
-                <img class="size-64 object-contain mt-12" src="/Images/Renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';"></img>
+                <img class="size-64 object-contain mt-12" src="./Images/Renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';"></img>
                 <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
                 <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
             </div>
