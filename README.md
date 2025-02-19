@@ -1,7 +1,7 @@
 # Monster Hunter Guessing Game
 
 ## About the Project
-This is a small on-going project i am working mostly because i am very bored, but also because I love Monster Hunter!!!Most of the website is inspired by [Monkepo](https://monkepo.online/), and you will notice many similarities. I will most likely work on this project on and off. maybe one day i'll host this website when i know more about web development and hosting. currently this is mostly something to learn Javascript. and if you take a gander, you'll see that its mostly just raw JS (because i am simply quirky like that). 
+This is a small on-going project i am working mostly because i am very bored, but also because I love Monster Hunter!!! Most of the website is inspired by [Monkepo](https://monkepo.online/), and you will notice many similarities. I will most likely work on this project on and off. maybe one day i'll host this website when i know more about web development and hosting. currently this is mostly something to learn Javascript. and if you take a gander, you'll see that its mostly just raw JS (because i am simply quirky like that). 
 
 ## Monstie Guesser
 When you load/refresh the page a random monster is chosen and you can start guessing! Simply type in your guess and use the information given to guess the chosen monster. You have an unlimited amount of attempts and can give up any time. 
@@ -17,7 +17,7 @@ When you load/refresh the page a random monster is chosen and you can start gues
 
    ### What does Yellow mean?
    A hint will mostly show up green or red, indicating correct or incorrect, but there are cases where it will appear yellow (mostly in element or ailment cases) this means that your guess is partially correct. So if you pick a monster with multiple elements for example and it turns yellow it means that either one of them can be correct. Or you pick a monster with one element and it turns yellow it means the random monster includes that element. 
-   
+
    Another rare case is when you have everything correct except it doesn't show you the result. This is indicated with a yellow line under the monster's name and means that you indeed have all the hints correct but not the right monster. For example, Rathian and Rathalos practically have the same hints but are not the same monster.
 
 ## Master Hunter
