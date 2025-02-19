@@ -1,15 +1,13 @@
-export class filterContainerClass {
-    constructor(attachdiv, monsters) {
+export class FilterContainerClass {
+    constructor(monsters) {
         this.monsters = monsters;
         this.filterContainer = document.createElement("div");
 
-        
-        buildContainer(attachdiv, this.filterContainer);
+        this.buildContainer(this.filterContainer);
     }
 
 
-    buildContainer(attachdiv, filterContainer) {
-        filterContainer.setAttribute("class", "flex flex-col w-80 h-80 bg-white rounded-lg shadow-md z-100");
-        attachdiv.appendChild(filterContainer);
+    buildContainer(filterContainer) {
+        filterContainer.setAttribute("class", "absolute left-0 flex flex-wrap justify-start items-center bg-white w-1/4 h-500px");
     }
 }
