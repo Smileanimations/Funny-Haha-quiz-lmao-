@@ -2,12 +2,14 @@ import { searchBarClass } from "./Modules/Search Bar/class.js";
 import { FilterContainerClass  } from "./Modules/Filter/class.js";
 
 let searchbar;
+let filterclass;
 let randomMonster;
 let monsters = [];
 let attempts = 0;
 let victoryDiv;
 let backgroundColor = "green";
 
+let body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
 
 let attachDiv;
@@ -20,6 +22,11 @@ const guessDivBackground = document.getElementById("guessbackground")
 let attemptsElement = document.getElementById("attempts");
 
 guessDivBackground.style.visibility = "hidden";
+
+// Imports the filterContainerClass from the class.js file and creates a new instance of it.
+filterclass = new FilterContainerClass(monsters);
+const filterContainer = filterclass.buildContainer();
+body.appendChild(filterContainer);
 
 // Fetch the JSON file
 fetch("./Data/monsters.json")
@@ -217,8 +224,5 @@ window.removevictoryScreen = function() {
 }
 
 window.instanceFilterMenu = function() {
-    // Imports the filterContainerClass from the class.js file and creates a new instance of it.
-    let filterclass = new FilterContainerClass(monsters);
-    document.getElementById("mainscreen").appendChild(filterclass.filterContainer);
-    console.log("Container Created");
+    filterclass.setGenerationFilter(monsters);
 }  
