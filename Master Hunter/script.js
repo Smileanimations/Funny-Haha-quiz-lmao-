@@ -1,4 +1,4 @@
-import {searchBarClass} from '../Data/class.js';
+import { searchBarClass } from '../Modules/Search Bar/class.js';
 
 let searchBar;
 let generationArray = [];
@@ -36,13 +36,7 @@ fetch("../Data/monsters.json")
 });
 
 function getGenerationsCount(monsters) {
-    let maxGenerations = Math.max(
-        ...monsters
-            .map(monster => monster.generations)
-    );
-    console.log(maxGenerations)
-
-    for (let i = 1; i <= maxGenerations; i++) {
+    for (let i = 1; i <= 5; i++) {
         generationArray.push(monsters.filter(monster => monster.generations === i).length);
     }
 }
@@ -225,7 +219,7 @@ window.sortArray = function() {
 }
 
 window.fillresults = function() {
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 230; i++) {
         let randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
         monsterPressed(randomMonster.name);
     }
