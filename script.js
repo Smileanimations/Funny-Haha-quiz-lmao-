@@ -1,12 +1,16 @@
-import { searchBarClass } from "./Data/class.js";
+import { searchBarClass } from "./Modules/Search Bar/class.js";
+import { FilterContainerClass } from "./Modules/Filter/class.js";
 
 let searchbar;
+let filterclass;
+let filterContainer;
 let randomMonster;
 let monsters = [];
 let attempts = 0;
 let victoryDiv;
 let backgroundColor = "green";
 
+const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
 
 let attachDiv;
@@ -38,6 +42,8 @@ fetch("./Data/monsters.json")
     searchbarDiv = document.getElementById("search-bar-div");
     // Imports the searchBarClass from the class.js file and creates a new instance of it.
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
+
+    createFilter();
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -213,4 +219,22 @@ function victoryScreen(monster, backgroundColor) {
 // Function that removes the victory screen.	
 window.removevictoryScreen = function() {
     victoryDiv.remove();
+}
+
+// \/ Everything under this line deals with the filter \/
+
+function createFilter() {
+    // Imports the FilterContainerClass from the class.js file and creates a new instance of it.
+    filterclass = new FilterContainerClass(monsters);
+    filterContainer = filterclass.buildContainer();
+    body.appendChild(filterContainer);
+    filterContainer.style.visibility = "hidden"
+}
+
+window.instanceFilterMenu = function() {
+    filterContainer.style.visibility = "visible";
+}
+
+window.closeFilter = function() {
+    filterContainer.style.visibility = "hidden";
 }
