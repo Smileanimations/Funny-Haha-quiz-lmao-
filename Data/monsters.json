@@ -2043,6 +2043,186 @@
     "species": "Original",
     "element": "Dragon",
     "ailment": "None"
+   },
+   {
+    "id": 228,
+    "name": "Ajarakan",
+    "generations": 6,
+    "class": "Fanged Beast",
+    "species": "Original",
+    "element": "Fire",
+    "ailment": "Blast"
+   },
+   {
+    "id": 229,
+    "name": "Arkveld",
+    "generations": 6,
+    "class": "Flying Wyvern",
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
+   },
+   {
+    "id": 230,
+    "name": "Balahara",
+    "generations": 6,
+    "class": "Leviathan",
+    "species": "Original",
+    "element": "Water",
+    "ailment": "None"
+   },
+   {
+    "id": 231,
+    "name": "Chatacabra",
+    "generations": 6,
+    "class":"Amphibian",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
+   },
+   {
+    "id": 232,
+    "generations": 6,
+    "name": "Doshaguma",
+    "class": "Fanged Beast",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
+   },
+   {
+    "id": 233,
+    "generations": 6,
+    "name": "Guardian Arkveld",
+    "class": "Construct",
+    "species": "Original",
+    "element": "Dragon",
+    "ailment": "None"
+   },
+   {
+    "id":234,
+    "generations":6,
+    "name": "Guardian Doshaguma",
+    "class": "Construct",
+    "species": "Original",
+    "element": "None",
+    "ailment": "None"
+   },
+   {
+    "id":235,
+    "generations":6,
+    "name": "Guardian Ebony Odogaron",
+    "class": "Construct",
+    "species": "Subspecies",
+    "element": "Dragon",
+    "ailment": "Bleed"
+   },
+   {
+    "id": 236,
+    "generations":6,
+    "name": "Guardian Fulgur Anjanath",
+    "class": "Construct",
+    "species":"Subspecies",
+    "element":"Thunder",
+    "ailment":"None"
+   },
+   {
+    "id":237,
+    "generations":6,
+    "name":"Guardian Rathalos",
+    "class":"Construct",
+    "species":"Original",
+    "element":"Fire",
+    "ailment":"Poison"
+   },
+   {
+    "id":238,
+    "generations":6,
+    "name":"Hirabami",
+    "class":"Leviathan",
+    "species":"Original",
+    "element":"Ice",
+    "ailment":"Frostblight"
+   },
+   {
+    "id":239,
+    "generations":6,
+    "name":"Jin Dahaad",
+    "class":"Leviathan",
+    "species":"Original",
+    "element":"Ice",
+    "ailment":"Frostblight"
+   },
+   {
+    "id":240,
+    "generations":6,
+    "name":"Lala Barina",
+    "class":"Temnoceran",
+    "species":"Original",
+    "element":"None",
+    "ailment":"Paralysis"
+   },
+   {
+    "id":241,
+    "generations":6,
+    "name":"Nu Udra",
+    "class":"Cephalopod",
+    "species":"Original",
+    "element":"Fire",
+    "ailment":"None"
+   },
+   {
+    "id":242,
+    "generations":6,
+    "name":"Quematrice",
+    "class":"Brute Wyvern",
+    "species":"Original",
+    "element":"Fire",
+    "ailment":"None"
+   },
+   {
+    "id":243,
+    "generations":6,
+    "name":"Rey Dau",
+    "class":"Flying Wyvern",
+    "species":"Original",
+    "element":"Thunder",
+    "ailment":"None"
+   },
+   {
+    "id":244,
+    "generations":6,
+    "name":"Rompopolo",
+    "class":"Brute Wyvern",
+    "species":"Original",
+    "element":"None",
+    "ailment":"Poison"
+   },
+   {
+    "id":245,
+    "generations":6,
+    "name":"Uth Duna",
+    "class":"Leviathan",
+    "species":"Original",
+    "element":"Water",
+    "ailment":"None"
+   },
+   {
+    "id":246,
+    "generations":6,
+    "name":"Xu Wu",
+    "class":"Cephalopod",
+    "species":"Original",
+    "element":"None",
+    "ailment":"None"
+   },
+   {
+    "id":247,
+    "generations":6,
+    "name":"Zoh Shia",
+    "class":"Construct",
+    "species":"Original",
+    "element":"Fire, Dragon",
+    "ailment":"None"
    }
   ]
   }
