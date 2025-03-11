@@ -43,7 +43,7 @@ export class searchBarClass {
         newDiv.innerHTML = `
             <img
                 class="max-w-[55px] max-h-[55px] float-left" 
-                src="./Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
+                src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
                 alt="${monster.name}" 
                 onerror="this.onerror=null; this.src='/Images/Icons/Default_${monster.generations}_Icon.webp';" 
             />
