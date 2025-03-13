@@ -32,8 +32,6 @@ export class FilterContainerClass {
         this.setElementFilter(this.monsters);
         this.setAilmentFilter(this.monsters);
 
-        this.checkboxValues(this.checkboxes, this.monsters);
-
         this.filterContainer.addEventListener('change', (event) => {
             if (event.target.type === 'checkbox') {
                 this.handleCheckboxChange(event.target);
@@ -48,9 +46,25 @@ export class FilterContainerClass {
         console.log(this.checkboxes)
     }
 
+    checkboxValues(checkboxes, monster) {
+        checkboxes.forEach(checkbox => {
+            if (!checkbox.name.includes(monster)) {
+                checkbox.setAttribute("value", "true")
+                checkbox.setAttribute("checked", "true")
+            } else {
+                checkbox.setAttribute("value", "false")
+            }
+        })
+    }
+
     setGenerationFilter(monsters) {
         const itemlist = this.filterContainer.querySelector("#filteritems");
-        const maxGenerations = [...new Set(this.monsters.map(monster => monster.generations))];
+        const maxGenerations = []
+        monsters.forEach(monster => {
+            if (!maxGenerations.includes(monster.generations)) {
+                maxGenerations.push(monster.generations)
+            }
+        })
 
         if (itemlist) {
             this.generationFilter = document.createElement("div");
@@ -65,8 +79,9 @@ export class FilterContainerClass {
                 `;
                 this.generationFilter.appendChild(generationitem);
                 this.checkboxes.set(`${generation}`, generationitem.querySelector('input'));
+                this.checkboxValues(this.checkboxes, maxGenerations)
             });
-
+            
             itemlist.appendChild(this.generationFilter);
         } else {
             console.log("Failed to create Generation Filter")
@@ -92,13 +107,15 @@ export class FilterContainerClass {
             <div class="grid grid-cols-4" id="grid"></div>
             `
             maxSpecies.forEach(species => {
-                let speciesfilter = document.createElement("div")
-                speciesfilter.setAttribute("class", "flex items-center")
-                speciesfilter.innerHTML = ` 
-                <input type="checkbox" class="flex mr-2" id="${species}" name="${species}" value="${species}" checked>
+                let speciesitem = document.createElement("div")
+                speciesitem.setAttribute("class", "flex items-center")
+                speciesitem.innerHTML = ` 
+                <input type="checkbox" class="flex mr-2" id="${species}" name="${species}" value="${species}">
                 <label for="${species}">${species}</label>
                 `;
-                this.speciesFilter.querySelector("#grid").appendChild(speciesfilter);
+                this.speciesFilter.querySelector("#grid").appendChild(speciesitem);
+                this.checkboxes.set(`${species}`, speciesitem.querySelector('input'));
+                this.checkboxValues(this.checkboxes, maxSpecies)
             });
             itemlist.appendChild(this.speciesFilter);
         }
@@ -125,10 +142,12 @@ export class FilterContainerClass {
                 let classitem = document.createElement("div")
                 classitem.setAttribute("class", "flex items-center")
                 classitem.innerHTML = ` 
-                <input type="checkbox" class="flex mr-2" id="${classes}" name="${classes}" value="${classes}" checked>
+                <input type="checkbox" class="flex mr-2" id="${classes}" name="${classes}" value="${classes}">
                 <label for="${classes}">${classes}</label>
                 `;
                 this.classFilter.querySelector("#grid").appendChild(classitem);
+                this.checkboxes.set(`${classes}`, classitem.querySelector('input'));
+                this.checkboxValues(this.checkboxes, maxClasses)
             });
             itemlist.appendChild(this.classFilter);
         }
@@ -157,10 +176,12 @@ export class FilterContainerClass {
                 let elementitem = document.createElement("div")
                 elementitem.setAttribute("class", "flex items-center")
                 elementitem.innerHTML = ` 
-                <input type="checkbox" class="flex mr-2" id="${element}" name="${element}" value="${element}" checked>
+                <input type="checkbox" class="flex mr-2" id="${element}" name="${element}" value="${element}">
                 <label for="${element}">${element}</label>
                 `;
                 this.elementFilter.querySelector("#grid").appendChild(elementitem);
+                this.checkboxes.set(`${element}`, elementitem.querySelector('input'));
+                this.checkboxValues(this.checkboxes, maxElements)
             });
             itemlist.appendChild(this.elementFilter);
         }
@@ -189,25 +210,16 @@ export class FilterContainerClass {
                 let ailmentitem = document.createElement("div")
                 ailmentitem.setAttribute("class", "flex items-center")
                 ailmentitem.innerHTML = ` 
-                <input type="checkbox" class="flex mr-2" id="${ailment}" name="${ailment}" value="${ailment}" checked>
+                <input type="checkbox" class="flex mr-2" id="${ailment}" name="${ailment}" value="${ailment}">
                 <label for="${ailment}">${ailment}</label>
                 `;
                 this.ailmentFilter.querySelector("#grid").appendChild(ailmentitem);
+                this.checkboxes.set(`${ailment}`, ailmentitem.querySelector('input'));
+                this.checkboxValues(this.checkboxes, maxAilments)
             });
             itemlist.appendChild(this.ailmentFilter);
         }
     }
 
-    checkboxValues(checkboxes, monsters) {
-        monsters.forEach(monster => {
-            checkboxes.forEach(checkbox => {
-                if (checkbox.id == monster.generations) {
-                    checkbox.setAttribute("value", "true")
-                } else {
-                    checkbox.setAttribute("checked", "unchecked")
-                    checkbox.setAttribute("value", "false")
-                }
-            }) 
-        })
-    }
+
 }
