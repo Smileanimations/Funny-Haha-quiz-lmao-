@@ -36,7 +36,6 @@ fetch("./Data/monsters.json")
 .then(data => {
     monsters = data.monsters;
     console.log(monsters);
-    console.log(getRandomMonster(monsters));
 
     attachDiv = document.getElementById("result");
     searchbarDiv = document.getElementById("search-bar-div");
@@ -44,6 +43,7 @@ fetch("./Data/monsters.json")
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
 
     createFilter();
+    resetGame()
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -64,9 +64,13 @@ window.resetGame = function() {
     backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
-    getRandomMonster(monsters);
+    let filteredmonsters = filterclass.filterMonsters(monsters)
+    console.log(filteredmonsters)
+    getRandomMonster(filteredmonsters);
     removevictoryScreen();
-    searchbar.searchBar.disabled = false;
+    if (searchbar) {
+        searchbar.searchBar.disabled = false;
+    }
     attempts = 0;
     attemptsElement.innerHTML = 'Attempts:'
 }
@@ -218,7 +222,9 @@ function victoryScreen(monster, backgroundColor) {
 
 // Function that removes the victory screen.	
 window.removevictoryScreen = function() {
-    victoryDiv.remove();
+    if (victoryDiv) {
+        victoryDiv.remove();
+    }
 }
 
 // \/ Everything under this line deals with the filter \/
@@ -237,4 +243,9 @@ window.instanceFilterMenu = function() {
 
 window.closeFilter = function() {
     filterContainer.style.visibility = "hidden";
+}
+
+window.saveChanges = function() {
+    resetGame()
+    filterclass.disableSaveButton()
 }

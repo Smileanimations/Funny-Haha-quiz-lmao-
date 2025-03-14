@@ -2,14 +2,10 @@ export class FilterContainerClass {
     constructor(monsters) {
         this.monsters = monsters;
         this.filterContainer;
-        this.generationFilter;
-        this.classFilter;
-        this.elementFilter;
-        this.ailmentFilter;
-        this.speciesFilter;
         this.itemlist;
         this.monsterKeys = [];
         this.checkboxes = new Map();
+        this.values = [];
 
         this.monsters.forEach((monster) => {
             Object.keys(monster).forEach(key => {
@@ -21,14 +17,14 @@ export class FilterContainerClass {
 
     buildContainer() {
         this.filterContainer = document.createElement("div");
-        this.filterContainer.setAttribute("class", "fixed inset-y-0 flex items-start h-screen w-1/3 z-20 overflow-auto");
+        this.filterContainer.setAttribute("class", "fixed bg-white inset-y-0 flex items-start h-screen w-1/3 z-20 overflow-auto");
         this.filterContainer.innerHTML = `
-            <div class="bg-white p-6 rounded-lg shadow-lg h-full w-full">
+            <div class="p-6 rounded-lg h-full w-full">
                 <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
                 <div id="filteritems"></div>
                 <div>
-                    <button onclick="closeFilter()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
-                    <button class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" disabled>Save Changes</button>
+                    <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded">Close</button>
+                    <button onclick="saveChanges()" class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" id="savebutton" disabled>Save Changes</button>
                 </div>
             </div> 
         `;
@@ -44,14 +40,35 @@ export class FilterContainerClass {
         return this.filterContainer;
     }
 
-    handleCheckboxChange(checkbox) {
-        console.log(`Checkbox ${checkbox.name} changed to ${checkbox.checked}`);
-        console.log(this.checkboxes)
+    enableSaveButton() {
+        const savebutton = document.getElementById("savebutton")
+        savebutton.setAttribute("class", "mt-4 border-2 border-green-500 text-white bg-green-500 px-4 py-2 rounded")
+        savebutton.disabled = false
     }
 
-    checkboxValues(checkboxes, monster) {
+    disableSaveButton() {
+        const savebutton = document.getElementById("savebutton")
+        savebutton.setAttribute("class", "mt-4 text-black border-2 border-green-500 px-4 py-2 rounded")
+        savebutton.disabled = true
+    }
+    
+    handleCheckboxChange(checkbox) {
+        console.log(`Checkbox ${checkbox.name} changed to ${checkbox.checked}`);
+        if (this.values.includes(checkbox)) {
+            const existingCheckbox = this.values.find(cb => cb.name === checkbox.name);
+            if (existingCheckbox) {
+                existingCheckbox.setAttribute("value", checkbox.checked);
+            }
+        } else {
+            checkbox.setAttribute("value", checkbox.checked)
+            this.values.push(checkbox)
+        }
+        this.enableSaveButton()
+    }
+
+    checkboxValues(checkboxes, items) {
         checkboxes.forEach(checkbox => {
-            if (!checkbox.name.includes(monster)) {
+            if (!checkbox.id.includes(items)) {
                 checkbox.setAttribute("value", "true")
                 checkbox.setAttribute("checked", "true")
             } else {
@@ -60,15 +77,36 @@ export class FilterContainerClass {
         })
     }
 
+    filterMonsters(monsters) {
+        let removedmonsters = []
+        let filteredmonsters = []
+        this.values.forEach(checkbox => {
+            monsters.forEach(monster => {
+                Object.keys(monster).forEach(key => {
+                    if (key !== 'id' && key !== 'name'){
+                        if (checkbox.checked == false) {
+                            if (monster[key].toString().split(", ").includes(checkbox.id)) {
+                                if (!removedmonsters.includes(monster)) {
+                                    removedmonsters.push(monster)
+                                }
+                            }
+                        }
+                    }
+                })
+            })
+        })
+        filteredmonsters = monsters.filter(monster => !removedmonsters.includes(monster));
+        return filteredmonsters
+    }
+
     setFilter(monsters, keyarray) {
         keyarray.forEach(key => {
             if (key !== 'id' && key !== 'name') {
                 const itemlist = this.filterContainer.querySelector("#filteritems");
                 let maxItems = [];
-                
+
                 monsters.forEach(monster => {
                     const items = monster[key].toString().split(", ")
-                    console.log(items)
                     items.forEach(item => {
                         if (!maxItems.includes(item)) {
                             maxItems.push(item);
