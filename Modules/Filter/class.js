@@ -21,7 +21,7 @@ export class FilterContainerClass {
 
     buildContainer() {
         this.filterContainer = document.createElement("div");
-        this.filterContainer.setAttribute("class", "fixed inset-y-0 flex items-start h-screen w-1/4 z-20");
+        this.filterContainer.setAttribute("class", "fixed inset-y-0 flex items-start h-screen w-1/3 z-20 overflow-auto");
         this.filterContainer.innerHTML = `
             <div class="bg-white p-6 rounded-lg shadow-lg h-full w-full">
                 <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
