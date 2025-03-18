@@ -1,12 +1,16 @@
-import { searchBarClass } from "./Data/class.js";
+import { searchBarClass } from "./Modules/Search Bar/class.js";
+import { FilterContainerClass } from "./Modules/Filter/class.js";
 
 let searchbar;
+let filterclass;
+let filterContainer;
 let randomMonster;
 let monsters = [];
 let attempts = 0;
 let victoryDiv;
 let backgroundColor = "green";
 
+const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
 
 let attachDiv;
@@ -31,13 +35,14 @@ fetch("./Data/monsters.json")
 })
 .then(data => {
     monsters = data.monsters;
-    console.log(monsters);
-    console.log(getRandomMonster(monsters));
-
+    createFilter();
     attachDiv = document.getElementById("result");
     searchbarDiv = document.getElementById("search-bar-div");
     // Imports the searchBarClass from the class.js file and creates a new instance of it.
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
+    monsters = filterclass.filterMonsters(data.monsters);
+    console.log(monsters);
+    resetGame(monsters)
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -45,7 +50,10 @@ fetch("./Data/monsters.json")
 
 // Function that gets a random monster from the monsters array.
 function getRandomMonster(monsters) {
-    randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    let filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
+    console.log(filteredmonsters);
+    randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
+    console.log(randomMonster);
     return randomMonster;
 }
 
@@ -60,7 +68,9 @@ window.resetGame = function() {
     guessDivBackground.style.visibility = "hidden";
     getRandomMonster(monsters);
     removevictoryScreen();
-    searchbar.searchBar.disabled = false;
+    if (searchbar) {
+        searchbar.searchBar.disabled = false;
+    }
     attempts = 0;
     attemptsElement.innerHTML = 'Attempts:'
 }
@@ -212,5 +222,30 @@ function victoryScreen(monster, backgroundColor) {
 
 // Function that removes the victory screen.	
 window.removevictoryScreen = function() {
-    victoryDiv.remove();
+    if (victoryDiv) {
+        victoryDiv.remove();
+    }
+}
+
+// \/ Everything under this line deals with the filter \/
+
+function createFilter() {
+    // Imports the FilterContainerClass from the class.js file and creates a new instance of it.
+    filterclass = new FilterContainerClass(monsters);
+    filterContainer = filterclass.buildContainer();
+    body.appendChild(filterContainer);
+    filterContainer.style.visibility = "hidden"
+}
+
+window.instanceFilterMenu = function() {
+    filterContainer.style.visibility = "visible";
+}
+
+window.closeFilter = function() {
+    filterContainer.style.visibility = "hidden";
+}
+
+window.saveChanges = function() {
+    resetGame();
+    filterclass.disableSaveButton()
 }
