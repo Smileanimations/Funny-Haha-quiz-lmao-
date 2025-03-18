@@ -35,15 +35,14 @@ fetch("./Data/monsters.json")
 })
 .then(data => {
     monsters = data.monsters;
-    console.log(monsters);
-
+    createFilter();
     attachDiv = document.getElementById("result");
     searchbarDiv = document.getElementById("search-bar-div");
     // Imports the searchBarClass from the class.js file and creates a new instance of it.
     searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-
-    createFilter();
-    resetGame()
+    monsters = filterclass.filterMonsters(data.monsters);
+    console.log(monsters);
+    resetGame(monsters)
 })
 .catch(error => {
     console.error("Error fetching the JSON file:", error);
@@ -51,7 +50,10 @@ fetch("./Data/monsters.json")
 
 // Function that gets a random monster from the monsters array.
 function getRandomMonster(monsters) {
-    randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    let filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
+    console.log(filteredmonsters);
+    randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
+    console.log(randomMonster);
     return randomMonster;
 }
 
@@ -64,9 +66,7 @@ window.resetGame = function() {
     backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
-    let filteredmonsters = filterclass.filterMonsters(monsters)
-    console.log(filteredmonsters)
-    getRandomMonster(filteredmonsters);
+    getRandomMonster(monsters);
     removevictoryScreen();
     if (searchbar) {
         searchbar.searchBar.disabled = false;
@@ -246,6 +246,6 @@ window.closeFilter = function() {
 }
 
 window.saveChanges = function() {
-    resetGame()
+    resetGame();
     filterclass.disableSaveButton()
 }

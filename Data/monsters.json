@@ -7,7 +7,7 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 2,
@@ -33,8 +33,8 @@
     "generations": 1,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 5,
@@ -52,7 +52,7 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 7,
@@ -78,8 +78,8 @@
     "generations": 1,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 10,
@@ -88,7 +88,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 11,
@@ -96,7 +96,7 @@
     "generations": 1,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -132,7 +132,7 @@
     "generations": 1,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -141,7 +141,7 @@
     "generations": 1,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -168,8 +168,8 @@
     "generations": 1,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 20,
@@ -177,8 +177,8 @@
     "generations": 1,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 21,
@@ -204,7 +204,7 @@
     "generations": 1,
     "class": "Bird Wyvern",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -258,8 +258,8 @@
     "generations": 1,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 30,
@@ -267,8 +267,8 @@
     "generations": 1,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 31,
@@ -277,7 +277,7 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 32,
@@ -303,8 +303,8 @@
     "generations": 2,
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 35,
@@ -312,7 +312,7 @@
     "generations": 2,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -321,7 +321,7 @@
     "generations": 2,
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Soiled"
    },
    {
@@ -330,8 +330,8 @@
     "generations": 2,
     "class": "Fanged Beast",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 38,
@@ -340,7 +340,7 @@
     "class": "Carapaceon",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 39,
@@ -348,7 +348,7 @@
     "generations": 2,
     "class": "Fanged Beast",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Soiled"
    },
    {
@@ -358,7 +358,7 @@
     "class": "Fanged Beast",
     "species": "Variant",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 41,
@@ -375,7 +375,7 @@
     "generations": 2,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep"
    },
    {
@@ -385,7 +385,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 44,
@@ -394,7 +394,7 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 45,
@@ -403,7 +403,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 46,
@@ -411,8 +411,8 @@
     "generations": 2,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 47,
@@ -421,7 +421,7 @@
     "class": "Carapaceon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 48,
@@ -430,7 +430,7 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 49,
@@ -439,7 +439,7 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
     
    },
    {
@@ -448,8 +448,8 @@
     "generations": 2,
     "class": "Carapaceon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 51,
@@ -476,7 +476,7 @@
     "class": "Carapaceon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 54,
@@ -484,8 +484,8 @@
     "generations": 2,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 55,
@@ -502,7 +502,7 @@
     "generations": 2,
     "class": "Neopteron",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis, Defense Down"
    },
    {
@@ -512,7 +512,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Thunder, Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 58,
@@ -521,7 +521,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 59,
@@ -539,7 +539,7 @@
     "class": "Leviathan",
     "species": "Rare Species",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 61,
@@ -548,7 +548,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 62,
@@ -557,7 +557,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon, Fire, Ice, Thunder, Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 63,
@@ -566,7 +566,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 64,
@@ -574,8 +574,8 @@
     "generations": 3,
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 65,
@@ -619,8 +619,8 @@
     "generations": 3,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 70,
@@ -629,7 +629,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 71,
@@ -638,7 +638,7 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 72,
@@ -656,7 +656,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 74,
@@ -664,8 +664,8 @@
     "generations": 3,
     "class": "Brute Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 75,
@@ -673,7 +673,7 @@
     "generations": 3,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -683,7 +683,7 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Ice, Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 77,
@@ -691,7 +691,7 @@
     "generations": 3,
     "class": "Leviathan",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -701,7 +701,7 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 79,
@@ -709,7 +709,7 @@
     "generations": 3,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep"
    },
    {
@@ -718,8 +718,8 @@
     "generations": 3,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 81,
@@ -727,7 +727,7 @@
     "generations": 3,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -736,8 +736,8 @@
     "generations": 3,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 83,
@@ -745,8 +745,8 @@
     "generations": 3,
     "class": "Elder Dragon",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 84,
@@ -755,7 +755,7 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Thunder, Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 85,
@@ -772,8 +772,8 @@
     "generations": 3,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 87,
@@ -782,7 +782,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 88,
@@ -799,7 +799,7 @@
     "generations": 3,
     "class": "Flying Wyvern",
     "species": "Rare Species",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -809,7 +809,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 91,
@@ -836,7 +836,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 94,
@@ -844,7 +844,7 @@
     "generations": 3,
     "class": "Brute Wyvern",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Mudded"
    },
    {
@@ -853,8 +853,8 @@
     "generations": 3,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 96,
@@ -881,7 +881,7 @@
     "class": "Fanged Wyvern",
     "species": "Subspecies",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 99,
@@ -898,7 +898,7 @@
     "generations": 3,
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Soiled, Paralysis"
    },
    {
@@ -908,7 +908,7 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 102,
@@ -917,7 +917,7 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 103,
@@ -925,8 +925,8 @@
     "generations": 4,
     "class": "Amphibian",
     "species": "Subspecies",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 104,
@@ -934,7 +934,7 @@
     "generations": 4,
     "class": "???",
     "species": "Variant",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Frenzy"
    },
    {
@@ -943,8 +943,8 @@
     "generations": 4,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 106,
@@ -952,7 +952,7 @@
     "generations": 4,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -961,7 +961,7 @@
     "generations": 4,
     "class": "Neopteron",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -988,7 +988,7 @@
     "generations": 4,
     "class": "???",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Frenzy"
    },
    {
@@ -998,7 +998,7 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 112,
@@ -1006,7 +1006,7 @@
     "generations": 4,
     "class": "Flying Wyvern",
     "species": "Rare Species",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Blast"
    },
    {
@@ -1015,7 +1015,7 @@
     "generations": 4,
     "class": "Snake Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -1024,7 +1024,7 @@
     "generations": 4,
     "class": "Temnoceran",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep, Poison, Webbed"
    },
    {
@@ -1060,7 +1060,7 @@
     "generations": 4,
     "class": "Neopteron",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Defense Down"
    },
    {
@@ -1078,7 +1078,7 @@
     "generations": 4,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Bleed"
    },
    {
@@ -1087,7 +1087,7 @@
     "generations": 4,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Frenzy"
    },
    {
@@ -1096,7 +1096,7 @@
     "generations": 4,
     "class": "Elder Dragon",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -1105,7 +1105,7 @@
     "generations": 4,
     "class": "Temnoceran",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis, Poison, Webbed"
    },
    {
@@ -1114,8 +1114,8 @@
     "generations": 4,
     "class": "Amphibian",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 125,
@@ -1150,7 +1150,7 @@
     "generations": 4,
     "class": "Neopteron",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Defense Down, Webbed"
    },
    {
@@ -1168,8 +1168,8 @@
     "generations": 4,
     "class": "Flying Wyvern",
     "species": "Deviant",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 131,
@@ -1222,8 +1222,8 @@
     "generations": 4,
     "class": "Amphibian",
     "species": "Deviant",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 137,
@@ -1250,7 +1250,7 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 140,
@@ -1258,8 +1258,8 @@
     "generations": 4,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 141,
@@ -1267,8 +1267,8 @@
     "generations": 4,
     "class": "Flying Wyvern",
     "species": "Deviant",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 142,
@@ -1285,7 +1285,7 @@
     "generations": 4,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep, Confusion"
    },
    {
@@ -1312,7 +1312,7 @@
     "generations": 4,
     "class": "Bird Wyvern",
     "species": "Deviant",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep, Confusion"
    },
    {
@@ -1321,8 +1321,8 @@
     "generations": 4,
     "class": "Fanged Beast",
     "species": "Deviant",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 148,
@@ -1339,7 +1339,7 @@
     "generations": 4,
     "class": "Flying Wyvern",
     "species": "Deviant",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Bleed"
    },
    {
@@ -1367,7 +1367,7 @@
     "class": "Carapaceon",
     "species": "Deviant",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 153,
@@ -1376,7 +1376,7 @@
     "class": "Fanged Wyvern",
     "species": "Deviant",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 154,
@@ -1385,7 +1385,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 155,
@@ -1393,7 +1393,7 @@
     "generations": 5,
     "class": "Brute Wyvern",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Defense Down"
    },
    {
@@ -1403,7 +1403,7 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 157,
@@ -1411,8 +1411,8 @@
     "generations": 5,
     "class": "Brute Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 158,
@@ -1421,7 +1421,7 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 159,
@@ -1430,7 +1430,7 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 160,
@@ -1438,7 +1438,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Variant",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Effluvium"
    },
    {
@@ -1448,7 +1448,7 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 162,
@@ -1456,7 +1456,7 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Blast"
    },
    {
@@ -1475,7 +1475,7 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 165,
@@ -1484,7 +1484,7 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 166,
@@ -1492,7 +1492,7 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Paralysis"
    },
    {
@@ -1501,8 +1501,8 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 168,
@@ -1511,7 +1511,7 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 169,
@@ -1519,8 +1519,8 @@
     "generations": 5,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 170,
@@ -1529,7 +1529,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 171,
@@ -1538,7 +1538,7 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 172,
@@ -1547,7 +1547,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water, Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 173,
@@ -1555,8 +1555,8 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 174,
@@ -1564,7 +1564,7 @@
     "generations": 5,
     "class": "Flying Wyvern",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep"
    },
    {
@@ -1573,7 +1573,7 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Bleed"
    },
    {
@@ -1582,8 +1582,8 @@
     "generations": 5,
     "class": "Flying Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 177,
@@ -1591,7 +1591,7 @@
     "generations": 5,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -1600,7 +1600,7 @@
     "generations": 5,
     "class": "Brute Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep"
    },
    {
@@ -1609,7 +1609,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Variant",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Bleed"
    },
    {
@@ -1618,8 +1618,8 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 181,
@@ -1628,7 +1628,7 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 182,
@@ -1636,8 +1636,8 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 183,
@@ -1646,7 +1646,7 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 184,
@@ -1655,7 +1655,7 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 185,
@@ -1663,8 +1663,8 @@
     "generations": 5,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 186,
@@ -1672,7 +1672,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Effluvium"
    },
    {
@@ -1682,7 +1682,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 188,
@@ -1690,7 +1690,7 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Subspecies",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison, Paralysis"
    },
    {
@@ -1700,7 +1700,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 190,
@@ -1709,7 +1709,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 191,
@@ -1718,7 +1718,7 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 192,
@@ -1727,7 +1727,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 193,
@@ -1735,8 +1735,8 @@
     "generations": 5,
     "class": "Fanged Beast",
     "species": "Apex",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 194,
@@ -1744,8 +1744,8 @@
     "generations": 5,
     "class": "Flying Wyvern",
     "species": "Apex",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 195,
@@ -1781,7 +1781,7 @@
     "class": "Fanged Wyvern",
     "species": "Apex",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 199,
@@ -1790,7 +1790,7 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 200,
@@ -1798,7 +1798,7 @@
     "generations": 5,
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison, Paralysis"
    },
    {
@@ -1808,7 +1808,7 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 202,
@@ -1817,7 +1817,7 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 203,
@@ -1843,7 +1843,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Blast, Bloodblight"
    },
    {
@@ -1862,7 +1862,7 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 208,
@@ -1870,8 +1870,8 @@
     "generations": 5,
     "class": "Bird Wyvern",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 209,
@@ -1880,7 +1880,7 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 210,
@@ -1889,7 +1889,7 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 211,
@@ -1897,7 +1897,7 @@
     "generations": 5,
     "class": "Fanged Wyvern",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Hellfire"
    },
    {
@@ -1906,7 +1906,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Bloodblight"
    },
    {
@@ -1916,7 +1916,7 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 214,
@@ -1951,7 +1951,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Risen",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Poison"
    },
    {
@@ -1961,7 +1961,7 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 219,
@@ -1970,7 +1970,7 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 220,
@@ -1978,7 +1978,7 @@
     "generations": 5,
     "class": "Elder Dragon",
     "species": "Risen",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Frenzy"
    },
    {
@@ -2005,7 +2005,7 @@
     "generations": 5,
     "class": "Leviathan",
     "species": "Original",
-    "element": "None",
+    "element": "No Element",
     "ailment": "Sleep"
    },
    {
@@ -2015,7 +2015,7 @@
     "class": "Amphibian",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 225,
@@ -2024,7 +2024,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 226,
@@ -2042,7 +2042,7 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 228,
@@ -2060,7 +2060,7 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 230,
@@ -2069,7 +2069,7 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id": 231,
@@ -2077,8 +2077,8 @@
     "generations": 6,
     "class":"Amphibian",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 232,
@@ -2086,8 +2086,8 @@
     "name": "Doshaguma",
     "class": "Fanged Beast",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id": 233,
@@ -2096,7 +2096,7 @@
     "class": "Construct",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "None"
+    "ailment": "No Ailment"
    },
    {
     "id":234,
@@ -2104,8 +2104,8 @@
     "name": "Guardian Doshaguma",
     "class": "Construct",
     "species": "Original",
-    "element": "None",
-    "ailment": "None"
+    "element": "No Element",
+    "ailment": "No Ailment"
    },
    {
     "id":235,
@@ -2123,7 +2123,7 @@
     "class": "Construct",
     "species":"Subspecies",
     "element":"Thunder",
-    "ailment":"None"
+    "ailment":"No Ailment"
    },
    {
     "id":237,
@@ -2158,7 +2158,7 @@
     "name":"Lala Barina",
     "class":"Temnoceran",
     "species":"Original",
-    "element":"None",
+    "element":"No Element",
     "ailment":"Paralysis"
    },
    {
@@ -2168,7 +2168,7 @@
     "class":"Cephalopod",
     "species":"Original",
     "element":"Fire",
-    "ailment":"None"
+    "ailment":"No Ailment"
    },
    {
     "id":242,
@@ -2177,7 +2177,7 @@
     "class":"Brute Wyvern",
     "species":"Original",
     "element":"Fire",
-    "ailment":"None"
+    "ailment":"No Ailment"
    },
    {
     "id":243,
@@ -2186,7 +2186,7 @@
     "class":"Flying Wyvern",
     "species":"Original",
     "element":"Thunder",
-    "ailment":"None"
+    "ailment":"No Ailment"
    },
    {
     "id":244,
@@ -2194,7 +2194,7 @@
     "name":"Rompopolo",
     "class":"Brute Wyvern",
     "species":"Original",
-    "element":"None",
+    "element":"No Element",
     "ailment":"Poison"
    },
    {
@@ -2204,7 +2204,7 @@
     "class":"Leviathan",
     "species":"Original",
     "element":"Water",
-    "ailment":"None"
+    "ailment":"No Ailment"
    },
    {
     "id":246,
@@ -2212,8 +2212,8 @@
     "name":"Xu Wu",
     "class":"Cephalopod",
     "species":"Original",
-    "element":"None",
-    "ailment":"None"
+    "element":"No Element",
+    "ailment":"No Ailment"
    },
    {
     "id":247,
@@ -2222,7 +2222,7 @@
     "class":"Construct",
     "species":"Original",
     "element":"Fire, Dragon",
-    "ailment":"None"
+    "ailment":"No Ailment"
    }
   ]
   }

@@ -1,6 +1,7 @@
 export class FilterContainerClass {
     constructor(monsters) {
         this.monsters = monsters;
+        this.originalMonsters = monsters;
         this.filterContainer;
         this.itemlist;
         this.monsterKeys = [];
@@ -9,8 +10,9 @@ export class FilterContainerClass {
 
         this.monsters.forEach((monster) => {
             Object.keys(monster).forEach(key => {
-                if (!this.monsterKeys.includes(key))
-                    this.monsterKeys.push(key)
+                if (!this.monsterKeys.includes(key)) {
+                    this.monsterKeys.push(key);
+                }
             })
         })
     }
@@ -22,7 +24,7 @@ export class FilterContainerClass {
             <div class="p-6 rounded-lg h-full w-full">
                 <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
                 <div id="filteritems"></div>
-                <div>
+                <div id="buttons">
                     <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded">Close</button>
                     <button onclick="saveChanges()" class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" id="savebutton" disabled>Save Changes</button>
                 </div>
@@ -85,7 +87,7 @@ export class FilterContainerClass {
                 Object.keys(monster).forEach(key => {
                     if (key !== 'id' && key !== 'name'){
                         if (checkbox.checked == false) {
-                            if (monster[key].toString().split(", ").includes(checkbox.id)) {
+                            if (monster[key].toString().split(", ").includes(checkbox.name)) {
                                 if (!removedmonsters.includes(monster)) {
                                     removedmonsters.push(monster)
                                 }
@@ -97,6 +99,28 @@ export class FilterContainerClass {
         })
         filteredmonsters = monsters.filter(monster => !removedmonsters.includes(monster));
         return filteredmonsters
+
+    }
+
+    checkFilteredMonsters(monsters) {
+        let filteredmonsters = this.filterMonsters(monsters)
+        if (filteredmonsters.length > 0) {
+            this.originalMonsters = filteredmonsters
+            if (document.getElementById("buttons").querySelector("p")) {
+                document.getElementById("buttons").querySelector("p").remove()
+            }
+            return filteredmonsters
+        } else {
+            if (document.getElementById("buttons").querySelector("p")) {
+                document.getElementById("buttons").querySelector("p").remove()
+            }
+            const error = document.createElement("p");
+            error.setAttribute("class", "text-red-500");
+            error.innerHTML = "No monsters found with the selected filters";
+            const placement = document.getElementById("buttons");
+            placement.appendChild(error);
+            return this.originalMonsters
+        }
     }
 
     setFilter(monsters, keyarray) {
@@ -129,7 +153,7 @@ export class FilterContainerClass {
                         <label for="${item}">${item}</label>
                         `;
                         this.keyFilter.querySelector("#grid").appendChild(keyitem);
-                        this.checkboxes.set(`${item}`, keyitem.querySelector('input'));
+                        this.checkboxes.set(item, keyitem.querySelector('input'));
                         this.checkboxValues(this.checkboxes, maxItems)
                     });
                     itemlist.appendChild(this.keyFilter);
