@@ -134,6 +134,7 @@ export class FilterContainerClass {
                     items.forEach(item => {
                         if (!maxItems.includes(item)) {
                             maxItems.push(item);
+                            maxItems.sort();
                         }
                     });
                 });

@@ -1,0 +1,732 @@
+{
+    "monsters": [
+        {
+            "name": "Abiorugu",
+            "generations": "Forward 3",
+            "class": "Brute Wyvern",
+            "species": "Original",
+            "element": "Fire",
+            "ailment": "Defense Down"
+        },
+        {
+            "name": "Akura Vashimu",
+            "generations": "Season 3.0",
+            "class": "Carapaceon",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Crystallization, Paralysis"
+        },
+        {
+            "name": "Akura Jebia",
+            "generations": "Season 3.5",
+            "class": "Carapaceon",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Crystallization, Paralysis"
+        },
+        {
+            "name": "Anorupatisu",
+            "generations": "G2",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "Ice, Dragon",
+            "ailment": "Snowman"
+        },
+        {
+            "name": "Arrogant Duremudira",
+            "generations": "Z",
+            "class": "Elder Dragon",
+            "species": "Extreme",
+            "element": "Thunder",
+            "ailment": "Corrupted Poison"
+        },
+        {
+            "name": "Aruganosu",
+            "generations": "Forward 5",
+            "class": "Piscine Wyvern",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Baruragaru",
+            "generations": "G3",
+            "class": "Leviathan",
+            "species": "Original",
+            "element": "Water",
+            "ailment": "Poison, Paralysis, Defense Down"
+        },
+        {
+            "name": "Berserk Laviente",
+            "generations": "G9",
+            "class": "Unclassified",
+            "species": "Unclassified",
+            "element": "Fire",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Berukyurosu",
+            "generations": "Season 4.0",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "Thunder",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Blinking Nargacuga",
+            "generations": "Z",
+            "class": "Flying Wyvern",
+            "species": "Extreme",
+            "element": "No Element",
+            "ailment": "Poison"
+        },
+        {
+            "name": "Bogabadorumu",
+            "generations": "Z Zenith",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Blastblight"
+        },
+        {
+            "name": "Bombadier Bogabadorumu",
+            "generations": "Z Zenith",
+            "class": "Flying Wyvern",
+            "species": "Extreme",
+            "element": "No Element",
+            "ailment": "Blastblight"
+        },
+        {
+            "name": "Breeding Season Hypnocatrice",
+            "generations": "Season 1.5",
+            "class": "Bird Wyvern",
+            "species": "Variant",
+            "element": "No Element",
+            "ailment": "Sleep"
+        },
+        {
+            "name": "Burning Freezing Eruzerion",
+            "generations": "Z",
+            "class": "Elder Dragon",
+            "species": "Extreme",
+            "element": "Fire, Ice",
+            "ailment": "Extreme Fireblight, Extreme Iceblight"
+        },
+        {
+            "name": "Diorekkusu",
+            "generations": "G Genuine",
+            "class": "Flying Wyvern",
+            "species": "Burst Species",
+            "element": "Thunder",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Disufiroa",
+            "generations": "G2",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "Frozen Seraphim",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Doragyurosu",
+            "generations": "Season 8.0",
+            "class": "Flying Wyvern",
+            "species": "Subspecies",
+            "element": "Dragon",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Duremudira",
+            "generations": "G6",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Frostbite, Corrupted Poison"
+        },
+        {
+            "name": "Dyuragaua",
+            "generations": "Season 8.0",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Frostbite, Sleep"
+        },
+        {
+            "name": "Eruzerion",
+            "generations": "Z",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "Fire, Ice",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "White Espinas",
+            "generations": "Season 5.5",
+            "class": "Flying Wyvern",
+            "species": "Rare Species",
+            "element": "Fire",
+            "ailment": "Poison, Paralysis, Defense Down"
+        },
+        {
+            "name": "Farunokku",
+            "generations": "G",
+            "class": "Bird Wyvern",
+            "species": "Original",
+            "element": "Thunder",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Forokururu",
+            "generations": "G Genuine",
+            "class": "Bird Wyvern",
+            "species": "Original",
+            "element": "Fire",
+            "ailment": "Dark, Poison, Paralysis, Sleep, Soiled, Defense Down"
+        },
+        {
+            "name": "Garuba Daora",
+            "generations": "G5",
+            "class": "Elder Dragon",
+            "species": "Burst Species",
+            "element": "Wind",
+            "ailment": "Crystallization"
+        },
+        {
+            "name": "Gasurabazura",
+            "generations": "G8",
+            "class": "Brute Wyvern",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Poison"
+        },
+        {
+            "name": "Giaorugu",
+            "generations": "G2",
+            "class": "Brute Wyvern",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Snowman, Defense Down"
+        },
+        {
+            "name": "Gogomoa",
+            "generations": "Forward 2",
+            "class": "Fanged Beast",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Poison, Sleep"
+        },
+        {
+            "name": "Goruganosu",
+            "generations": "Forward 5",
+            "class": "Piscine Wyvern",
+            "species": "Original",
+            "element": "Thunder",
+            "ailment": "Sleep"
+        },
+        {
+            "name": "Guanzorumu",
+            "generations": "G10",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "Fire, Dragon",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Gureadomosu",
+            "generations": "G7",
+            "class": "Flying Wyvern",
+            "species": "Origin Species",
+            "element": "Water",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Gurenzeburu",
+            "generations": "Season 9.0",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "Water",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Harudomerugu",
+            "generations": "G7",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "No Ailment"
+        },
+        {
+            "name": "Howling Zinogre",
+            "generations": "G9.1",
+            "class": "Fanged Wyvern",
+            "species": "Extreme",
+            "element": "Thunder",
+            "ailment": "Paralysis"
+        },
+        {
+            "name": "Hyujikiki",
+            "generations": "G",
+            "class": "Flying Wyvern",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Paralysis, Poison, Sleep"
+        },
+        {
+            "name": "Inagami",
+            "generations": "G5",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element": "No Element",
+            "ailment": "Sleep"
+        },
+        {
+            "name": "Kamu Orugaron",
+            "generations": "Season 6.0",
+            "class": "Fanged Beast",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Snowman"
+        },
+        {
+            "name": "Keoaruboru",
+            "generations": "Z",
+            "class": "Elder Dragon",
+            "species": "Original",
+            "element":"Fire",
+            "ailment": "No Ailment"
+        },
+        {
+            "name":"Kuarusepusu",
+            "generations":"Forward 4",
+            "class":"Leviathan",
+            "species":"Original",
+            "element":"Fire, Thunder",
+            "ailment":"Paralysis"
+        },
+        {
+            "name":"Lavasioth Subspecies",
+            "generations":"Season 1.5",
+            "class":"Piscine Wyvern",
+            "species":"Subspecies",
+            "element":"Fire",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Laviente",
+            "generations":"Season 7.0",
+            "class":"Unclassified",
+            "species":"Unclassified",
+            "element":"Fire",
+            "ailment":"Paralysis"
+        },
+        {
+            "name":"Lolo Gougarf",
+            "generations":"G2",
+            "class":"Fanged Beast",
+            "species":"Original",
+            "element":"No Element",
+            "ailment":"Magnet"
+        },
+        {
+            "name":"Meraginasu",
+            "generations":"G3.2",
+            "class":"Flying Wyvern",
+            "species":"Burst Species",
+            "element":"Darkness",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Mi Ru",
+            "generations":"G2",
+            "class":"Unclassified",
+            "species":"Unclassified",
+            "element":"Fire",
+            "ailment":"Crystallization"
+        },
+        {
+            "name":"Midogaron",
+            "generations":"G",
+            "class":"Fanged Beast",
+            "species":"Original",
+            "element":"Fire",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Mysterious Mi Ru",
+            "generations":"Z",
+            "class":"Unclassified",
+            "species":"Extreme",
+            "element":"Fire",
+            "ailment":"Crystallization"
+        },
+        {
+            "name": "Nono Orugaron",
+            "generations": "Season 6.0",
+            "class": "Fanged Beast",
+            "species": "Original",
+            "element": "Ice",
+            "ailment": "Snowman"
+        },
+        {
+            "name": "Odibatorasu",
+            "generations":"Forward 5",
+            "class":"Flying Wyvern",
+            "species":"Original",
+            "element":"No Element",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Pariapuria",
+            "generations":"Season 5.0",
+            "class":"Flying Wyvern",
+            "species":"Original",
+            "element":"Water",
+            "ailment":"Poison, Paralysis, Sleep, Soiled"
+        },
+        {
+            "name":"Poborubarumu",
+            "generations":"G6",
+            "class":"Flying Wyvern",
+            "species":"Original",
+            "element":"Kanade",
+            "ailment":"Confusion"
+        },
+        {
+            "name":"Pokaradon",
+            "generations":"G1",
+            "class":"Leviathan",
+            "species":"Original",
+            "element":"Water",
+            "ailment":"Snowman"
+        },
+        {
+            "name":"Ray Gougarf",
+            "generations":"G2",
+            "class":"Fanged Beast",
+            "species":"Original",
+            "element":"No Element",
+            "ailment":"Magnet"
+        },
+        {
+            "name":"Rebidiora",
+            "generations":"G2",
+            "class":"Elder Dragon",
+            "species":"Subspecies",
+            "element":"Thunderpole",
+            "ailment":"Magnet"
+        },
+        {
+            "name":"Rukodiora",
+            "generations":"Forward 1",
+            "class":"Elder Dragon",
+            "species":"Original",
+            "element":"Dragon",
+            "ailment":"Magnet"
+        },
+        {
+            "name":"Ruler Guanzorumu",
+            "generations":"G10",
+            "class":"Elder Dragon",
+            "species":"Extreme",
+            "element":"Fire, Dragon",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Shantien",
+            "generations":"G1",
+            "class":"Elder Dragon",
+            "species":"Original",
+            "element":"Tenshou",
+            "ailment":"Paralysis"
+        },
+        {
+            "name":"Silver Hypnocatrice",
+            "generations":"Season 3.5",
+            "class":"Bird Wyvern",
+            "species":"Rare Species",
+            "element":"No Element",
+            "ailment":"Sleep"
+        },
+        {
+            "name":"Sparkling Zerureusu",
+            "generations":"Z Zenith",
+            "class":"Flying Wyvern",
+            "species":"Extreme",
+            "element":"Light",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Starving Deviljho",
+            "generations":"G10",
+            "class":"Brute Wyvern",
+            "species":"Extreme",
+            "element":"Dragon",
+            "ailment":"Defense Down"
+        },
+        {
+            "name":"Taikun Zamuza",
+            "generations":"Forward 3",
+            "class":"Carapaceon",
+            "species":"Original",
+            "element":"Thunder",
+            "ailment":"Poison, Paralysis"
+        },
+        {
+            "name":"Thirsty Pariapuria",
+            "generations":"G9",
+            "class":"Flying Wyvern",
+            "species":"Extreme",
+            "element":"Water",
+            "ailment":"Poison, Paralysis, Sleep, Soiled"
+        },
+        {
+            "name":"Tao Tesukatora",
+            "generations": "G9.1",
+            "class":"Elder Dragon",
+            "species":"Origin Species",
+            "element":"Ice",
+            "ailment":"Frostbite"
+        },
+        {
+            "name":"Toridcless",
+            "generations":"G9",
+            "class":"Bird Wyvern",
+            "species":"Original",
+            "element":"Thunder",
+            "ailment":"Paralysis"
+        },
+        {
+            "name":"Unknown",
+            "generations":"Forward 1",
+            "class":"Flying Wyvern",
+            "species":"Unclassified",
+            "element":"Fire",
+            "ailment":"Poison, Defense Down"
+        },
+        {
+            "name":"Varusaburosu",
+            "generations":"G6",
+            "class":"Flying Wyvern",
+            "species":"Burst Species",
+            "element":"Fire",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Violet Laviente",
+            "generations":"Forward 1",
+            "class":"Unclassified",
+            "species":"Unclassified",
+            "element":"Fire",
+            "ailment":"Paralysis"
+        },
+        {
+            "name":"Voljang",
+            "generations":"G10.1",
+            "class":"Fanged Beast",
+            "species":"Origin Species",
+            "element":"Fire",
+            "ailment":"No Ailment"
+        },
+        {
+            "name":"Yama Kurai",
+            "generations":"G8",
+            "class":"Elder Dragon",
+            "species":"Origin Species",
+            "element":"No Element",
+            "ailment":"Poison, Paralysis, Sleep"
+        },
+        {
+            "name":"Zenaserisu",
+            "generations":"Z",
+            "class":"Flying Wyvern",
+            "species":"Original",
+            "element":"Water",
+            "ailment":"No Ailment"
+        },
+        {
+            "name": "Zenith Akura Vashimu",
+            "generations": "Z",
+            "class": "Carapaceon",
+            "species": "Zenith",
+            "element": "No Element",
+            "ailment": "Crystallization, Extreme Paralysis"
+        },
+        {
+            "name": "Zenith Anorupatisu",
+            "generations": "Z",
+            "class": "Flying Wyvern",
+            "species": "Zenith",
+            "element": "Ice, Dragon",
+            "ailment": "Extreme Iceblight"
+        },
+        {
+            "name": "Zenith Baruragaru",
+            "generations": "Z Zenith",
+            "class": "Leviathan",
+            "species": "Zenith",
+            "element": "Water",
+            "ailment": "Extreme Waterblight, Bleeding"
+        },
+        {
+            "name": "Zenith Blangonga",
+            "generations": "Z",
+            "class": "Fanged Beast",
+            "species": "Zenith",
+            "element": "Ice",
+            "ailment": "Extreme Iceblight"
+        },
+        {
+            "name":"Zenith Daiymo Hermitaur",
+            "generations":"Z",
+            "class":"Carapaceon",
+            "species":"Zenith",
+            "element":"Water",
+            "ailment":"Extreme Waterblight"
+        },
+        {
+            "name": "Zenith Doragyurosu",
+            "generations": "Z",
+            "class": "Flying Wyvern",
+            "species": "Zenith",
+            "element": "Dragon",
+            "ailment": "Extreme Dragonblight"
+        },
+        {
+            "name":"Zenith Espinas",
+            "generations":"Z",
+            "class":"Flying Wyvern",
+            "species":"Zenith",
+            "element":"Fire",
+            "ailment":"Extreme Poison, Paralysis"
+        },
+        {
+            "name":"Zenith Gasurabazura",
+            "generations":"Z",
+            "class":"Brute Wyvern",
+            "species":"Zenith",
+            "element":"No Element",
+            "ailment":"Extreme Poison"
+        },
+        {
+            "name": "Zenith Giaorugu",
+            "generations": "Z",
+            "class": "Brute Wyvern",
+            "species": "Zenith",
+            "element": "Ice",
+            "ailment":"Extreme Iceblight, Defense Down, Snowman"
+        },
+        {
+            "name":"Zenith Gravios",
+            "generations":"Z Zenith",
+            "class":"Flying Wyvern",
+            "species":"Zenith",
+            "element":"Fire",
+            "ailment":"Extreme Fireblight"
+        },
+        {
+            "name":"Zenith Harudomerugu",
+            "generations":"Z Zenith",
+            "class":"Elder Dragon",
+            "species":"Zenith",
+            "element":"No Element",
+            "ailment":"No Ailment"
+        },
+        {
+            "name": "Zenith Hypnocatrice",
+            "generations": "Z",
+            "class": "Bird Wyvern",
+            "species": "Zenith",
+            "element": "No Element",
+            "ailment": "Extreme Sleep"
+        },
+        {
+            "name": "Zenith Hyujikiki",
+            "generations": "Z",
+            "class": "Flying Wyvern",
+            "species": "Zenith",
+            "element": "No Element",
+            "ailment":"Paralysis, Bleed"
+        },
+        {
+            "name": "Zenith Inagami",
+            "generations": "Z",
+            "class": "Elder Dragon",
+            "species": "Zenith",
+            "element": "No Element",
+            "ailment": "Extreme Sleep"
+        },
+        {
+            "name":"Zenith Khezu",
+            "generations":"Z",
+            "class":"Flying Wyvern",
+            "species":"Zenith",
+            "element":"Thunder",
+            "ailment":"Extreme Thunderblight"
+        },
+        {
+            "name":"Zenith Midogaron",
+            "generations":"Z",
+            "class":"Fanged Beast",
+            "species":"Zenith",
+            "element":"Fire",
+            "ailment":"Extreme Fireblight"
+        },
+        {
+            "name":"Zenith Plesioth",
+            "generations":"Z",
+            "class":"Piscine Wyvern",
+            "species":"Zenith",
+            "element":"Water",
+            "ailment":"Extreme Waterblight"
+        },
+        {
+            "name":"Zenith Rathalos",
+            "generations":"Z",
+            "class":"Flying Wyvern",
+            "species":"Zenith",
+            "element":"Fire",
+            "ailment":"Extreme Fireblight, Poison"
+        },
+        {
+            "name":"Zenith Rukodiora",
+            "generations":"Z",
+            "class":"Elder Dragon",
+            "species":"Zenith",
+            "element":"Dragon",
+            "ailment":"Extreme Dragonblight, Magnet"
+        },
+        {
+            "name":"Zenith Taikun Zamuza",
+            "generations":"Z Zenith",
+            "class":"Carapaceon",
+            "species":"Zenith",
+            "element":"Thunder",
+            "ailment":"Extreme Thunderblight"
+        },
+        {
+            "name":"Zenith Tigrex",
+            "generations":"Z",
+            "class":"Flying Wyvern",
+            "species":"Zenith",
+            "element":"No Element",
+            "ailment":"Bleed"
+        },
+        {
+            "name":"Zenith Toridcless",
+            "generations":"Z",
+            "class":"Bird Wyvern",
+            "species":"Zenith",
+            "element":"Thunder",
+            "ailment":"Extreme Thunderblight, Paralysis"
+        },
+        {
+            "name":"Zerureusu",
+            "generations":"G",
+            "class":"Flying Wyvern",
+            "species":"Original",
+            "element":"Light",
+            "ailment":"No Ailment"
+        }
+    ]
+}
