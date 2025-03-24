@@ -25,7 +25,7 @@ let attemptsElement = document.getElementById("attempts");
 guessDivBackground.style.visibility = "hidden";
 
 // Fetch the JSON file
-fetch("./Data/monsters.json")
+fetch("./Data/Frontier/monsters.json")
 
 .then(response => {
     if (!response.ok) {
@@ -167,7 +167,7 @@ window.monsterPressed = function(monster) {
         "flex items-center bg-gray-600 p-4 rounded-lg w-full");
     guessElement.innerHTML = `
         <div class="w-20 h-20 object-cover">
-            <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
+            <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"/>
         </div>
 
         <div>
