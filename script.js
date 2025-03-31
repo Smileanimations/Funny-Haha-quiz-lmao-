@@ -25,7 +25,7 @@ let attemptsElement = document.getElementById("attempts");
 guessDivBackground.style.visibility = "hidden";
 
 // Fetch the JSON file
-fetch("./Data/Frontier/monsters.json")
+fetch("./Data/monsters.json")
 
 .then(response => {
     if (!response.ok) {
