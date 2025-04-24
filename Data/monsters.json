@@ -68,7 +68,7 @@
     "name": "Crimson Fatalis",
     "generations": 1,
     "class": "Elder Dragon",
-    "species": "Original",
+    "species": "Variant",
     "element": "Fire, Dragon",
     "ailment": "Blast"
    },
@@ -510,7 +510,7 @@
     "name": "White Fatalis",
     "generations": 2,
     "class": "Elder Dragon",
-    "species": "Original",
+    "species": "Variant",
     "element": "Thunder, Dragon",
     "ailment": "No Ailment"
    },
