@@ -2094,7 +2094,7 @@
     "generations": 6,
     "name": "Guardian Arkveld",
     "class": "Construct",
-    "species": "Original",
+    "species": "Guardian",
     "element": "Dragon",
     "ailment": "No Ailment"
    },
@@ -2103,7 +2103,7 @@
     "generations":6,
     "name": "Guardian Doshaguma",
     "class": "Construct",
-    "species": "Original",
+    "species": "Guardian",
     "element": "No Element",
     "ailment": "No Ailment"
    },
@@ -2112,7 +2112,7 @@
     "generations":6,
     "name": "Guardian Ebony Odogaron",
     "class": "Construct",
-    "species": "Subspecies",
+    "species": "Guardian",
     "element": "Dragon",
     "ailment": "Bleed"
    },
@@ -2121,7 +2121,7 @@
     "generations":6,
     "name": "Guardian Fulgur Anjanath",
     "class": "Construct",
-    "species":"Subspecies",
+    "species":"Guardian",
     "element":"Thunder",
     "ailment":"No Ailment"
    },
@@ -2130,7 +2130,7 @@
     "generations":6,
     "name":"Guardian Rathalos",
     "class":"Construct",
-    "species":"Original",
+    "species":"Guardian",
     "element":"Fire",
     "ailment":"Poison"
    },
