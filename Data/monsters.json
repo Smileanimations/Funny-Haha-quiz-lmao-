@@ -2223,6 +2223,42 @@
     "species":"Original",
     "element":"Fire, Dragon",
     "ailment":"No Ailment"
+   },
+   {
+    "id":248,
+    "generations":6,
+    "name":"Omega Planetes",
+    "class":"???",
+    "species":"Original",
+    "element":"Fire, Ice",
+    "ailment":"Health Penalty, Frostblight"
+   },
+   {
+    "id":249,
+    "generations":5,
+    "name": "Behemoth",
+    "class": "Elder Dragon",
+    "species": "Original",
+    "element": "Fire, Thunder",
+    "ailment": "Bleed, Defense Down"
+   },
+   {
+    "id":250,
+    "generations":5,
+    "name":"Leshen",
+    "class":"Relic",
+    "species":"Original",
+    "element":"No Element",
+    "ailment":"Bleed"
+   },
+   {
+    "id":251,
+    "generations":6,
+    "name":"Ancient Leshen",
+    "class":"Relic",
+    "species":"Original",
+    "element":"No Element",
+    "ailment":"Bleed"
    }
   ]
   }
