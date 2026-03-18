@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Unnamed Guessing Game</title>
+    <script src="script.js" type="module" defer></script>
+</head>
+<body id="body" class="">
+    <div id="maindiv" class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
+        <header class="w-full bg-gray-900 p-4 text-2xl flex justify-between">
+            <div class="flex justify-center">
+                <h1 class="text-white">Monster Hunter Guessing Game</h1>
+            </div>
+            <div class="space-x-4 items-center">
+                <a href="./index.html" class="text-gray-300 hover:text-white underline underline-offset-2">Guess the Monster</a>
+                <a href="./Master Hunter/masterhunter.html" class="text-gray-300 hover:text-white">Master Hunter</a>
+                <a href="#" class="text-gray-300 hover:text-white">Services</a>
+                <a href="#" class="text-gray-300 hover:text-white">About</a>
+            </div>
+        </header>
+        <main  id="mainscreen" class="flex flex-1 flex-col items-center space-y-6">
+            <h1 class="text-4xl font-bold">Guess the Monster!</h1>
+            <div id="search-bar-div">
+                <input id="search-bar" type="text" placeholder="Your Guess..." class="p-3 ps-10 rounded-lg bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 justify-center align items-center" />
+                <div id="result" class="left-1/2 -translate-x-1/2 grid grid-row-5 absolute border-0 border-white rounded-lg bg-white p-1 mt-2 z-10"></div>
+            </div>
+            <div>
+                <button onclick="instanceFilterMenu()" class="border border-gray-600 rounded-full text-lg px-6 py-3 mx-2">Filter</button>
+            </div>
+            <button onclick="giveUp()" id="resetbutton" class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600">Give Up</button>
+            <p id="attempts" class="font-bold">Attempts:</p>
+            <div id="guessbackground" class="mt-8 flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div id="guesses" class="flex flex-col items-center space-y-4"></div>
+            </div>
+        </main>
+
+        <footer style="z-index: 2;" class="bg-gray-900 w-full p-4 text-center">
+            <p>© 2024 Monster Guess Game</p>
+        </footer>
+    </div>
+</body>
+</html>
