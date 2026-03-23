@@ -1,6 +1,7 @@
 import { searchBarClass } from "/Modules/SearchBar/class.js";
 import { FilterContainerClass } from "/Modules/Filter/class.js";
 
+
 let searchbar;
 let filterclass;
 let filterContainer;
@@ -78,7 +79,8 @@ window.resetGame = function () {
 // Function that shows the victory screen with a red bar instead of a green one.
 window.giveUp = function () {
     backgroundColor = "red";
-    victoryScreen(randomMonster, backgroundColor);
+    const gaveUp = true;
+    victoryScreen(randomMonster, backgroundColor, gaveUp);
 
 }
 
@@ -116,8 +118,8 @@ function compareMonster(monster) {
 
 // Function that compares the elements of the monster and the random monster, it does by checking each element and creating a point system and by comparing those points returns a color.
 function compareElement(monster, randommonster) {
-    let monsterarray = monster.split(", ");
-    let randommonsterarray = randommonster.split(", ");
+    const monsterarray = monster.split(", ");
+    const randommonsterarray = randommonster.split(", ");
 
     let wrong = 0;
     let correct = 0;
@@ -147,12 +149,12 @@ window.monsterPressed = function (monster) {
     attempts++;
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
-    let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
+    const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
     searchbar.removeResults();
     searchbar.searchBar.value = "";
 
-    let monsterMatch = monsterguess[0];
-    let compareResults = compareMonster(monsterMatch);
+    const monsterMatch = monsterguess[0];
+    const compareResults = compareMonster(monsterMatch);
 
     if (compareResults.every((result) => result.includes("green")) && monsterMatch != randomMonster) {
         bottomBorder = "border-b-4 border-yellow-500"
@@ -187,7 +189,7 @@ window.monsterPressed = function (monster) {
 }
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
-function victoryScreen(monster, backgroundColor) {
+function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
     resetbutton.setAttribute("class", "bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600");
