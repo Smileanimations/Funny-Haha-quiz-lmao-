@@ -1,7 +1,6 @@
 import { searchBarClass } from "/Modules/SearchBar/class.js";
 import { FilterContainerClass } from "/Modules/Filter/class.js";
 
-
 let searchbar;
 let filterclass;
 let filterContainer;
@@ -17,11 +16,11 @@ const mainscreen = document.getElementById("mainscreen");
 let attachDiv;
 let searchbarDiv;
 
-let resetbutton = document.getElementById("resetbutton");
+const resetbutton = document.getElementById("resetbutton");
 
-let guessDiv = document.getElementById("guesses");
+const guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
-let attemptsElement = document.getElementById("attempts");
+const attemptsElement = document.getElementById("attempts");
 
 guessDivBackground.style.visibility = "hidden";
 
@@ -50,6 +49,8 @@ fetch("./Data/monsters.json")
     });
 
 // Function that gets a random monster from the monsters array.
+// 
+// @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     let filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
     console.log(filteredmonsters);
@@ -85,6 +86,8 @@ window.giveUp = function () {
 }
 
 // Function that compares the monster with the random monster and returns an array with the colors of the results.
+//
+// @monster is the monster that was pressed.
 function compareMonster(monster) {
     let colors = [];
 
@@ -145,6 +148,8 @@ function compareElement(monster, randommonster) {
 
 }
 // Function that is called when a monster is pressed, it compares the monster with the random monster and shows the results in the results.
+//
+// @monster is the monster that was pressed.
 window.monsterPressed = function (monster) {
     attempts++;
     guessDivBackground.style.visibility = "visible";
@@ -189,6 +194,12 @@ window.monsterPressed = function (monster) {
 }
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
+//
+// @monster is the monster that was guessed correctly or the random monster when you give up.
+//
+// @backgroundColor is the color of the bar at the bottom of the victory screen, it is green when you guessed correctly and red when you give up.
+//
+// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up. Is False by default.
 function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
@@ -220,12 +231,40 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
     `
 
     mainscreen.appendChild(victoryDiv);
+    console.log("Updating stats with attempts: " + attempts);
+    updateStats(attempts, gaveUp);
 }
 
 // Function that removes the victory screen.	
 window.removevictoryScreen = function () {
     if (victoryDiv) {
         victoryDiv.remove();
+    }
+}
+
+// Function that updates the statistics in the database with the number of attempts and whether the player gave up or not.
+//
+// @attempts is the number of attempts it took to guess the monster.
+//
+// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up.
+async function updateStats(attempts, gaveUp) {
+    try {
+        const response = await fetch('/update-attempts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                attempts: attempts,
+                gaveUp: gaveUp
+             })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error updating attempts:', error);
     }
 }
 
