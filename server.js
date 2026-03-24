@@ -28,6 +28,7 @@ const updateLossesStmt = db.prepare(
     "UPDATE stats SET total_losses = total_losses + 1 WHERE id = 1"
 );
 
+// Function that creates the database and the table if it doesnt exist, also inserts a few rows if the table is empty.
 function createDatabase() {
     db.exec(`
         CREATE TABLE IF NOT EXISTS stats (
@@ -59,6 +60,7 @@ app.get('/stats', (req, res) => {
     res.json(stats);
 });
 
+// Endpoint to update the stats in the database, it takes the attempts and gaveUp values from the request body and updates the total_attempts, average_attempt, total_wins and total_losses in the database accordingly.
 app.post('/update-attempts', (req, res) => {
     const { attempts, gaveUp } = req.body;
     const stats = getStatsStmt.get();

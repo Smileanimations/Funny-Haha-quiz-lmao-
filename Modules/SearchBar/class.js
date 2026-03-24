@@ -11,6 +11,9 @@ export class searchBarClass {
         this.removeResults();
     }
 
+    // Method to update the search results based on the input value
+    // 
+    // @e is the event that is triggered when the input value changes
     updateValue(e) {
         this.result = e.target.value.toLowerCase();
         this.searchbarDiv.appendChild(this.attachDiv);
@@ -27,15 +30,20 @@ export class searchBarClass {
         }
     }
 
+    // Method to remove the search results
     removeResults() {
         this.attachDiv.remove();
     }
 
+    // Method to show a message when no results are found
     shownotFound() {
         this.attachDiv.innerHTML = `
         <div class="text-black w-80">No Results</div>`
     }
 
+    // Method that creates a button for each monster that is found in the search results, it also adds an event listener to each button that will call the monsterPressed function when clicked
+    //
+    // @monster is the monster that is found in the search results
     createElement(monster) {
         const newDiv = document.createElement("Button");
         newDiv.setAttribute('onclick', `monsterPressed('${monster.name}')`)
