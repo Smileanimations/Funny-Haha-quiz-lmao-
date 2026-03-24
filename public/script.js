@@ -1,5 +1,5 @@
-import { searchBarClass } from "./Modules/Search Bar/class.js";
-import { FilterContainerClass } from "./Modules/Filter/class.js";
+import { searchBarClass } from "/Modules/SearchBar/class.js";
+import { FilterContainerClass } from "/Modules/Filter/class.js";
 
 let searchbar;
 let filterclass;
@@ -16,39 +16,41 @@ const mainscreen = document.getElementById("mainscreen");
 let attachDiv;
 let searchbarDiv;
 
-let resetbutton = document.getElementById("resetbutton");
+const resetbutton = document.getElementById("resetbutton");
 
-let guessDiv = document.getElementById("guesses");
+const guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
-let attemptsElement = document.getElementById("attempts");
+const attemptsElement = document.getElementById("attempts");
 
 guessDivBackground.style.visibility = "hidden";
 
 // Fetch the JSON file
 fetch("./Data/monsters.json")
 
-.then(response => {
-    if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
-})
-.then(data => {
-    monsters = data.monsters;
-    createFilter();
-    attachDiv = document.getElementById("result");
-    searchbarDiv = document.getElementById("search-bar-div");
-    // Imports the searchBarClass from the class.js file and creates a new instance of it.
-    searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-    monsters = filterclass.filterMonsters(data.monsters);
-    console.log(monsters);
-    resetGame(monsters)
-})
-.catch(error => {
-    console.error("Error fetching the JSON file:", error);
-});
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        monsters = data.monsters;
+        createFilter();
+        attachDiv = document.getElementById("result");
+        searchbarDiv = document.getElementById("search-bar-div");
+        // Imports the searchBarClass from the class.js file and creates a new instance of it.
+        searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
+        monsters = filterclass.filterMonsters(data.monsters);
+        console.log(monsters);
+        resetGame(monsters)
+    })
+    .catch(error => {
+        console.error("Error fetching the JSON file:", error);
+    });
 
 // Function that gets a random monster from the monsters array.
+// 
+// @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     let filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
     console.log(filteredmonsters);
@@ -58,7 +60,7 @@ function getRandomMonster(monsters) {
 }
 
 // Function that clears the the search bar and results and pick a new random monster.
-window.resetGame = function() {
+window.resetGame = function () {
     resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
     resetbutton.setAttribute("onclick", "giveUp()");
     resetbutton.innerHTML = "Give Up";
@@ -76,13 +78,16 @@ window.resetGame = function() {
 }
 
 // Function that shows the victory screen with a red bar instead of a green one.
-window.giveUp = function() {
+window.giveUp = function () {
     backgroundColor = "red";
-    victoryScreen(randomMonster, backgroundColor);
+    const gaveUp = true;
+    victoryScreen(randomMonster, backgroundColor, gaveUp);
 
 }
 
 // Function that compares the monster with the random monster and returns an array with the colors of the results.
+//
+// @monster is the monster that was pressed.
 function compareMonster(monster) {
     let colors = [];
 
@@ -116,8 +121,8 @@ function compareMonster(monster) {
 
 // Function that compares the elements of the monster and the random monster, it does by checking each element and creating a point system and by comparing those points returns a color.
 function compareElement(monster, randommonster) {
-    let monsterarray = monster.split(", ");
-    let randommonsterarray = randommonster.split(", ");
+    const monsterarray = monster.split(", ");
+    const randommonsterarray = randommonster.split(", ");
 
     let wrong = 0;
     let correct = 0;
@@ -128,7 +133,7 @@ function compareElement(monster, randommonster) {
     monsterarray.forEach(element => {
         if (randommonsterarray.includes(element)) {
             correct += 1;
-        } else { 
+        } else {
             wrong += 1;
         }
     });
@@ -143,16 +148,18 @@ function compareElement(monster, randommonster) {
 
 }
 // Function that is called when a monster is pressed, it compares the monster with the random monster and shows the results in the results.
-window.monsterPressed = function(monster) {
+//
+// @monster is the monster that was pressed.
+window.monsterPressed = function (monster) {
     attempts++;
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
-    let monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
+    const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
     searchbar.removeResults();
     searchbar.searchBar.value = "";
 
-    let monsterMatch = monsterguess[0];
-    let compareResults = compareMonster(monsterMatch);
+    const monsterMatch = monsterguess[0];
+    const compareResults = compareMonster(monsterMatch);
 
     if (compareResults.every((result) => result.includes("green")) && monsterMatch != randomMonster) {
         bottomBorder = "border-b-4 border-yellow-500"
@@ -182,12 +189,18 @@ window.monsterPressed = function(monster) {
         </div>
     `
     guessDiv.prepend(guessElement);
-    
+
     attemptsElement.innerHTML = `Attempts: ${attempts}`
 }
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
-function victoryScreen(monster, backgroundColor) {
+//
+// @monster is the monster that was guessed correctly or the random monster when you give up.
+//
+// @backgroundColor is the color of the bar at the bottom of the victory screen, it is green when you guessed correctly and red when you give up.
+//
+// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up. Is False by default.
+function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
     resetbutton.setAttribute("class", "bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600");
@@ -196,7 +209,7 @@ function victoryScreen(monster, backgroundColor) {
 
     victoryDiv = document.createElement("div");
 
-    victoryDiv.setAttribute("class", 
+    victoryDiv.setAttribute("class",
         "absolute justify-center items-center"
     )
 
@@ -218,12 +231,40 @@ function victoryScreen(monster, backgroundColor) {
     `
 
     mainscreen.appendChild(victoryDiv);
+    console.log("Updating stats with attempts: " + attempts);
+    updateStats(attempts, gaveUp);
 }
 
 // Function that removes the victory screen.	
-window.removevictoryScreen = function() {
+window.removevictoryScreen = function () {
     if (victoryDiv) {
         victoryDiv.remove();
+    }
+}
+
+// Function that updates the statistics in the database with the number of attempts and whether the player gave up or not.
+//
+// @attempts is the number of attempts it took to guess the monster.
+//
+// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up.
+async function updateStats(attempts, gaveUp) {
+    try {
+        const response = await fetch('/update-attempts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                attempts: attempts,
+                gaveUp: gaveUp
+             })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error updating attempts:', error);
     }
 }
 
@@ -237,15 +278,15 @@ function createFilter() {
     filterContainer.style.visibility = "hidden"
 }
 
-window.instanceFilterMenu = function() {
+window.instanceFilterMenu = function () {
     filterContainer.style.visibility = "visible";
 }
 
-window.closeFilter = function() {
+window.closeFilter = function () {
     filterContainer.style.visibility = "hidden";
 }
 
-window.saveChanges = function() {
+window.saveChanges = function () {
     resetGame();
     filterclass.disableSaveButton()
 }

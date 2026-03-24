@@ -17,6 +17,7 @@ export class FilterContainerClass {
         })
     }
 
+    // Method to build the filter container
     buildContainer() {
         this.filterContainer = document.createElement("div");
         this.filterContainer.setAttribute("class", "fixed bg-white inset-y-0 flex items-start h-screen w-1/3 z-20 overflow-auto");
@@ -42,18 +43,23 @@ export class FilterContainerClass {
         return this.filterContainer;
     }
 
+    // Method to enable the save button
     enableSaveButton() {
         const savebutton = document.getElementById("savebutton")
         savebutton.setAttribute("class", "mt-4 border-2 border-green-500 text-white bg-green-500 px-4 py-2 rounded")
         savebutton.disabled = false
     }
 
+    // Method to disable the save button
     disableSaveButton() {
         const savebutton = document.getElementById("savebutton")
         savebutton.setAttribute("class", "mt-4 text-black border-2 border-green-500 px-4 py-2 rounded")
         savebutton.disabled = true
     }
-    
+
+    // Method to handle checkbox changes
+    // 
+    // @checkbox is the checkbox that was pressed
     handleCheckboxChange(checkbox) {
         console.log(`Checkbox ${checkbox.name} changed to ${checkbox.checked}`);
         if (this.values.includes(checkbox)) {
@@ -68,6 +74,10 @@ export class FilterContainerClass {
         this.enableSaveButton()
     }
 
+    // Method to set the values of the checkboxes based on the items in the filter
+    // 
+    // @checkboxes are all the checkboxes 
+    // @items are all the categories than can be filtered
     checkboxValues(checkboxes, items) {
         checkboxes.forEach(checkbox => {
             if (!checkbox.id.includes(items)) {
@@ -79,6 +89,9 @@ export class FilterContainerClass {
         })
     }
 
+    // Method that filters the monsters after options have changed
+    //
+    // @monsters are all the monsters in the json file
     filterMonsters(monsters) {
         let removedmonsters = []
         let filteredmonsters = []
@@ -102,6 +115,9 @@ export class FilterContainerClass {
 
     }
 
+    // Method to check if the filtered monsters are more than 0, if not it will show an error message and return the original monsters
+    //
+    // @monsters are all the monsters in the json file
     checkFilteredMonsters(monsters) {
         let filteredmonsters = this.filterMonsters(monsters)
         if (filteredmonsters.length > 0) {
@@ -123,6 +139,10 @@ export class FilterContainerClass {
         }
     }
 
+    // Method that creates all the checkboxes based on the catagories in the json file
+    //
+    // @monsters are all the monsters in the json file
+    // @keyarray are all the categories than can be filtered
     setFilter(monsters, keyarray) {
         keyarray.forEach(key => {
             if (key !== 'id' && key !== 'name') {
