@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Unnamed Guessing Game</title>
+    <script src="script.js" type="module" defer></script>
+</head>
+<body>
+    <div id="maindiv" class="min-h-screen flex flex-col items-center bg-gray-800 text-white">
+        <header class="w-full bg-gray-900 p-4 text-2xl flex justify-between">
+            <div class="flex justify-center">
+                <h1 class="text-white">Monster Hunter Guessing Game</h1>
+            </div>
+            <div class="space-x-4 items-center">
+                <a href="/" class="text-gray-300 hover:text-white underline underline-offset-2">Guess the Monster</a>
+                <a href="/masterhunter" class="text-gray-300 hover:text-white">Master Hunter</a>
+                <a href="/statistics" class="text-gray-300 hover:text-white">Statistics</a>
+                <a href="#" class="text-gray-300 hover:text-white">About</a>
+            </div>
+        </header>
+        <div id="statistics" class="flex flex-col items-center space-y-6 mt-10">
+            <div id="square-attempts" class="h-full w-full bg-purple-0 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-gray-100 shadow-lg flex flex-col items-center justify-center p-10">
+                <h1 id="total-attempts" class="text-white text-2xl font-bold">Attempts_Number</h1>
+                <h4 class="font-bold text-l">Total Attempts</h4>
+            </div>
+        </div>
+</body>
+</html>
