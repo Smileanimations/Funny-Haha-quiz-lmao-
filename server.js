@@ -1,13 +1,15 @@
 import express from 'express';
 import path from 'path';
 import Database from 'better-sqlite3';
+import { stat } from 'fs';
 
 const app = express();
 const db = new Database('stats.db');
-
+createDatabase()
 
 const publicPath = path.join(path.resolve(), 'public');
 const hunterPath = path.join(path.resolve(), 'masterhunter');
+const statsPath = path.join(path.resolve(), 'statistics');
 const modulesPath = path.join(path.resolve(), 'modules');
 const dataPath = path.join(path.resolve(), 'data');
 const imagePath = path.join(path.resolve(), 'images');
@@ -46,14 +48,13 @@ function createDatabase() {
     console.log("Database and table created successfully: ", row);
 }
 
-createDatabase()
-
 app.use(express.json());
 app.use(express.static(publicPath));
 app.use('/Modules', express.static(modulesPath));
 app.use('/Data', express.static(dataPath));
 app.use('/Images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
+app.use('/statistics', express.static(statsPath));
 
 app.get('/stats', (req, res) => {
     const stats = getStatsStmt.get();
@@ -76,8 +77,8 @@ app.post('/update-attempts', (req, res) => {
     } else {
         updateWinsStmt.run();
     }
-    console.log(stats, gaveUp);
     res.json({ message: 'Stats updated successfully'});
+    console.log(stats, gaveUp);
 });
 
 app.get(['/masterhunter'], (req, res) => {
@@ -86,6 +87,10 @@ app.get(['/masterhunter'], (req, res) => {
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
+});
+
+app.get('/statistics', (req, res) => {
+    res.sendFile(path.join(statsPath, 'statistics.html'));
 });
 
 app.listen(3000, () => {
