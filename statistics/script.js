@@ -16,7 +16,7 @@ function getStatistics() {
         });
 }
 
-function animateValue(element, start, end, duration = 500) {
+function animateValue(element, start, end, duration = 1000) {
     const startTime = performance.now();
     
     const update = (currentTime) => {
