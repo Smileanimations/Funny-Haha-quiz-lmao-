@@ -15,7 +15,7 @@ const dataPath = path.join(path.resolve(), 'data');
 const imagePath = path.join(path.resolve(), 'images');
 
 const getStatsStmt = db.prepare(
-  "SELECT total_attempts, total_wins, total_losses, average_attempt FROM stats WHERE id = 1"
+  "SELECT total_attempts, total_wins, total_losses, total_games, average_attempt FROM stats WHERE id = 1"
 );
 
 const updateAttemptsStmt = db.prepare(
@@ -30,6 +30,10 @@ const updateLossesStmt = db.prepare(
     "UPDATE stats SET total_losses = total_losses + 1 WHERE id = 1"
 );
 
+const updateGamesStmt = db.prepare(
+    "UPDATE stats SET total_games = total_games + 1 WHERE id = 1"
+);
+
 // Function that creates the database and the table if it doesnt exist, also inserts a few rows if the table is empty.
 function createDatabase() {
     db.exec(`
@@ -38,12 +42,13 @@ function createDatabase() {
             total_attempts INTEGER DEFAULT 0,
             total_wins INTEGER DEFAULT 0,
             total_losses INTEGER DEFAULT 0,
+            total_games INTEGER DEFAULT 0,
             average_attempt REAL DEFAULT 0
         )
     `);
     const row = db.prepare("SELECT * FROM stats").get();
     if (!row) {
-        db.prepare("INSERT INTO stats (total_attempts, total_wins, total_losses, average_attempt) VALUES (0, 0, 0, 0)").run();
+        db.prepare("INSERT INTO stats (total_attempts, total_wins, total_losses, total_games, average_attempt) VALUES (0, 0, 0, 0, 0)").run();
     }
     console.log("Database and table created successfully: ", row);
 }
@@ -74,8 +79,10 @@ app.post('/update-attempts', (req, res) => {
 
     if (gaveUp == true) {
         updateLossesStmt.run();
+        updateGamesStmt.run();
     } else {
         updateWinsStmt.run();
+        updateGamesStmt.run();
     }
     res.json({ message: 'Stats updated successfully'});
     console.log(stats, gaveUp);
