@@ -52,7 +52,7 @@ fetch("./Data/monsters.json")
 // 
 // @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
-    let filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
+    const filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
     console.log(filteredmonsters);
     randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
     console.log(randomMonster);
@@ -232,7 +232,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
 
     mainscreen.appendChild(victoryDiv);
     console.log("Updating stats with attempts: " + attempts);
-    updateStats(attempts, gaveUp);
+    updateStats(attempts, gaveUp, monster.name);
 }
 
 // Function that removes the victory screen.	
@@ -247,16 +247,19 @@ window.removevictoryScreen = function () {
 // @attempts is the number of attempts it took to guess the monster.
 //
 // @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up.
-async function updateStats(attempts, gaveUp) {
+// @monsterName is the name of the monster for which to update stats.
+async function updateStats(attempts, gaveUp, monsterName) {
+    console.log("Sending stats update to server...");
     try {
-        const response = await fetch('/update-attempts', {
+        const response = await fetch('/update-stats', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
                 attempts: attempts,
-                gaveUp: gaveUp
+                gaveUp: gaveUp,
+                monster: monsterName
              })
         });
         
