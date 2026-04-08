@@ -54,6 +54,11 @@ app.get('/stats', (req, res) => {
     const stats = getStatsStmt.get();
     res.json(stats);
 });
+
+app.get('/games', (req, res) => {
+    const games = getGamesStmt.all();
+    res.json(games);
+});
     
 app.get('/games', (req, res) => {
     const games = getGamesStmt.all();
