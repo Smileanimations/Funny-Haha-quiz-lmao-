@@ -3,6 +3,8 @@ const totalAttemptsElement = document.getElementById('total-attempts');
 const averageAttemptsElement = document.getElementById('average-attempts');
 const totalWinsElement = document.getElementById('total-wins');
 const totalLossesElement = document.getElementById('total-losses');
+const totalGamesElement = document.getElementById('total-games');
+const averageWinsElement = document.getElementById('average-win');
 
 
 function getStatistics() {
@@ -14,7 +16,7 @@ function getStatistics() {
         });
 }
 
-function animateValue(element, start, end, duration = 500) {
+function animateValue(element, start, end, duration = 1000) {
     const startTime = performance.now();
     
     const update = (currentTime) => {
@@ -35,6 +37,14 @@ function setStatistics(stats) {
     animateValue(averageAttemptsElement, 0, Math.round(stats.average_attempt));
     animateValue(totalWinsElement, 0, stats.total_wins);
     animateValue(totalLossesElement, 0, stats.total_losses);
+    animateValue(totalGamesElement, 0, stats.total_games);
+    if (stats.total_wins > 0) {
+    const averageWin = (stats.total_wins / stats.total_games) * 100;
+    animateValue(averageWinsElement, 0, Math.round(averageWin));
+    } else {
+    averageWinsElement.textContent = '0%';
+    }
+
 }
 
 function main() {
@@ -43,6 +53,8 @@ function main() {
         averageAttemptsElement.textContent = 'Error';
         totalWinsElement.textContent = 'Error';
         totalLossesElement.textContent = 'Error';
+        totalGamesElement.textContent = 'Error';
+        averageAttemptsElement.textContent = 'Error';
         return;
     }
 
