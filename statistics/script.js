@@ -64,11 +64,11 @@ function setLastPlayedGames() {
         const gameEntry = document.createElement('div');
         gameEntry.classList.add('flex', 'flex-row', 'game-entry', 'bg-' + (game.gave_up ? 'red' : 'green') + '-500', 'rounded-md', 'p-3', 'mb-2');
         gameEntry.innerHTML = `
-            <img class="size-20 inline-block mr-3" src="/Images/Icons/${game.monster_name.replace(/ /g, '_')}_Icon.webp" alt="${game.monster_name}" onerror="this.onerror=null; this.src='/Images/Icons/Default_Icon.webp';">
+            <img class="size-20 inline-block mr-3" src="/Images/Icons/${game.monster_name.replace(/ /g, '_')}_Icon.webp" alt="${game.monster_name}" onerror="this.onerror=null; this.src='/Images/Icons/Default_1_Icon.webp';">
             <div class="flex flex-col text-white inline-block">
                 <p><strong>Monster:</strong> ${game.monster_name}</p>
                 <p><strong>Attempts:</strong> ${game.attempts}</p>
-                <p><strong>Result:</strong> ${game.gave_up ? 'Gave Up' : 'Won'}</p>
+                <p><strong>Result:</strong> ${game.gave_up ? 'Gave Up' : 'Guessed'}</p>
             </div>
         `;
         gamesContainer.appendChild(gameEntry);
