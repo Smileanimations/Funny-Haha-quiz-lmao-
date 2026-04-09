@@ -1,3 +1,5 @@
 ./ideas
 .vscode
-.db
+/node_modules
+/dist
+stats.db
