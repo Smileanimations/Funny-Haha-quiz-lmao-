@@ -1,11 +1,14 @@
 const stats = await getStatistics();
 const games = await getGames();
+const monsters = await getMonsters();
+
 const totalAttemptsElement = document.getElementById('total-attempts');
 const averageAttemptsElement = document.getElementById('average-attempts');
 const totalWinsElement = document.getElementById('total-wins');
 const totalLossesElement = document.getElementById('total-losses');
 const totalGamesElement = document.getElementById('total-games');
-const averageWinsElement = document.getElementById('average-win');
+const averageWinsElement = document.getElementById('average-win')
+const mostguessedMonstersElement = document.getElementById('most-guessed-monsters');
 
 
 function getStatistics() {
@@ -22,6 +25,15 @@ function getGames() {
         .then(response => response.json())
         .catch(error => {
             console.error('Error fetching games:', error);
+            return [];
+        });
+}
+
+function getMonsters() {
+    return fetch('/monsters-guessed')
+        .then(response => response.json())
+        .catch(error => {
+            console.error('Error fetching monsters guessed:', error);
             return [];
         });
 }
@@ -75,6 +87,35 @@ function setLastPlayedGames() {
     });
 }
 
+function setMostGuessedMonsters() {
+    const mostGuessedMonsters = monsters.slice(0, 3);
+    let bgColor = '';
+    mostGuessedMonsters.forEach(monster => {
+        const number = mostGuessedMonsters.indexOf(monster) + 1;
+        switch (number) {
+            case 1:
+                bgColor = 'bg-yellow-500';
+                break;
+            case 2:
+                bgColor = 'bg-gray-300';
+                break;
+            case 3:
+                bgColor = 'bg-yellow-700';
+                break;
+        }
+        const monsterEntry = document.createElement('div');
+        monsterEntry.classList.add('flex', 'flex-row', 'monster-entry', bgColor, 'rounded-md', 'p-3', 'mb-2');
+        monsterEntry.innerHTML = `
+            <img class="size-20 inline-block mr-3" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" alt="${monster.name}" onerror="this.onerror=null; this.src='/Images/Icons/Default_1_Icon.webp';">
+            <div class="flex flex-col text-white inline-block">
+                <p><strong>Monster:</strong> ${monster.name}</p>
+                <p><strong>Times Guessed:</strong> ${monster.attempts}</p>
+            </div>
+        `;
+        mostguessedMonstersElement.appendChild(monsterEntry);
+    });
+}
+
 function main() {
     if (!stats) {
         totalAttemptsElement.textContent = 'Error';
@@ -88,6 +129,7 @@ function main() {
 
     setStatistics();
     setLastPlayedGames();
+    setMostGuessedMonsters();
 }
 
 main();

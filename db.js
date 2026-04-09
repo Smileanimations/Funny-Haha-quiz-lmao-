@@ -23,7 +23,7 @@ function createDatabase() {
 
         CREATE TABLE IF NOT EXISTS monsters_guessed (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            monster_id INTEGER,
+            monster_id INTEGER UNIQUE,
             name TEXT,
             attempts INTEGER
         );

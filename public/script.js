@@ -6,6 +6,7 @@ let filterclass;
 let filterContainer;
 let randomMonster;
 let monsters = [];
+let guessedMonsters = [];
 let attempts = 0;
 let victoryDiv;
 let backgroundColor = "green";
@@ -152,9 +153,12 @@ function compareElement(monster, randommonster) {
 // @monster is the monster that was pressed.
 window.monsterPressed = function (monster) {
     attempts++;
+
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
+    guessedMonsters.push(monsterguess);
+
     searchbar.removeResults();
     searchbar.searchBar.value = "";
 
@@ -232,7 +236,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
 
     mainscreen.appendChild(victoryDiv);
     console.log("Updating stats with attempts: " + attempts);
-    updateStats(attempts, gaveUp, monster.name);
+    updateStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 
 // Function that removes the victory screen.	
@@ -248,7 +252,7 @@ window.removevictoryScreen = function () {
 //
 // @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up.
 // @monsterName is the name of the monster for which to update stats.
-async function updateStats(attempts, gaveUp, monsterName) {
+async function updateStats(attempts, gaveUp, monsterName, guessed) {
     console.log("Sending stats update to server...");
     try {
         const response = await fetch('/update-stats', {
@@ -259,7 +263,8 @@ async function updateStats(attempts, gaveUp, monsterName) {
             body: JSON.stringify({ 
                 attempts: attempts,
                 gaveUp: gaveUp,
-                monster: monsterName
+                monster: monsterName,
+                guessedMonsters: guessed
              })
         });
         

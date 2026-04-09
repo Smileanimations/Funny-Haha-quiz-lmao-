@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { getStats, updateStats } from './models/statsModel.js';
 import { getGames, updateGames } from './models/gamesModel.js';
+import { getMonsters, updateMonsters } from './models/monstersGuessedModel.js';
 
 const app = express();
 const publicPath = path.join(path.resolve(), 'public');
@@ -41,7 +42,12 @@ app.post('/update-stats', (req, res) => {
 
     updateGames(monster, attempts, gaveUp ? 1 : 0);
 
-    console.log(guessedMonsters);
+    for (const monsters of guessedMonsters) {
+        for (const monster in monsters) {
+            updateMonsters(monsters[monster].id, monsters[monster].name);
+        }
+    }
+
     res.json({ message: 'Stats updated successfully'});
 });
 
