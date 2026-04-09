@@ -1,46 +1,16 @@
 import express from 'express';
 import path from 'path';
-import Database from 'better-sqlite3';
-import { stat } from 'fs';
+import { getStats, updateStats } from './models/statsModel.js';
+import { getGames, updateGames } from './models/gamesModel.js';
+import { getMonsters, updateMonsters } from './models/monstersGuessedModel.js';
 
 const app = express();
-const db = new Database('stats.db');
-createDatabase()
-
 const publicPath = path.join(path.resolve(), 'public');
 const hunterPath = path.join(path.resolve(), 'masterhunter');
 const statsPath = path.join(path.resolve(), 'statistics');
 const modulesPath = path.join(path.resolve(), 'modules');
 const dataPath = path.join(path.resolve(), 'data');
 const imagePath = path.join(path.resolve(), 'images');
-
-const getStatsStmt = db.prepare(
-  "SELECT total_attempts, total_wins, total_losses, total_games, average_attempt FROM stats WHERE id = 1"
-);
-
-const getGamesStmt = db.prepare(
-    "SELECT monster_name, attempts, gave_up, timestamp FROM games"
-);
-
-const updateAttemptsStmt = db.prepare(
-  "UPDATE stats SET total_attempts = total_attempts + ?, average_attempt = ? WHERE id = 1"
-);
-
-const updateWinsStmt = db.prepare(
-    "UPDATE stats SET total_wins = total_wins + 1 WHERE id = 1"
-);
-
-const updateLossesStmt = db.prepare(
-    "UPDATE stats SET total_losses = total_losses + 1 WHERE id = 1"
-);
-
-const updateGamesPlayedStmt = db.prepare(
-    "UPDATE stats SET total_games = total_games + 1 WHERE id = 1"
-);
-
-const updateGamesTableStmt = db.prepare(
-    "INSERT INTO games (monster_name, attempts, gave_up) VALUES (?, ?, ?)"
-);
 
 app.use(express.json());
 app.use(express.static(publicPath));
@@ -51,43 +21,34 @@ app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
 
 app.get('/stats', (req, res) => {
-    const stats = getStatsStmt.get();
+    const stats = getStats();
     res.json(stats);
 });
 
 app.get('/games', (req, res) => {
-    const games = getGamesStmt.all();
+    const games = getGames();
     res.json(games);
+});
+
+app.get('/monsters-guessed', (req, res) => {
+    const monsters = getMonsters();
+    res.json(monsters);
 });
     
-app.get('/games', (req, res) => {
-    const games = getGamesStmt.all();
-    res.json(games);
-});
-
 // Endpoint to update the stats in the database, it takes the attempts and gaveUp values from the request body and updates the total_attempts, average_attempt, total_wins and total_losses in the database accordingly.
 app.post('/update-stats', (req, res) => {
-    const { attempts, gaveUp, monster } = req.body;
-    const stats = getStatsStmt.get();
+    const { attempts, gaveUp, monster, guessedMonsters } = req.body;
+    updateStats(attempts, gaveUp);
 
-    if (stats.average_attempt != 0) {
-        const newAverage = (stats.average_attempt * stats.total_attempts + attempts) / (stats.total_attempts + 1);
-        updateAttemptsStmt.run(attempts, newAverage);
-    } else {
-        updateAttemptsStmt.run(attempts, attempts);
+    updateGames(monster, attempts, gaveUp ? 1 : 0);
+
+    for (const monsters of guessedMonsters) {
+        for (const monster in monsters) {
+            updateMonsters(monsters[monster].id, monsters[monster].name);
+        }
     }
-
-    if (gaveUp == true) {
-        updateLossesStmt.run();
-    } else {
-        updateWinsStmt.run();
-    }
-
-    updateGamesPlayedStmt.run();
-    updateGamesTableStmt.run(monster, attempts, gaveUp ? 1 : 0);
 
     res.json({ message: 'Stats updated successfully'});
-    console.log(stats, gaveUp, games);
 });
 
 app.get(['/masterhunter'], (req, res) => {
@@ -105,31 +66,3 @@ app.get('/statistics', (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
-
-
-// Function that creates the database and the table if it doesnt exist, also inserts a few rows if the table is empty.
-function createDatabase() {
-    db.exec(`
-        CREATE TABLE IF NOT EXISTS stats (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            total_attempts INTEGER DEFAULT 0,
-            total_wins INTEGER DEFAULT 0,
-            total_losses INTEGER DEFAULT 0,
-            total_games INTEGER DEFAULT 0,
-            average_attempt REAL DEFAULT 0
-        );
-
-        CREATE TABLE IF NOT EXISTS games (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            monster_name TEXT,
-            attempts INTEGER,
-            gave_up BOOLEAN,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-        );
-    `);
-    const row = db.prepare("SELECT * FROM stats").get();
-    if (!row) {
-        db.prepare("INSERT INTO stats (total_attempts, total_wins, total_losses, total_games, average_attempt) VALUES (0, 0, 0, 0, 0)").run();
-    }
-    console.log("Database and table created successfully: ", row);
-}
