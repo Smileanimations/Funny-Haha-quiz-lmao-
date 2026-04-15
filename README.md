@@ -1,7 +1,20 @@
 # Monster Hunter Guessing Game
 
-## About the Project
-This is a small on-going project i am working mostly because i am very bored, but also because I love Monster Hunter!!! Most of the website is inspired by [Monkepo](https://monkepo.online/), and you will notice many similarities. I will most likely work on this project on and off. maybe one day i'll host this website when i know more about web development and hosting. currently this is mostly something to learn Javascript. and if you take a gander, you'll see that its mostly just raw JS (because i am simply quirky like that). 
+---
+
+### About the Project
+
+Monster Hunter Guessing Game is a passion project I made because I am a big fan of the franchise Monster Hunter and saw other fandoms create "guessing games" along the likes of this one and wanted to try it myself.
+
+It is entirely client side, built with Javascript and Node. It currently has 2 stand-alone games:
+
+**Monstie Guesser** - A Wordle-style guessing game where a random monster is selected on load and you narrow it down using hints like generation, monster type, species, element, and ailment. Colour-coded feedback (green, red, and yellow for partial matches) guides you to the answer, with no guess limit and the option to give up whenever the hunt gets too tough.
+
+**Master Hunter** - A challenge mode where your goal is simple: name every monster. Sort the grid alphabetically, by generation, or by class to make the hunt a little more manageable.
+
+The project isnt hosted yet, you can find how to run it further in the readme.
+
+---
 
 ## Monstie Guesser
 When you load/refresh the page a random monster is chosen and you can start guessing! Simply type in your guess and use the information given to guess the chosen monster. You have an unlimited amount of attempts and can give up any time. 
@@ -27,10 +40,10 @@ You can change the display so that it shows you every class instead of every gen
 2. Sorted based on Generation
 3. Sorted based on Class
 
-This way you'll get an less overwhelming grid and make it a little easier to guess missing monsters.
 
 ## How to get started
 Since this website isn't hosted you'll have to run it yourself which shouldn't be too hard
 1. Clone the repository (https://github.com/Smileanimations/Funny-Haha-quiz-lmao-.git),
-2. In VSCode use the Live Server extension (Or any other method you know that'll make it work, i just use this one),
-3. And start playing! 
+2. Make sure you have [Node.js](https://nodejs.org/en) installed, you can find out by running `node -v` in your terminal
+3. Open a terminal in the root of the project and run `npm install` which will install all the dependencies
+4. After that you can run `npm start` or `node server.js` to host on `http://localhost:3000`
