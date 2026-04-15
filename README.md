@@ -34,7 +34,7 @@ When you load/refresh the page a random monster is chosen and you can start gues
    Another rare case is when you have everything correct except it doesn't show you the result. This is indicated with a yellow line under the monster's name and means that you indeed have all the hints correct but not the right monster. For example, Rathian and Rathalos practically have the same hints but are not the same monster.
 
 ## Master Hunter
-Also ripped off of Monkepo is Master Hunter! In this game there is just one simple task: Name Every Monster. That's it! 
+In this game there is just one simple task: Name Every Monster. That's it! 
 You can change the display so that it shows you every class instead of every generation if you prefer. You can also filter the results with the following options:
 1. Sorted Alphabetically
 2. Sorted based on Generation
