@@ -10,7 +10,7 @@ const totalGamesElement = document.getElementById('total-games');
 const averageWinsElement = document.getElementById('average-win')
 const mostguessedMonstersElement = document.getElementById('most-guessed-monsters');
 
-
+// Get the statistics from the server.
 function getStatistics() {
     return fetch('/stats')
         .then(response => response.json())
@@ -20,6 +20,7 @@ function getStatistics() {
         });
 }
 
+// Get the games played from the server.
 function getGames() {
     return fetch('/games')
         .then(response => response.json())
@@ -29,6 +30,7 @@ function getGames() {
         });
 }
 
+// Get the monsters guessed from the server.
 function getMonsters() {
     return fetch('/monsters-guessed')
         .then(response => response.json())
@@ -38,6 +40,7 @@ function getMonsters() {
         });
 }
 
+// Animate the counting of statistics values
 function animateValue(element, start, end, duration = 1000) {
     const startTime = performance.now();
     
@@ -54,9 +57,10 @@ function animateValue(element, start, end, duration = 1000) {
     requestAnimationFrame(update);
 }
 
+// Set the statistics values with animation
 function setStatistics() {
     animateValue(totalAttemptsElement, 0, stats.total_attempts);
-    animateValue(averageAttemptsElement, 0, Math.round(stats.average_attempt));
+    animateValue(averageAttemptsElement, 0, stats.average_attempt);
     animateValue(totalWinsElement, 0, stats.total_wins);
     animateValue(totalLossesElement, 0, stats.total_losses);
     animateValue(totalGamesElement, 0, stats.total_games);
@@ -68,6 +72,7 @@ function setStatistics() {
     }
 }
 
+// Get the last 5 played games and display them in the "Last Played Games" section
 function setLastPlayedGames() {
     const gamesContainer = document.getElementById('games-container');
     const lastGames = games.slice(-5).reverse();
@@ -87,6 +92,7 @@ function setLastPlayedGames() {
     });
 }
 
+// Sort monsters by attempts and get the top 3 most guessed monsters
 function setMostGuessedMonsters() {
     const mostGuessedMonsters = monsters.slice(0, 3);
     let bgColor = '';
@@ -116,6 +122,7 @@ function setMostGuessedMonsters() {
     });
 }
 
+// Main function to initialize the statistics page
 function main() {
     if (!stats) {
         totalAttemptsElement.textContent = 'Error';
