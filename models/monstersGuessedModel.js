@@ -8,6 +8,9 @@ export function getMonsters() {
     return getMonstersStmt.all();
 }
 
+// Inserts a new monster record into the monsters_guessed table with the provided monster ID and name, and increments the attempts count if the monster already exists
+// @param {int} monsterId is the ID of the monster that was guessed correctly.
+// @param {string} monsterName is the name of the monster that was guessed correctly.
 export function updateMonsters(monsterId, monsterName) {
     const updateMonstersTableStmt = db.prepare(
         `INSERT INTO monsters_guessed (monster_id, name, attempts)

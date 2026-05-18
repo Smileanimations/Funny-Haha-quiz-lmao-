@@ -13,7 +13,7 @@ export class searchBarClass {
 
     // Method to update the search results based on the input value
     // 
-    // @e is the event that is triggered when the input value changes
+    // @e is the character that is typed in the search bar
     updateValue(e) {
         this.result = e.target.value.toLowerCase();
         this.searchbarDiv.appendChild(this.attachDiv);
@@ -43,7 +43,7 @@ export class searchBarClass {
 
     // Method that creates a button for each monster that is found in the search results, it also adds an event listener to each button that will call the monsterPressed function when clicked
     //
-    // @monster is the monster that is found in the search results
+    // @param {Object} monster is the monster that is found in the search results
     createElement(monster) {
         const newDiv = document.createElement("Button");
         newDiv.setAttribute('onclick', `monsterPressed('${monster.name}')`)

@@ -8,7 +8,6 @@ let randomMonster;
 let monsters = [];
 let guessedMonsters = [];
 let attempts = 0;
-let victoryDiv;
 let backgroundColor = "green";
 
 const body = document.getElementById("body");
@@ -16,6 +15,7 @@ const mainscreen = document.getElementById("mainscreen");
 
 let attachDiv;
 let searchbarDiv;
+let victoryDiv;
 
 const resetbutton = document.getElementById("resetbutton");
 
@@ -51,7 +51,7 @@ fetch("./Data/monsters.json")
 
 // Function that gets a random monster from the monsters array.
 // 
-// @monsters is the list of every monster that is in the JSON file.
+//param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     const filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
     console.log(filteredmonsters);
@@ -88,7 +88,7 @@ window.giveUp = function () {
 
 // Function that compares the monster with the random monster and returns an array with the colors of the results.
 //
-// @monster is the monster that was pressed.
+// @param {Object} monster is the monster that was pressed.
 function compareMonster(monster) {
     let colors = [];
 
@@ -121,6 +121,8 @@ function compareMonster(monster) {
 }
 
 // Function that compares the elements of the monster and the random monster, it does by checking each element and creating a point system and by comparing those points returns a color.
+// @param {Array} monster is are the element(s) of the monster that was pressed.
+// @param {Array} randommonster are the element(s) of the random monster.
 function compareElement(monster, randommonster) {
     const monsterarray = monster.split(", ");
     const randommonsterarray = randommonster.split(", ");
@@ -150,7 +152,7 @@ function compareElement(monster, randommonster) {
 }
 // Function that is called when a monster is pressed, it compares the monster with the random monster and shows the results in the results.
 //
-// @monster is the monster that was pressed.
+// @param {Object} monster is the monster that was pressed.
 window.monsterPressed = function (monster) {
     attempts++;
 
@@ -199,11 +201,11 @@ window.monsterPressed = function (monster) {
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
 //
-// @monster is the monster that was guessed correctly or the random monster when you give up.
+// @param {Object} monster is the monster that was guessed correctly or the random monster when you give up.
 //
-// @backgroundColor is the color of the bar at the bottom of the victory screen, it is green when you guessed correctly and red when you give up.
+// @param {string} backgroundColor is the color of the bar at the bottom of the victory screen, it is green when you guessed correctly and red when you give up.
 //
-// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up. Is False by default.
+// @param {boolean} gaveUp is whether the player gave up or not, it is used to update the stats with a loss when the player gives up. Is False by default.
 function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
@@ -248,10 +250,10 @@ window.removevictoryScreen = function () {
 
 // Function that updates the statistics in the database with the number of attempts and whether the player gave up or not.
 //
-// @attempts is the number of attempts it took to guess the monster.
+// @param {int} attempts is the number of attempts it took to guess the monster.
 //
-// @gaveUp is wether the player gave up or not, it is used to update the stats with a loss when the player gives up.
-// @monsterName is the name of the monster for which to update stats.
+// @param {boolean} gaveUp is whether the player gave up or not, it is used to update the stats with a loss when the player gives up.
+// @param {string} monsterName is the name of the monster for which to update stats.
 async function updateStats(attempts, gaveUp, monsterName, guessed) {
     console.log("Sending stats update to server...");
     try {

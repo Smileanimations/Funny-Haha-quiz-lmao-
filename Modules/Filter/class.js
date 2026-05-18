@@ -59,7 +59,7 @@ export class FilterContainerClass {
 
     // Method to handle checkbox changes
     // 
-    // @checkbox is the checkbox that was pressed
+    // @param {HTMLInputElement} checkbox is the checkbox that was pressed
     handleCheckboxChange(checkbox) {
         console.log(`Checkbox ${checkbox.name} changed to ${checkbox.checked}`);
         if (this.values.includes(checkbox)) {
@@ -76,8 +76,8 @@ export class FilterContainerClass {
 
     // Method to set the values of the checkboxes based on the items in the filter
     // 
-    // @checkboxes are all the checkboxes 
-    // @items are all the categories than can be filtered
+    // @param {Array} checkboxes are all the checkboxes 
+    // @param {Array} items are all the categories than can be filtered
     checkboxValues(checkboxes, items) {
         checkboxes.forEach(checkbox => {
             if (!checkbox.id.includes(items)) {
@@ -91,7 +91,7 @@ export class FilterContainerClass {
 
     // Method that filters the monsters after options have changed
     //
-    // @monsters are all the monsters in the json file
+    // @param {Array} monsters are all the monsters in the json file
     filterMonsters(monsters) {
         let removedmonsters = []
         let filteredmonsters = []
@@ -141,8 +141,8 @@ export class FilterContainerClass {
 
     // Method that creates all the checkboxes based on the catagories in the json file
     //
-    // @monsters are all the monsters in the json file
-    // @keyarray are all the categories than can be filtered
+    // @param {Array} monsters are all the monsters in the json file
+    // @param {Array} keyarray are all the categories than can be filtered
     setFilter(monsters, keyarray) {
         keyarray.forEach(key => {
             if (key !== 'id' && key !== 'name') {
