@@ -1,16 +1,18 @@
 import express from 'express';
 import path from 'path';
-import { getStats, updateStats } from './models/statsModel.js';
-import { getGames, updateGames } from './models/gamesModel.js';
-import { getMonsters, updateMonsters } from './models/monstersGuessedModel.js';
+import { fileURLToPath } from 'url';
+import { create } from 'domain';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-const publicPath = path.join(path.resolve(), 'public');
-const hunterPath = path.join(path.resolve(), 'masterhunter');
-const statsPath = path.join(path.resolve(), 'statistics');
-const modulesPath = path.join(path.resolve(), 'modules');
-const dataPath = path.join(path.resolve(), 'data');
-const imagePath = path.join(path.resolve(), 'images');
+const publicPath = path.join(__dirname, 'public');
+const hunterPath = path.join(__dirname, 'masterhunter');
+const statsPath = path.join(__dirname, 'statistics');
+const modulesPath = path.join(__dirname, 'modules');
+const dataPath = path.join(__dirname, 'data');
+const imagePath = path.join(__dirname, 'images');
 
 app.use(express.json());
 app.use(express.static(publicPath));
@@ -35,22 +37,6 @@ app.get('/monsters-guessed', (req, res) => {
     res.json(monsters);
 });
     
-// Endpoint to update the stats in the database, it takes the attempts and gaveUp values from the request body and updates the total_attempts, average_attempt, total_wins and total_losses in the database accordingly.
-app.post('/update-stats', (req, res) => {
-    const { attempts, gaveUp, monster, guessedMonsters } = req.body;
-    updateStats(attempts, gaveUp);
-
-    updateGames(monster, attempts, gaveUp ? 1 : 0);
-
-    for (const monsters of guessedMonsters) {
-        for (const monster in monsters) {
-            updateMonsters(monsters[monster].id, monsters[monster].name);
-        }
-    }
-
-    res.json({ message: 'Stats updated successfully'});
-});
-
 app.get(['/masterhunter'], (req, res) => {
     res.sendFile(path.join(hunterPath, 'masterhunter.html'));
 });
@@ -62,6 +48,7 @@ app.get('/', (req, res) => {
 app.get('/statistics', (req, res) => {
     res.sendFile(path.join(statsPath, 'statistics.html'));
 });
+
 
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
