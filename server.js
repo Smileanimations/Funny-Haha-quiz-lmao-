@@ -22,11 +22,6 @@ app.use('/Images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
 
-app.get('/stats', (req, res) => {
-    const stats = getStats();
-    res.json(stats);
-});
-
 app.get('/games', (req, res) => {
     const games = getGames();
     res.json(games);
@@ -46,7 +41,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/statistics', (req, res) => {
-    res.sendFile(path.join(statsPath, 'statistics.html'));
+    res.sendFile(path.join(publicPath, 'statistics/statistics.html'));
 });
 
 

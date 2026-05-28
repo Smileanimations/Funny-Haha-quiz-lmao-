@@ -14,9 +14,10 @@ export async function getMonsters() {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const store = db.transaction('monsters_guessed', 'readonly').objectStore('monsters_guessed');
-        const request = store.get(1);
+        const request = store.getAll();
         request.onsuccess = function() {
-            resolve(request.result);
+            const sorted = request.result.sort((a, b) => b.attempts - a.attempts);
+            resolve(sorted);
         };
         request.onerror = function() {
             reject(request.error);
@@ -24,29 +25,42 @@ export async function getMonsters() {
     });
 }
 
-export async function updateMonsters(monsterId, monsterName, attempts) {
+export async function updateMonsters(guessedMonsters) {
     const db = await openDB();
-    const monsters = getMonsters();
+    const monsters = await getMonsters();
     return new Promise((resolve, reject) => {
-        const store = db.transaction('monsters_guessed', 'readwrite').objectStore('monsters_guessed');
-        const request = store.get(monsterId);
-        if (request.result) {
-            const monster = request.result;
-            monster.attempts += attempts;
-            const updateRequest = store.put(monster);
-            updateRequest.onsuccess = function() {
-                resolve(updateRequest.result);
+        for (const monster of guessedMonsters) {
+            console.log("Updating monster: ", monster);
+            const store = db.transaction('monsters_guessed', 'readwrite').objectStore('monsters_guessed');
+            const request = store.getAll();
+            request.onsuccess = function() {
+                const data = request.result.find(m => m.name === monster.name);
+                if (!data) {
+                    const addRequest = store.add({ name: monster.name, attempts: 1 });
+                    addRequest.onsuccess = function() {
+                        console.log("Monster added: ", monster);
+                        resolve(addRequest.result);
+                    };
+                    addRequest.onerror = function() {
+                        console.error("Error adding monster: ", monster, addRequest.error);
+                        reject(addRequest.error);
+                    };
+                    return;
+                }
+                data.attempts += 1;
+                const updateRequest = store.put(data);
+                updateRequest.onsuccess = function() {
+                    console.log("Monster updated: ", data);
+                    resolve(updateRequest.result);
+                };
+                updateRequest.onerror = function() {
+                    console.error("Error updating monster: ", data, updateRequest.error);
+                    reject(updateRequest.error);
+                };
             };
-            updateRequest.onerror = function() {
-                reject(updateRequest.error);
-            };
-        } else {
-            const addRequest = store.add({ monster_id: monsterId, name: monsterName, attempts: attempts });
-            addRequest.onsuccess = function() {
-                resolve(addRequest.result);
-            };
-            addRequest.onerror = function() {
-                reject(addRequest.error);
+            request.onerror = function() {
+                console.error("Error fetching monster: ", monster.name, request.error);
+                reject(request.error);
             };
         }
     });

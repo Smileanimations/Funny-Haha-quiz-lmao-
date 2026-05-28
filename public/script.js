@@ -162,7 +162,7 @@ window.monsterPressed = function (monster) {
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
-    guessedMonsters.push(monsterguess);
+    guessedMonsters.push(monsterguess[0]);
 
     searchbar.removeResults();
     searchbar.searchBar.value = "";
@@ -274,9 +274,8 @@ async function insertStats(attempts, gaveUp, monsterName, guessedMonsters) {
     }
 
     try {
-        const monsterId = monsters.find(monster => monster.name === monsterName).id;
-        await updateMonsters(monsterId, monsterName, attempts);
-        console.log("Monsters guessed updated successfully");
+        console.log("Updating monsters guessed with: ", guessedMonsters);
+        await updateMonsters(guessedMonsters);
     } catch (error) {
         console.error("Error updating monsters guessed:", error);
     }

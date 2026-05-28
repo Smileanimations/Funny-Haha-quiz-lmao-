@@ -14,7 +14,7 @@ export async function getGames() {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const get = db.transaction('games', 'readonly').objectStore('games');
-        const request = get.get(1);
+        const request = get.getAll();
         request.onsuccess = function() {
             resolve(request.result);
         };
