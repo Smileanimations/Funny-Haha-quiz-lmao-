@@ -28,6 +28,7 @@ function createDatabase() {
             attempts INTEGER
         );
     `);
+    
     const row = db.prepare("SELECT * FROM stats").get();
     if (!row) {
         db.prepare("INSERT INTO stats (total_attempts, total_wins, total_losses, total_games, average_attempt) VALUES (0, 0, 0, 0, 0)").run();

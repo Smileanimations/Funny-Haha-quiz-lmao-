@@ -1,5 +1,8 @@
 import { searchBarClass } from "/Modules/SearchBar/class.js";
 import { FilterContainerClass } from "/Modules/Filter/class.js";
+import { updateStats } from "./models/statsModel.js";
+import { updateGames } from "./models/gamesModel.js";
+import { updateMonsters } from "./models/monstersGuessedModel.js";
 
 let searchbar;
 let filterclass;
@@ -159,7 +162,7 @@ window.monsterPressed = function (monster) {
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
-    guessedMonsters.push(monsterguess);
+    guessedMonsters.push(monsterguess[0]);
 
     searchbar.removeResults();
     searchbar.searchBar.value = "";
@@ -238,7 +241,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
 
     mainscreen.appendChild(victoryDiv);
     console.log("Updating stats with attempts: " + attempts);
-    updateStats(attempts, gaveUp, monster.name, guessedMonsters);
+    insertStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 
 // Function that removes the victory screen.	
@@ -254,27 +257,27 @@ window.removevictoryScreen = function () {
 //
 // @param {boolean} gaveUp is whether the player gave up or not, it is used to update the stats with a loss when the player gives up.
 // @param {string} monsterName is the name of the monster for which to update stats.
-async function updateStats(attempts, gaveUp, monsterName, guessed) {
-    console.log("Sending stats update to server...");
+async function insertStats(attempts, gaveUp, monsterName, guessedMonsters) {
+    console.log("Updating stats with attempts: " + attempts);
     try {
-        const response = await fetch('/update-stats', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ 
-                attempts: attempts,
-                gaveUp: gaveUp,
-                monster: monsterName,
-                guessedMonsters: guessed
-             })
-        });
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        await updateStats(attempts, gaveUp);
+        console.log("Stats updated successfully");
     } catch (error) {
-        console.error('Error updating attempts:', error);
+        console.error("Error updating stats:", error);
+    }
+
+    try {        
+        await updateGames(monsterName, attempts, gaveUp);
+        console.log("Games updated successfully");
+    } catch (error) {
+        console.error("Error updating games:", error);
+    }
+
+    try {
+        console.log("Updating monsters guessed with: ", guessedMonsters);
+        await updateMonsters(guessedMonsters);
+    } catch (error) {
+        console.error("Error updating monsters guessed:", error);
     }
 }
 
