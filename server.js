@@ -17,9 +17,9 @@ const imagePath = path.join(__dirname, 'images');
 
 app.use(express.json());
 app.use(express.static(publicPath));
-app.use('/Modules', express.static(modulesPath));
-app.use('/Data', express.static(dataPath));
-app.use('/Images', express.static(imagePath));
+app.use('/modules', express.static(modulesPath));
+app.use('/data', express.static(dataPath));
+app.use('/images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
 app.use('/about', express.static(aboutPath));
