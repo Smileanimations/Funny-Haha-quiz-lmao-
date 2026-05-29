@@ -1,5 +1,5 @@
-import { searchBarClass } from "/Modules/SearchBar/class.js";
-import { FilterContainerClass } from "/Modules/Filter/class.js";
+import { searchBarClass } from "/modules/searchbar/class.js";
+import { FilterContainerClass } from "/modules/filter/class.js";
 import { updateStats } from "./models/statsModel.js";
 import { updateGames } from "./models/gamesModel.js";
 import { updateMonsters } from "./models/monstersGuessedModel.js";
@@ -45,7 +45,6 @@ fetch("./Data/monsters.json")
         // Imports the searchBarClass from the class.js file and creates a new instance of it.
         searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
         monsters = filterclass.filterMonsters(data.monsters);
-        console.log(monsters);
         resetGame(monsters)
     })
     .catch(error => {
@@ -57,9 +56,7 @@ fetch("./Data/monsters.json")
 //param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     const filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
-    console.log(filteredmonsters);
     randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
-    console.log(randomMonster);
     return randomMonster;
 }
 
@@ -95,11 +92,6 @@ window.giveUp = function () {
 function compareMonster(monster) {
     let colors = [];
 
-    console.log(monster);
-    console.log(randomMonster);
-
-
-
     if (monster.generations == randomMonster.generations) {
         colors.push("green");
     } else {
@@ -132,9 +124,6 @@ function compareElement(monster, randommonster) {
 
     let wrong = 0;
     let correct = 0;
-
-    console.log(monsterarray);
-    console.log(randommonsterarray);
 
     monsterarray.forEach(element => {
         if (randommonsterarray.includes(element)) {
@@ -176,14 +165,12 @@ window.monsterPressed = function (monster) {
         victoryScreen(monsterMatch, backgroundColor);
     }
 
-    console.log(compareResults);
-
     const guessElement = document.createElement("div");
     guessElement.setAttribute("class",
         "flex items-center bg-gray-600 p-4 rounded-lg w-full");
     guessElement.innerHTML = `
         <div class="w-20 h-20 object-cover">
-            <img src="/Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/Images/Icons/Default_${monsterMatch.generations}_Icon.webp';"  />
+            <img src="/images/icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/images/icons/Default_${monsterMatch.generations}_Icon.webp';"  />
         </div>
 
         <div>
@@ -226,9 +213,9 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
         <div class="rounded-3xl bg-white w-[800px] h-[600px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
-                <img class="size-64 object-contain mt-12" src="/Images/Renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/Images/Renders/default.webp';"></img>
+                <img class="size-64 object-contain mt-12" src="/images/renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/images/renders/default.webp';"></img>
                 <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
-                <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h2>
+                <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h3>
             </div>
             <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
                 <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
@@ -240,7 +227,6 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
     `
 
     mainscreen.appendChild(victoryDiv);
-    console.log("Updating stats with attempts: " + attempts);
     insertStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 

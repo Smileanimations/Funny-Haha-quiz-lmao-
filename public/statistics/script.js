@@ -52,14 +52,13 @@ function setStatistics() {
 // Get the last 5 played games and display them in the "Last Played Games" section
 function setLastPlayedGames() {
     const gamesContainer = document.getElementById('games-container');
-    console.log("Games: ", games);
     const lastGames = games.slice(-5).reverse();
 
     lastGames.forEach(game => {
         const gameEntry = document.createElement('div');
         gameEntry.classList.add('flex', 'flex-row', 'game-entry', 'bg-' + (game.gave_up ? 'red' : 'green') + '-500', 'rounded-md', 'p-3', 'mb-2');
         gameEntry.innerHTML = `
-            <img class="size-20 inline-block mr-3" src="/Images/Icons/${game.monster_name.replace(/ /g, '_')}_Icon.webp" alt="${game.monster_name}" onerror="this.onerror=null; this.src='/Images/Icons/Default_1_Icon.webp';">
+            <img class="size-20 inline-block mr-3" src="/images/icons/${game.monster_name.replace(/ /g, '_')}_Icon.webp" alt="${game.monster_name}" onerror="this.onerror=null; this.src='/images/icons/Default_1_Icon.webp';">
             <div class="flex flex-col text-white inline-block">
                 <p><strong>Monster:</strong> ${game.monster_name}</p>
                 <p><strong>Attempts:</strong> ${game.attempts}</p>
@@ -90,7 +89,7 @@ function setMostGuessedMonsters() {
         const monsterEntry = document.createElement('div');
         monsterEntry.classList.add('flex', 'flex-row', 'monster-entry', bgColor, 'rounded-md', 'p-3', 'mb-2');
         monsterEntry.innerHTML = `
-            <img class="size-20 inline-block mr-3" src="/Images/Icons/${monster.name.replace(/ /g, '_')}_Icon.webp" alt="${monster.name}" onerror="this.onerror=null; this.src='/Images/Icons/Default_1_Icon.webp';">
+            <img class="size-20 inline-block mr-3" src="/images/icons/${monster.name.replace(/ /g, '_')}_Icon.webp" alt="${monster.name}" onerror="this.onerror=null; this.src='/images/icons/Default_1_Icon.webp';">
             <div class="flex flex-col text-white inline-block">
                 <p><strong>Monster:</strong> ${monster.name}</p>
                 <p><strong>Times Guessed:</strong> ${monster.attempts}</p>

@@ -10,6 +10,7 @@ const app = express();
 const publicPath = path.join(__dirname, 'public');
 const hunterPath = path.join(__dirname, 'masterhunter');
 const statsPath = path.join(__dirname, 'statistics');
+const aboutPath = path.join(__dirname, 'about');
 const modulesPath = path.join(__dirname, 'modules');
 const dataPath = path.join(__dirname, 'data');
 const imagePath = path.join(__dirname, 'images');
@@ -21,6 +22,7 @@ app.use('/Data', express.static(dataPath));
 app.use('/Images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
+app.use('/about', express.static(aboutPath));
 
 app.get('/games', (req, res) => {
     const games = getGames();
@@ -42,6 +44,10 @@ app.get('/', (req, res) => {
 
 app.get('/statistics', (req, res) => {
     res.sendFile(path.join(publicPath, 'statistics/statistics.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(aboutPath, 'about.html'));
 });
 
 

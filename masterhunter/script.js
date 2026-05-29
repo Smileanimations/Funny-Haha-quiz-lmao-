@@ -1,4 +1,4 @@
-import { searchBarClass } from "../Modules/SearchBar/class.js";
+import { searchBarClass } from "../modules/searchbar/class.js";
 
 let searchBar;
 let generationArray = [];
@@ -22,7 +22,6 @@ fetch("../Data/monsters.json")
     })
     .then(data => {
         monsters = data.monsters;
-        console.log(monsters);
 
         const searchbarDiv = document.getElementById('search-bar-div');
         const attachDiv = document.getElementById('result');
@@ -40,7 +39,6 @@ function getGenerationsCount(monsters) {
         ...monsters
             .map(monster => monster.generations)
     );
-    console.log(maxGenerations)
 
     for (let i = 1; i <= maxGenerations; i++) {
         generationArray.push(monsters.filter(monster => monster.generations === i).length);
@@ -64,7 +62,6 @@ function setCorrectGuessed(typeArray) {
     typeArray.forEach(element => {
         correctguessed.push(0);
     });
-    console.log(correctguessed);
 }
 
 function setTableHeader(element, typeArray) {
@@ -149,7 +146,7 @@ function createGuessedMonsters(monster) {
     let monsterguess = document.createElement('div');
     monsterguess.setAttribute('class', 'flex flex-col place-items-center text-center bg-gray-600 rounded-lg w-40 h-48');
     monsterguess.innerHTML = `
-        <img src = "../Images/Icons/${monster.replace(/ /g, '_')}_Icon.webp" alt ="${monster}" class="w-20 h-20 p-1" onerror="this.onerror=null; this.src='../Images/Icons/Default_${pickedMonster.generations}_Icon.webp';" />
+        <img src = "../images/icons/${monster.replace(/ /g, '_')}_Icon.webp" alt ="${monster}" class="w-20 h-20 p-1" onerror="this.onerror=null; this.src='../images/icons/Default_${pickedMonster.generations}_Icon.webp';" />
         <div class="pt-1">
             <p class="text-gray-300 text-sm">Gen ${pickedMonster.generations}</p>
         </div>
