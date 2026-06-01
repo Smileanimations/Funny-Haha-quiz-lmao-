@@ -220,10 +220,3 @@ window.sortArray = function () {
         sortnumber++;
     }
 }
-
-window.fillresults = function () {
-    for (let i = 0; i < 200; i++) {
-        let randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
-        monsterPressed(randomMonster.name);
-    }
-}
