@@ -11,6 +11,10 @@ export class searchBarClass {
         this.removeResults();
     }
 
+    updateMonsters(monsters) {
+        this.monsters = monsters;
+    }
+
     // Method to update the search results based on the input value
     // 
     // @e is the character that is typed in the search bar

@@ -12,14 +12,16 @@ let monsters = [];
 let guessedMonsters = [];
 let attempts = 0;
 let backgroundColor = "green";
+let filteredMonsters = [];
 
 const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
 
-let attachDiv;
-let searchbarDiv;
+
 let victoryDiv;
 
+const attachDiv = document.getElementById("result");
+const searchbarDiv = document.getElementById("search-bar-div");
 const guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
 const attemptsElement = document.getElementById("attempts");
@@ -39,12 +41,10 @@ fetch("./Data/monsters.json")
     .then(data => {
         monsters = data.monsters;
         createFilter();
-        attachDiv = document.getElementById("result");
-        searchbarDiv = document.getElementById("search-bar-div");
         // Imports the searchBarClass from the class.js file and creates a new instance of it.
         searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-        monsters = filterclass.filterMonsters(data.monsters);
-        resetGame(monsters)
+        filteredMonsters = filterclass.filterMonsters(data.monsters);
+        resetGame(filteredMonsters)
     })
     .catch(error => {
         console.error("Error fetching the JSON file:", error);
@@ -54,8 +54,7 @@ fetch("./Data/monsters.json")
 // 
 //param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
-    const filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
-    randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
+    randomMonster = filteredMonsters[Math.floor(Math.random() * filteredMonsters.length)];
     return randomMonster;
 }
 
@@ -63,17 +62,21 @@ function getRandomMonster(monsters) {
 window.resetGame = function () {
     resetbutton.setAttribute("class", "bg-gray-700 text-gray-300 px-6 py-2 rounded-full");
     resetbutton.innerHTML = "Give Up";
-
     backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
+
+    filteredMonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
     getRandomMonster(monsters);
+    searchbar.updateMonsters(filteredMonsters);
     removevictoryScreen();
+
     if (searchbar) {
         searchbar.searchBar.disabled = false;
     }
+
     attempts = 0;
-    attemptsElement.innerHTML = 'Attempts:'
+    attemptsElement.innerHTML = 'Attempts: 0';
 }
 
 // Function that shows the victory screen with a red bar instead of a green one.
@@ -86,7 +89,7 @@ window.giveUp = function () {
 
 function enableResetButton() {
     resetButton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
-    resetButton.setAttribute("onclick", "resetGame()");
+    resetButton.setAttribute("onclick", "giveUp()");
     resetButton.innerHTML = "Give Up";
 }
 
