@@ -20,11 +20,10 @@ let attachDiv;
 let searchbarDiv;
 let victoryDiv;
 
-const resetbutton = document.getElementById("resetbutton");
-
 const guessDiv = document.getElementById("guesses");
 const guessDivBackground = document.getElementById("guessbackground")
 const attemptsElement = document.getElementById("attempts");
+const resetButton = document.getElementById("resetbutton");
 
 guessDivBackground.style.visibility = "hidden";
 
@@ -62,8 +61,7 @@ function getRandomMonster(monsters) {
 
 // Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function () {
-    resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
-    resetbutton.setAttribute("onclick", "giveUp()");
+    resetbutton.setAttribute("class", "bg-gray-700 text-gray-300 px-6 py-2 rounded-full");
     resetbutton.innerHTML = "Give Up";
 
     backgroundColor = "green";
@@ -84,6 +82,12 @@ window.giveUp = function () {
     const gaveUp = true;
     victoryScreen(randomMonster, backgroundColor, gaveUp);
 
+}
+
+function enableResetButton() {
+    resetButton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
+    resetButton.setAttribute("onclick", "resetGame()");
+    resetButton.innerHTML = "Give Up";
 }
 
 // Function that compares the monster with the random monster and returns an array with the colors of the results.
@@ -148,6 +152,10 @@ function compareElement(monster, randommonster) {
 window.monsterPressed = function (monster) {
     attempts++;
 
+    if (attempts >= 5) {
+        enableResetButton();
+    }
+
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
@@ -187,6 +195,7 @@ window.monsterPressed = function (monster) {
     guessDiv.prepend(guessElement);
 
     attemptsElement.innerHTML = `Attempts: ${attempts}`
+
 }
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
