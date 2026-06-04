@@ -301,3 +301,7 @@ window.saveChanges = function () {
     resetGame();
     filterclass.disableSaveButton()
 }
+
+window.resetFilter = function () {
+    filterclass.resetFilter();
+}

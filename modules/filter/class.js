@@ -1,17 +1,19 @@
+
+
 export class FilterContainerClass {
     constructor(monsters) {
         this.monsters = monsters;
         this.originalMonsters = monsters;
         this.filterContainer;
         this.itemlist;
-        this.monsterKeys = [];
+        this.monsterCategories = [];
         this.checkboxes = new Map();
         this.values = [];
 
         this.monsters.forEach((monster) => {
             Object.keys(monster).forEach(key => {
-                if (!this.monsterKeys.includes(key)) {
-                    this.monsterKeys.push(key);
+                if (!this.monsterCategories.includes(key)) {
+                    this.monsterCategories.push(key);
                 }
             })
         })
@@ -27,13 +29,14 @@ export class FilterContainerClass {
                 <div id="filteritems"></div>
                 <div id="buttons">
                     <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded">Close</button>
+                    <button onclick="resetFilter()" class="mt-4 border-2 border-gray-500 bg-gray-500 text-white px-4 py-2 rounded">Reset Filter</button>
                     <button onclick="saveChanges()" class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" id="savebutton" disabled>Save Changes</button>
                 </div>
             </div> 
         `;
 
-        console.log("Container Created");
-        this.setFilter(this.monsters, this.monsterKeys);
+        console.log("Filter Container Created");
+        this.setFilter(this.monsters, this.monsterCategories);
 
         this.filterContainer.addEventListener('change', (event) => {
             if (event.target.type === 'checkbox') {
@@ -57,11 +60,18 @@ export class FilterContainerClass {
         savebutton.disabled = true
     }
 
+    resetFilter() {
+        this.checkboxes.forEach(checkbox => {
+            checkbox.value = "true"
+            checkbox.checked = true
+        })
+        this.enableSaveButton()
+    }
+
     // Method to handle checkbox changes
     // 
     // @param {HTMLInputElement} checkbox is the checkbox that was pressed
     handleCheckboxChange(checkbox) {
-        console.log(`Checkbox ${checkbox.name} changed to ${checkbox.checked}`);
         if (this.values.includes(checkbox)) {
             const existingCheckbox = this.values.find(cb => cb.name === checkbox.name);
             if (existingCheckbox) {
@@ -89,6 +99,19 @@ export class FilterContainerClass {
         })
     }
 
+    getCategoryItems(monsters, category) {
+        let maxItems = []
+        monsters.forEach(monster => {
+            const items = monster[category].toString().split(", ")
+            items.forEach(item => {
+                if (!maxItems.includes(item)) {
+                    maxItems.push(item);
+                }
+            });
+        });
+        return maxItems;
+    }
+
     // Method that filters the monsters after options have changed
     //
     // @param {Array} monsters are all the monsters in the json file
@@ -112,7 +135,6 @@ export class FilterContainerClass {
         })
         filteredmonsters = monsters.filter(monster => !removedmonsters.includes(monster));
         return filteredmonsters
-
     }
 
     // Method to check if the filtered monsters are more than 0, if not it will show an error message and return the original monsters
@@ -139,30 +161,22 @@ export class FilterContainerClass {
         }
     }
 
-    // Method that creates all the checkboxes based on the catagories in the json file
+    // Method that creates all the checkboxes based on the categories in the json file
     //
     // @param {Array} monsters are all the monsters in the json file
-    // @param {Array} keyarray are all the categories than can be filtered
-    setFilter(monsters, keyarray) {
-        keyarray.forEach(key => {
-            if (key !== 'id' && key !== 'name') {
+    // @param {Array} categories are all the monster categories than can be filtered
+    setFilter(monsters, categories) {
+        categories.forEach(category => {
+            if (category !== 'id' && category !== 'name') {
                 const itemlist = this.filterContainer.querySelector("#filteritems");
-                let maxItems = [];
+                const maxItems = this.getCategoryItems(monsters, category); 
 
-                monsters.forEach(monster => {
-                    const items = monster[key].toString().split(", ")
-                    items.forEach(item => {
-                        if (!maxItems.includes(item)) {
-                            maxItems.push(item);
-                        }
-                    });
-                });
                 if (itemlist) {
                     this.keyFilter = document.createElement("div");
                     this.keyFilter.setAttribute("id", "ailment-filter")
                     this.keyFilter.setAttribute("class", "py-6 ")
                     this.keyFilter.innerHTML = `
-                    <h3 class="text-lg font-semibold">${key.charAt(0).toUpperCase()}${key.slice(1)}:</h3>
+                    <h3 class="text-lg font-semibold">${category.charAt(0).toUpperCase()}${category.slice(1)}:</h3>
                     <div class="grid grid-cols-4" id="grid"></div>
                     `
                     maxItems.forEach(item => {
