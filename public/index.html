@@ -9,6 +9,7 @@
     <script src="./models/statsModel.js" type="module" defer></script>
     <script src="./models/gamesModel.js" type="module" defer></script>
     <script src="./models/monstersGuessedModel.js" type="module" defer></script>
+    <script src="./models/filterModel.js" type="module" defer></script>
     <script src="./script.js" type="module" defer></script>
 </head>
 <body id="body" class="">
@@ -31,7 +32,7 @@
                 <div id="result" class="left-1/2 -translate-x-1/2 grid grid-row-5 absolute border-0 border-white rounded-lg bg-white p-1 mt-2 z-10"></div>
             </div>
             <div>
-                <button onclick="instanceFilterMenu()" class="border border-gray-600 rounded-full text-lg px-6 py-3 mx-2">Filter</button>
+                <button onclick="instanceFilterMenu()" class="border border-gray-600 rounded-full text-lg px-6 py-3 mx-2 hover:bg-gray-700">Filter</button>
             </div>
             <button id="resetbutton">Give Up</button>
             <p id="attempts" class="font-bold">Attempts:</p>

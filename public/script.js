@@ -1,5 +1,5 @@
-import { searchBarClass } from "/modules/searchbar/class.js";
-import { FilterContainerClass } from "/modules/filter/class.js";
+import { searchBarClass } from "./modules/searchbar/class.js";
+import { FilterContainerClass } from "./modules/filter/class.js";
 import { updateStats } from "./models/statsModel.js";
 import { updateGames } from "./models/gamesModel.js";
 import { updateMonsters } from "./models/monstersGuessedModel.js";
@@ -43,8 +43,7 @@ fetch("./Data/monsters.json")
         createFilter();
         // Imports the searchBarClass from the class.js file and creates a new instance of it.
         searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-        filteredMonsters = filterclass.filterMonsters(data.monsters);
-        resetGame(filteredMonsters)
+        resetGame(monsters)
     })
     .catch(error => {
         console.error("Error fetching the JSON file:", error);
@@ -66,7 +65,7 @@ window.resetGame = function () {
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
 
-    filteredMonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
+    filteredMonsters = filterclass.checkFilteredMonsters(monsters);
     getRandomMonster(monsters);
     searchbar.updateMonsters(filteredMonsters);
     removevictoryScreen();

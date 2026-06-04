@@ -1,6 +1,8 @@
-
+import { updateFilteredMonsters } from "/models/filterModel.js";
 
 export class FilterContainerClass {
+
+    
     constructor(monsters) {
         this.monsters = monsters;
         this.originalMonsters = monsters;
@@ -28,8 +30,8 @@ export class FilterContainerClass {
                 <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
                 <div id="filteritems"></div>
                 <div id="buttons">
-                    <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded">Close</button>
-                    <button onclick="resetFilter()" class="mt-4 border-2 border-gray-500 bg-gray-500 text-white px-4 py-2 rounded">Reset Filter</button>
+                    <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Close</button>
+                    <button onclick="resetFilter()" class="mt-4 border-2 border-gray-500 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Reset Filter</button>
                     <button onclick="saveChanges()" class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" id="savebutton" disabled>Save Changes</button>
                 </div>
             </div> 
@@ -49,7 +51,7 @@ export class FilterContainerClass {
     // Method to enable the save button
     enableSaveButton() {
         const savebutton = document.getElementById("savebutton")
-        savebutton.setAttribute("class", "mt-4 border-2 border-green-500 text-white bg-green-500 px-4 py-2 rounded")
+        savebutton.setAttribute("class", "mt-4 border-2 border-green-500 text-white bg-green-500 px-4 py-2 rounded hover:bg-green-600")
         savebutton.disabled = false
     }
 
@@ -62,7 +64,7 @@ export class FilterContainerClass {
 
     resetFilter() {
         this.checkboxes.forEach(checkbox => {
-            checkbox.value = "true"
+            checkbox.value = true
             checkbox.checked = true
         })
         this.enableSaveButton()
@@ -75,12 +77,13 @@ export class FilterContainerClass {
         if (this.values.includes(checkbox)) {
             const existingCheckbox = this.values.find(cb => cb.name === checkbox.name);
             if (existingCheckbox) {
-                existingCheckbox.setAttribute("value", checkbox.checked);
+                existingCheckbox.value = checkbox.checked;
             }
         } else {
-            checkbox.setAttribute("value", checkbox.checked)
+            checkbox.value = checkbox.checked;
             this.values.push(checkbox)
         }
+        console.log(this.checkboxes)
         this.enableSaveButton()
     }
 
@@ -91,10 +94,11 @@ export class FilterContainerClass {
     checkboxValues(checkboxes, items) {
         checkboxes.forEach(checkbox => {
             if (!checkbox.id.includes(items)) {
-                checkbox.setAttribute("value", "true")
-                checkbox.setAttribute("checked", "true")
+                checkbox.value = true;
+                checkbox.checked = true;
             } else {
-                checkbox.setAttribute("value", "false")
+                checkbox.value = false;
+                checkbox.checked = false;
             }
         })
     }
@@ -147,6 +151,13 @@ export class FilterContainerClass {
             if (document.getElementById("buttons").querySelector("p")) {
                 document.getElementById("buttons").querySelector("p").remove()
             }
+
+            try {
+                updateFilteredMonsters(filteredmonsters)
+            } catch (error) {
+                console.error("Error updating filtered monsters: ", error);
+            }
+
             return filteredmonsters
         } else {
             if (document.getElementById("buttons").querySelector("p")) {
