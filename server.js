@@ -47,7 +47,7 @@ app.get('/statistics', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(aboutPath, 'about.html'));
+    res.sendFile(path.join(publicPath, 'about/about.html'));
 });
 
 
