@@ -7,7 +7,8 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: G"
    },
    {
     "id": 2,
@@ -16,7 +17,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: G"
    },
    {
     "id": 3,
@@ -25,7 +27,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Poison, Sleep"
+    "ailment": "Poison, Sleep",
+    "game": "Monster Hunter"
    },
    {
     "id": 4,
@@ -34,7 +37,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: G"
    },
    {
     "id": 5,
@@ -43,7 +47,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: G"
    },
    {
     "id": 6,
@@ -52,7 +57,8 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: G"
    },
    {
     "id": 7,
@@ -61,7 +67,8 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Water",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"Monster Hunter"
    },
    {
     "id": 8,
@@ -70,7 +77,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Fire, Dragon",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: G"
    },
    {
     "id": 9,
@@ -79,7 +87,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 10,
@@ -88,7 +97,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 11,
@@ -97,7 +107,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"Monster Hunter"
    },
    {
     "id": 12,
@@ -106,7 +117,8 @@
     "class": "Flying Wyvern",
     "species": "Rare Species",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: G"
    },
    {
     "id": 13,
@@ -115,7 +127,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game": "Monster Hunter"
    },
    {
     "id": 14,
@@ -124,7 +137,8 @@
     "class": "Piscine Wyvern",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: G"
    },
    {
     "id": 15,
@@ -133,7 +147,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"Monster Hunter"
    },
    {
     "id": 16,
@@ -142,7 +157,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"Monster Hunter"
    },
    {
     "id": 17,
@@ -151,7 +167,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"Monster Hunter"
    },
    {
     "id": 18,
@@ -160,7 +177,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"Monster Hunter"
    },
    {
     "id": 19,
@@ -169,7 +187,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 20,
@@ -178,7 +197,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 21,
@@ -187,7 +207,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: G"
    },
    {
     "id": 22,
@@ -196,7 +217,8 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Water",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"Monster Hunter"
    },
    {
     "id": 23,
@@ -205,7 +227,8 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: G"
    },
    {
     "id": 24,
@@ -214,7 +237,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"Monster Hunter"
    },
    {
     "id": 25,
@@ -223,7 +247,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"Monster Hunter"
    },
    {
     "id": 26,
@@ -232,7 +257,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: G"
    },
    {
     "id": 27,
@@ -241,7 +267,8 @@
     "class": "Bird Wyvern",
     "species": "Variant",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Freedom"
    },
    {
     "id": 28,
@@ -250,7 +277,8 @@
     "class": "Flying Wyvern",
     "species": "Rare Species",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: G"
    },
    {
     "id": 29,
@@ -259,7 +287,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 30,
@@ -268,7 +297,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: G"
    },
    {
     "id": 31,
@@ -277,7 +307,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"Monster Hunter"
    },
    {
     "id": 32,
@@ -286,7 +317,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire, Dragon",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game": "MH: Freedom 2"
    },
    {
     "id": 33,
@@ -295,7 +327,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game": "MH: Dos"
    },
    {
     "id": 34,
@@ -304,7 +337,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 35,
@@ -313,7 +347,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Dos"
    },
    {
     "id": 36,
@@ -322,7 +357,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Soiled"
+    "ailment": "Soiled",
+    "game":"MH: Dos"
    },
    {
     "id": 37,
@@ -331,7 +367,8 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 38,
@@ -340,7 +377,8 @@
     "class": "Carapaceon",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 39,
@@ -349,7 +387,8 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Soiled"
+    "ailment": "Soiled",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 40,
@@ -358,7 +397,8 @@
     "class": "Fanged Beast",
     "species": "Variant",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 41,
@@ -367,7 +407,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Freedom 2"
    },
    {
     "id": 42,
@@ -376,7 +417,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game": "MH: Dos"
    },
    {
     "id": 43,
@@ -385,7 +427,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 44,
@@ -394,7 +437,8 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 45,
@@ -403,7 +447,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 46,
@@ -412,7 +457,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Freedom Unite"
    },
    {
     "id": 47,
@@ -421,7 +467,8 @@
     "class": "Carapaceon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 48,
@@ -430,7 +477,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 49,
@@ -439,7 +487,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
     
    },
    {
@@ -449,7 +498,8 @@
     "class": "Carapaceon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 51,
@@ -458,7 +508,8 @@
     "class": "Carapaceon",
     "species": "Original",
     "element": "Water",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: Dos"
    },
    {
     "id": 52,
@@ -467,7 +518,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game": "MH: Dos"
    },
    {
     "id": 53,
@@ -476,7 +528,8 @@
     "class": "Carapaceon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 54,
@@ -485,7 +538,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Freedom 2"
    },
    {
     "id": 55,
@@ -494,7 +548,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Freedom 2"
    },
    {
     "id": 56,
@@ -503,7 +558,8 @@
     "class": "Neopteron",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis, Defense Down"
+    "ailment": "Paralysis, Defense Down",
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 57,
@@ -512,7 +568,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Thunder, Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 58,
@@ -521,7 +578,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Dos"
    },
    {
     "id": 59,
@@ -530,7 +588,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Dos"
    },
    {
     "id": 60,
@@ -539,7 +598,8 @@
     "class": "Leviathan",
     "species": "Rare Species",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: 3 Ultimate"
    },
    {
     "id": 61,
@@ -548,7 +608,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Tri"
    },
    {
     "id": 62,
@@ -557,7 +618,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon, Fire, Ice, Thunder, Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 63,
@@ -566,7 +628,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Portable 3rd"
    },
    {
     "id": 64,
@@ -575,7 +638,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 65,
@@ -584,7 +648,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 66,
@@ -593,7 +658,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Tri"
    },
    {
     "id": 67,
@@ -602,7 +668,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Water",
-    "ailment": "Mudded"
+    "ailment": "Mudded",
+    "game":"MH: Tri"
    },
    {
     "id": 68,
@@ -611,7 +678,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 69,
@@ -620,7 +688,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 70,
@@ -629,7 +698,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 71,
@@ -638,7 +708,8 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 72,
@@ -647,7 +718,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game":"MH: Tri"
    },
    {
     "id": 73,
@@ -656,7 +728,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 74,
@@ -665,7 +738,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 75,
@@ -674,7 +748,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Tri"
    },
    {
     "id": 76,
@@ -683,7 +758,8 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Ice, Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 77,
@@ -692,7 +768,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: Tri"
    },
    {
     "id": 78,
@@ -701,7 +778,8 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 79,
@@ -710,7 +788,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: Tri"
    },
    {
     "id": 80,
@@ -719,7 +798,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 81,
@@ -728,7 +808,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 82,
@@ -737,7 +818,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 83,
@@ -746,7 +828,8 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 84,
@@ -755,7 +838,8 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Thunder, Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 85,
@@ -764,7 +848,8 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 86,
@@ -773,7 +858,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 87,
@@ -782,7 +868,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 88,
@@ -791,7 +878,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 89,
@@ -800,7 +888,8 @@
     "class": "Flying Wyvern",
     "species": "Rare Species",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 90,
@@ -809,7 +898,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 91,
@@ -818,7 +908,8 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 92,
@@ -827,7 +918,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game":"MH: Tri"
    },
    {
     "id": 93,
@@ -836,7 +928,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Tri"
    },
    {
     "id": 94,
@@ -845,7 +938,8 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Mudded"
+    "ailment": "Mudded",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 95,
@@ -854,7 +948,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 96,
@@ -863,7 +958,8 @@
     "class": "Brute Wyvern",
     "species": "Variant",
     "element": "Dragon",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 97,
@@ -872,7 +968,8 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Soiled"
+    "ailment": "Soiled",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 98,
@@ -881,7 +978,8 @@
     "class": "Fanged Wyvern",
     "species": "Subspecies",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 3 Ultimate"
    },
    {
     "id": 99,
@@ -890,7 +988,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: Tri"
    },
    {
     "id": 100,
@@ -899,7 +998,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Soiled, Paralysis"
+    "ailment": "Soiled, Paralysis",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 101,
@@ -908,7 +1008,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Portable 3rd"
    },
    {
     "id": 102,
@@ -917,7 +1018,8 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: 4 Ultimate"
    },
    {
     "id": 103,
@@ -926,7 +1028,8 @@
     "class": "Amphibian",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 104,
@@ -935,7 +1038,8 @@
     "class": "???",
     "species": "Variant",
     "element": "No Element",
-    "ailment": "Frenzy"
+    "ailment": "Frenzy",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 105,
@@ -944,7 +1048,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: 4"
    },
    {
     "id": 106,
@@ -953,7 +1058,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4"
    },
    {
     "id": 107,
@@ -962,7 +1068,8 @@
     "class": "Neopteron",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 108,
@@ -971,7 +1078,8 @@
     "class": "Neopteron",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "Soiled"
+    "ailment": "Soiled",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 109,
@@ -980,7 +1088,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Tarred"
+    "ailment": "Tarred",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 110,
@@ -989,7 +1098,8 @@
     "class": "???",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Frenzy"
+    "ailment": "Frenzy",
+    "game":"MH: 4"
    },
    {
     "id": 111,
@@ -998,7 +1108,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 4"
    },
    {
     "id": 112,
@@ -1007,7 +1118,8 @@
     "class": "Flying Wyvern",
     "species": "Rare Species",
     "element": "No Element",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game": "MH: 4"
    },
    {
     "id": 113,
@@ -1016,7 +1128,8 @@
     "class": "Snake Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4"
    },
    {
     "id": 114,
@@ -1025,7 +1138,8 @@
     "class": "Temnoceran",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep, Poison, Webbed"
+    "ailment": "Sleep, Poison, Webbed",
+    "game":"MH: 4"
    },
    {
     "id": 115,
@@ -1034,7 +1148,8 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: 4"
    },
    {
     "id": 116,
@@ -1043,7 +1158,8 @@
     "class": "Brute Wyvern",
     "species": "Variant",
     "element": "No Element",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 117,
@@ -1052,7 +1168,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Sleep, Poison"
+    "ailment": "Sleep, Poison",
+    "game":"MH: 4"
    },
    {
     "id": 118,
@@ -1061,7 +1178,8 @@
     "class": "Neopteron",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game":"MH: 4"
    },
    {
     "id": 119,
@@ -1070,7 +1188,8 @@
     "class": "Neopteron",
     "species": "Original",
     "element": "Water",
-    "ailment": "Soiled"
+    "ailment": "Soiled",
+    "game":"MH: 4"
    },
    {
     "id": 120,
@@ -1079,7 +1198,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 121,
@@ -1088,7 +1208,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Frenzy"
+    "ailment": "Frenzy",
+    "game":"MH: 4"
    },
    {
     "id": 122,
@@ -1097,7 +1218,8 @@
     "class": "Elder Dragon",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 123,
@@ -1106,7 +1228,8 @@
     "class": "Temnoceran",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Paralysis, Poison, Webbed"
+    "ailment": "Paralysis, Poison, Webbed",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 124,
@@ -1115,7 +1238,8 @@
     "class": "Amphibian",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: 4"
    },
    {
     "id": 125,
@@ -1124,7 +1248,8 @@
     "class": "Snake Wyvern",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 126,
@@ -1133,7 +1258,8 @@
     "class": "Amphibian",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: 4 Ultimate"
    },
    {
     "id": 127,
@@ -1142,7 +1268,8 @@
     "class": "Amphibian",
     "species": "Original",
     "element": "Ice, Water",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: 4"
    },
    {
     "id": 128,
@@ -1151,7 +1278,8 @@
     "class": "Neopteron",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Defense Down, Webbed"
+    "ailment": "Defense Down, Webbed",
+    "game": "MH: GU"
    },
    {
     "id": 129,
@@ -1160,7 +1288,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game": "MH: Generations"
    },
    {
     "id": 130,
@@ -1169,7 +1298,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: GU"
    },
    {
     "id": 131,
@@ -1178,7 +1308,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "Thunder",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: GU"
    },
    {
     "id": 132,
@@ -1187,7 +1318,8 @@
     "class": "Brute Wyvern",
     "species": "Deviant",
     "element": "Fire",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: Generations"
    },
    {
     "id": 133,
@@ -1196,7 +1328,8 @@
     "class": "Bird Wyvern",
     "species": "Deviant",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Generations"
    },
    {
     "id": 134,
@@ -1205,7 +1338,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Generations"
    },
    {
     "id": 135,
@@ -1214,7 +1348,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Generations"
    },
    {
     "id": 136,
@@ -1223,7 +1358,8 @@
     "class": "Amphibian",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 137,
@@ -1232,7 +1368,8 @@
     "class": "Fanged Beast",
     "species": "Deviant",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: GU"
    },
    {
     "id": 138,
@@ -1241,7 +1378,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Generations"
    },
    {
     "id": 139,
@@ -1250,7 +1388,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 140,
@@ -1259,7 +1398,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 141,
@@ -1268,7 +1408,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 142,
@@ -1277,7 +1418,8 @@
     "class": "Brute Wyvern",
     "species": "Deviant",
     "element": "Fire",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: Generations"
    },
    {
     "id": 143,
@@ -1286,7 +1428,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep, Confusion"
+    "ailment": "Sleep, Confusion",
+    "game":"MH: Generations"
    },
    {
     "id": 144,
@@ -1295,7 +1438,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "Bubble"
+    "ailment": "Bubble",
+    "game":"MH: Generations"
    },
    {
     "id": 145,
@@ -1304,7 +1448,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "Mucus, Boned"
+    "ailment": "Mucus, Boned",
+    "game":"MH: Generations"
    },
    {
     "id": 146,
@@ -1313,7 +1458,8 @@
     "class": "Bird Wyvern",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "Sleep, Confusion"
+    "ailment": "Sleep, Confusion",
+    "game":"MH: GU"
    },
    {
     "id": 147,
@@ -1322,7 +1468,8 @@
     "class": "Fanged Beast",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 148,
@@ -1331,7 +1478,8 @@
     "class": "Carapaceon",
     "species": "Deviant",
     "element": "Water",
-    "ailment": "Bleed, Defense Down"
+    "ailment": "Bleed, Defense Down",
+    "game":"MH: GU"
    },
    {
     "id": 149,
@@ -1340,7 +1488,8 @@
     "class": "Flying Wyvern",
     "species": "Deviant",
     "element": "No Element",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: Generations"
    },
    {
     "id": 150,
@@ -1349,7 +1498,8 @@
     "class": "Fanged Beast",
     "species": "Deviant",
     "element": "Ice",
-    "ailment": "Snowman"
+    "ailment": "Snowman",
+    "game":"MH: Generations"
    },
    {
     "id": 151,
@@ -1358,7 +1508,8 @@
     "class": "Leviathan",
     "species": "Deviant",
     "element": "Water, Fire",
-    "ailment": "Bubble"
+    "ailment": "Bubble",
+    "game":"MH: GU"
    },
    {
     "id": 152,
@@ -1367,7 +1518,8 @@
     "class": "Carapaceon",
     "species": "Deviant",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 153,
@@ -1376,7 +1528,8 @@
     "class": "Fanged Wyvern",
     "species": "Deviant",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Generations"
    },
    {
     "id": 154,
@@ -1385,7 +1538,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: GU"
    },
    {
     "id": 155,
@@ -1394,7 +1548,8 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Defense Down"
+    "ailment": "Defense Down",
+    "game":"MH: Iceborne"
    },
    {
     "id": 156,
@@ -1403,7 +1558,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 157,
@@ -1412,7 +1568,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 158,
@@ -1421,7 +1578,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 159,
@@ -1430,7 +1588,8 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 160,
@@ -1439,7 +1598,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "No Element",
-    "ailment": "Effluvium"
+    "ailment": "Effluvium",
+    "game":"MH: Iceborne"
    },
    {
     "id": 161,
@@ -1448,7 +1608,8 @@
     "class": "Bird Wyvern",
     "species": "Subspecies",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 162,
@@ -1457,7 +1618,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: World"
    },
    {
     "id": 163,
@@ -1466,7 +1628,8 @@
     "class": "Fanged Wyvern",
     "species": "Subspecies",
     "element": "Dragon",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: Iceborne"
    },
    {
     "id": 164,
@@ -1475,7 +1638,8 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 165,
@@ -1484,7 +1648,8 @@
     "class": "Brute Wyvern",
     "species": "Subspecies",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 166,
@@ -1493,7 +1658,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Paralysis"
+    "ailment": "Paralysis",
+    "game":"MH: World"
    },
    {
     "id": 167,
@@ -1502,7 +1668,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 168,
@@ -1511,7 +1678,8 @@
     "class": "Piscine Wyvern",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 169,
@@ -1520,7 +1688,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 170,
@@ -1529,7 +1698,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 171,
@@ -1538,7 +1708,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 172,
@@ -1547,7 +1718,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Water, Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 173,
@@ -1556,7 +1728,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 174,
@@ -1565,7 +1738,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: Iceborne"
    },
    {
     "id": 175,
@@ -1574,7 +1748,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: World"
    },
    {
     "id": 176,
@@ -1583,7 +1758,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 177,
@@ -1592,7 +1768,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: World"
    },
    {
     "id": 178,
@@ -1601,7 +1778,8 @@
     "class": "Brute Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: World"
    },
    {
     "id": 179,
@@ -1610,7 +1788,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "No Element",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: Iceborne"
    },
    {
     "id": 180,
@@ -1619,7 +1798,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 181,
@@ -1628,7 +1808,8 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 182,
@@ -1637,7 +1818,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 183,
@@ -1646,7 +1828,8 @@
     "class": "Flying Wyvern",
     "species": "Variant",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 184,
@@ -1655,7 +1838,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 185,
@@ -1664,7 +1848,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 186,
@@ -1673,7 +1858,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Effluvium"
+    "ailment": "Effluvium",
+    "game":"MH: World"
    },
    {
     "id": 187,
@@ -1682,7 +1868,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Iceborne"
    },
    {
     "id": 188,
@@ -1691,7 +1878,8 @@
     "class": "Fanged Wyvern",
     "species": "Subspecies",
     "element": "No Element",
-    "ailment": "Poison, Paralysis"
+    "ailment": "Poison, Paralysis",
+    "game":"MH: Iceborne"
    },
    {
     "id": 189,
@@ -1700,7 +1888,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 190,
@@ -1709,7 +1898,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: World"
    },
    {
     "id": 191,
@@ -1718,7 +1908,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game": "MH: Rise"
    },
    {
     "id": 192,
@@ -1727,7 +1918,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 193,
@@ -1736,7 +1928,8 @@
     "class": "Fanged Beast",
     "species": "Apex",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 194,
@@ -1745,7 +1938,8 @@
     "class": "Flying Wyvern",
     "species": "Apex",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 195,
@@ -1754,7 +1948,8 @@
     "class": "Leviathan",
     "species": "Apex",
     "element": "Fire",
-    "ailment": "Hellfire"
+    "ailment": "Hellfire",
+    "game":"MH: Rise"
    },
    {
     "id": 196,
@@ -1763,7 +1958,8 @@
     "class": "Flying Wyvern",
     "species": "Apex",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Rise"
    },
    {
     "id": 197,
@@ -1772,7 +1968,8 @@
     "class": "Flying Wyvern",
     "species": "Apex",
     "element": "Fire",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Rise"
    },
    {
     "id": 198,
@@ -1781,7 +1978,8 @@
     "class": "Fanged Wyvern",
     "species": "Apex",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 199,
@@ -1790,7 +1988,8 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 200,
@@ -1799,7 +1998,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Poison, Paralysis"
+    "ailment": "Poison, Paralysis",
+    "game":"MH: Rise"
    },
    {
     "id": 201,
@@ -1808,7 +2008,8 @@
     "class": "Fanged Beast",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 202,
@@ -1817,7 +2018,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 203,
@@ -1826,7 +2028,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Poison, Paralysis"
+    "ailment": "Poison, Paralysis",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 204,
@@ -1835,7 +2038,8 @@
     "class": "Flying Wyvern",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Poison, Defense Down"
+    "ailment": "Poison, Defense Down",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 205,
@@ -1844,7 +2048,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Blast, Bloodblight"
+    "ailment": "Blast, Bloodblight",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 206,
@@ -1853,7 +2058,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Fire, Water",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 207,
@@ -1862,7 +2068,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 208,
@@ -1871,7 +2078,8 @@
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 209,
@@ -1880,7 +2088,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "Ice",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 210,
@@ -1889,7 +2098,8 @@
     "class": "Leviathan",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 211,
@@ -1898,7 +2108,8 @@
     "class": "Fanged Wyvern",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Hellfire"
+    "ailment": "Hellfire",
+    "game":"MH: Rise"
    },
    {
     "id": 212,
@@ -1907,7 +2118,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Bloodblight"
+    "ailment": "Bloodblight",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 213,
@@ -1916,7 +2128,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 214,
@@ -1925,7 +2138,8 @@
     "class": "Elder Dragon",
     "species": "Variant",
     "element": "Dragon",
-    "ailment": "Bloodblight"
+    "ailment": "Bloodblight",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 215,
@@ -1934,7 +2148,8 @@
     "class": "Temnoceran",
     "species": "Subspecies",
     "element": "Fire",
-    "ailment": "Blast, Webbed"
+    "ailment": "Blast, Webbed",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 216,
@@ -1943,7 +2158,8 @@
     "class": "Temnoceran",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Webbed"
+    "ailment": "Webbed",
+    "game":"MH: Rise"
    },
    {
     "id": 217,
@@ -1952,7 +2168,8 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "No Element",
-    "ailment": "Poison"
+    "ailment": "Poison",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 218,
@@ -1961,7 +2178,8 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 219,
@@ -1970,7 +2188,8 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 220,
@@ -1979,7 +2198,8 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "No Element",
-    "ailment": "Frenzy"
+    "ailment": "Frenzy",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 221,
@@ -1988,7 +2208,8 @@
     "class": "Elder Dragon",
     "species": "Risen",
     "element": "Fire",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 222,
@@ -1997,7 +2218,8 @@
     "class": "Fanged Wyvern",
     "species": "Variant",
     "element": "Dragon",
-    "ailment": "Hellfire"
+    "ailment": "Hellfire",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 223,
@@ -2006,7 +2228,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "No Element",
-    "ailment": "Sleep"
+    "ailment": "Sleep",
+    "game":"MH: Rise"
    },
    {
     "id": 224,
@@ -2015,7 +2238,8 @@
     "class": "Amphibian",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 225,
@@ -2024,7 +2248,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Thunder",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 226,
@@ -2033,7 +2258,8 @@
     "class": "Leviathan",
     "species": "Rare Species",
     "element": "Fire",
-    "ailment": "Resistance Down"
+    "ailment": "Resistance Down",
+    "game":"MH: Sunbreak"
    },
    {
     "id": 227,
@@ -2042,7 +2268,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Rise"
    },
    {
     "id": 228,
@@ -2051,7 +2278,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "Fire",
-    "ailment": "Blast"
+    "ailment": "Blast",
+    "game":"MH: Wilds"
    },
    {
     "id": 229,
@@ -2060,7 +2288,8 @@
     "class": "Flying Wyvern",
     "species": "Original",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id": 230,
@@ -2069,7 +2298,8 @@
     "class": "Leviathan",
     "species": "Original",
     "element": "Water",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id": 231,
@@ -2078,7 +2308,8 @@
     "class":"Amphibian",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id": 232,
@@ -2087,7 +2318,8 @@
     "class": "Fanged Beast",
     "species": "Original",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id": 233,
@@ -2096,7 +2328,8 @@
     "class": "Construct",
     "species": "Guardian",
     "element": "Dragon",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":234,
@@ -2105,7 +2338,8 @@
     "class": "Construct",
     "species": "Guardian",
     "element": "No Element",
-    "ailment": "No Ailment"
+    "ailment": "No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":235,
@@ -2114,7 +2348,8 @@
     "class": "Construct",
     "species": "Guardian",
     "element": "Dragon",
-    "ailment": "Bleed"
+    "ailment": "Bleed",
+    "game":"MH: Wilds"
    },
    {
     "id": 236,
@@ -2123,7 +2358,8 @@
     "class": "Construct",
     "species":"Guardian",
     "element":"Thunder",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":237,
@@ -2132,7 +2368,8 @@
     "class":"Construct",
     "species":"Guardian",
     "element":"Fire",
-    "ailment":"Poison"
+    "ailment":"Poison",
+    "game":"MH: Wilds"
    },
    {
     "id":238,
@@ -2141,7 +2378,8 @@
     "class":"Leviathan",
     "species":"Original",
     "element":"Ice",
-    "ailment":"Frostblight"
+    "ailment":"Frostblight",
+    "game":"MH: Wilds"
    },
    {
     "id":239,
@@ -2150,7 +2388,8 @@
     "class":"Leviathan",
     "species":"Original",
     "element":"Ice",
-    "ailment":"Frostblight"
+    "ailment":"Frostblight",
+    "game":"MH: Wilds"
    },
    {
     "id":240,
@@ -2159,7 +2398,8 @@
     "class":"Temnoceran",
     "species":"Original",
     "element":"No Element",
-    "ailment":"Paralysis"
+    "ailment":"Paralysis",
+    "game":"MH: Wilds"
    },
    {
     "id":241,
@@ -2168,7 +2408,8 @@
     "class":"Cephalopod",
     "species":"Original",
     "element":"Fire",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":242,
@@ -2177,7 +2418,8 @@
     "class":"Brute Wyvern",
     "species":"Original",
     "element":"Fire",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":243,
@@ -2186,7 +2428,8 @@
     "class":"Flying Wyvern",
     "species":"Original",
     "element":"Thunder",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":244,
@@ -2195,7 +2438,8 @@
     "class":"Brute Wyvern",
     "species":"Original",
     "element":"No Element",
-    "ailment":"Poison"
+    "ailment":"Poison",
+    "game":"MH: Wilds"
    },
    {
     "id":245,
@@ -2204,7 +2448,8 @@
     "class":"Leviathan",
     "species":"Original",
     "element":"Water",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":246,
@@ -2213,7 +2458,8 @@
     "class":"Cephalopod",
     "species":"Original",
     "element":"No Element",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":247,
@@ -2222,7 +2468,8 @@
     "class":"Construct",
     "species":"Original",
     "element":"Fire, Dragon",
-    "ailment":"No Ailment"
+    "ailment":"No Ailment",
+    "game":"MH: Wilds"
    },
    {
     "id":248,
@@ -2231,7 +2478,8 @@
     "class":"???",
     "species":"Original",
     "element":"Fire, Ice",
-    "ailment":"Health Penalty, Frostblight"
+    "ailment":"Health Penalty, Frostblight",
+    "game":"MH: Wilds"
    },
    {
     "id":249,
@@ -2240,7 +2488,8 @@
     "class": "Elder Dragon",
     "species": "Original",
     "element": "Fire, Thunder",
-    "ailment": "Bleed, Defense Down"
+    "ailment": "Bleed, Defense Down",
+    "game":"MH: World"
    },
    {
     "id":250,
@@ -2249,7 +2498,8 @@
     "class":"Relic",
     "species":"Original",
     "element":"No Element",
-    "ailment":"Bleed"
+    "ailment":"Bleed",
+    "game":"MH: World"
    },
    {
     "id":251,
@@ -2258,7 +2508,8 @@
     "class":"Relic",
     "species":"Original",
     "element":"No Element",
-    "ailment":"Bleed"
+    "ailment":"Bleed",
+    "game":"MH: World"
    }
   ]
   }
