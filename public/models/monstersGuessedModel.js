@@ -1,6 +1,6 @@
 function openDB() {
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open('funny-haha-quiz', 3);
+        const request = indexedDB.open('funny-haha-quiz', 7);
         request.onsuccess = function(event) {
             resolve(event.target.result);
         };
@@ -30,7 +30,6 @@ export async function updateMonsters(guessedMonsters) {
     const monsters = await getMonsters();
     return new Promise((resolve, reject) => {
         for (const monster of guessedMonsters) {
-            console.log("Updating monster: ", monster);
             const store = db.transaction('monsters_guessed', 'readwrite').objectStore('monsters_guessed');
             const request = store.getAll();
             request.onsuccess = function() {
@@ -47,10 +46,10 @@ export async function updateMonsters(guessedMonsters) {
                     };
                     return;
                 }
+
                 data.attempts += 1;
                 const updateRequest = store.put(data);
                 updateRequest.onsuccess = function() {
-                    console.log("Monster updated: ", data);
                     resolve(updateRequest.result);
                 };
                 updateRequest.onerror = function() {

@@ -1,5 +1,5 @@
-import { searchBarClass } from "/modules/searchbar/class.js";
-import { FilterContainerClass } from "/modules/filter/class.js";
+import { searchBarClass } from "./modules/searchbar/class.js";
+import { FilterContainerClass } from "./modules/filter/class.js";
 import { updateStats } from "./models/statsModel.js";
 import { updateGames } from "./models/gamesModel.js";
 import { updateMonsters } from "./models/monstersGuessedModel.js";
@@ -12,19 +12,22 @@ let monsters = [];
 let guessedMonsters = [];
 let attempts = 0;
 let backgroundColor = "green";
+let filterEnabled = true
 
 const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
 
-let attachDiv;
-let searchbarDiv;
+
 let victoryDiv;
 
-const resetbutton = document.getElementById("resetbutton");
-
+const attachDiv = document.getElementById("result");
+const searchbarDiv = document.getElementById("search-bar-div");
 const guessDiv = document.getElementById("guesses");
+const filterDiv = document.getElementById("filter-div");
 const guessDivBackground = document.getElementById("guessbackground")
 const attemptsElement = document.getElementById("attempts");
+const resetButton = document.getElementById("resetbutton");
+const filterButton = document.getElementById("filterbutton")
 
 guessDivBackground.style.visibility = "hidden";
 
@@ -37,14 +40,10 @@ fetch("./Data/monsters.json")
         }
         return response.json();
     })
-    .then(data => {
+    .then(async data => {
         monsters = data.monsters;
-        createFilter();
-        attachDiv = document.getElementById("result");
-        searchbarDiv = document.getElementById("search-bar-div");
-        // Imports the searchBarClass from the class.js file and creates a new instance of it.
-        searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
-        monsters = filterclass.filterMonsters(data.monsters);
+        await createFilter();
+        searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);   // Imports the searchBarClass from the class.js file and creates a new instance of it.
         resetGame(monsters)
     })
     .catch(error => {
@@ -55,27 +54,29 @@ fetch("./Data/monsters.json")
 // 
 //param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
-    const filteredmonsters = filterclass.checkFilteredMonsters(filterclass.filterMonsters(monsters));
-    randomMonster = filteredmonsters[Math.floor(Math.random() * filteredmonsters.length)];
+    randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
     return randomMonster;
 }
 
 // Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function () {
-    resetbutton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
-    resetbutton.setAttribute("onclick", "giveUp()");
+    resetbutton.setAttribute("class", "bg-gray-700 text-gray-300 px-6 py-2 rounded-full");
     resetbutton.innerHTML = "Give Up";
-
     backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
-    getRandomMonster(monsters);
-    removevictoryScreen();
+
+    const filteredMonsters = filterclass.monsters ?? monsters;
+    getRandomMonster(filteredMonsters);
+    searchbar.updateMonsters(filteredMonsters);
+    removeVictoryScreen();
+
     if (searchbar) {
         searchbar.searchBar.disabled = false;
     }
+
     attempts = 0;
-    attemptsElement.innerHTML = 'Attempts:'
+    attemptsElement.innerHTML = 'Attempts: 0';
 }
 
 // Function that shows the victory screen with a red bar instead of a green one.
@@ -84,6 +85,12 @@ window.giveUp = function () {
     const gaveUp = true;
     victoryScreen(randomMonster, backgroundColor, gaveUp);
 
+}
+
+function enableResetButton() {
+    resetButton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
+    resetButton.setAttribute("onclick", "giveUp()");
+    resetButton.innerHTML = "Give Up";
 }
 
 // Function that compares the monster with the random monster and returns an array with the colors of the results.
@@ -148,6 +155,14 @@ function compareElement(monster, randommonster) {
 window.monsterPressed = function (monster) {
     attempts++;
 
+    if (filterEnabled) {
+        disableFilter()
+    }
+
+    if (attempts >= 5) {
+        enableResetButton();
+    }
+
     guessDivBackground.style.visibility = "visible";
     let bottomBorder = "";
     const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
@@ -187,6 +202,7 @@ window.monsterPressed = function (monster) {
     guessDiv.prepend(guessElement);
 
     attemptsElement.innerHTML = `Attempts: ${attempts}`
+
 }
 
 // Function that creates the victory screen with the monster that was guessed correctly (Also creates when you give up).
@@ -219,7 +235,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
             </div>
             <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
                 <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-                <button onclick="removevictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+                <button onclick="removeVictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
             </div>
             <div class="absolute inset-x-0 bottom-0 h-20 bg-${backgroundColor}-500 rounded-b-3xl">
             </div>
@@ -227,11 +243,12 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
     `
 
     mainscreen.appendChild(victoryDiv);
+    enableFilter()
     insertStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 
 // Function that removes the victory screen.	
-window.removevictoryScreen = function () {
+window.removeVictoryScreen = function () {
     if (victoryDiv) {
         victoryDiv.remove();
     }
@@ -269,12 +286,15 @@ async function insertStats(attempts, gaveUp, monsterName, guessedMonsters) {
 
 // \/ Everything under this line deals with the filter \/
 
-function createFilter() {
+async function createFilter() {
     // Imports the FilterContainerClass from the class.js file and creates a new instance of it.
     filterclass = new FilterContainerClass(monsters);
+    await filterclass.init()
+
     filterContainer = filterclass.buildContainer();
     body.appendChild(filterContainer);
     filterContainer.style.visibility = "hidden"
+    filterclass.monsters = filterclass.checkFilteredMonsters(filterclass.originalMonsters)
 }
 
 window.instanceFilterMenu = function () {
@@ -285,7 +305,36 @@ window.closeFilter = function () {
     filterContainer.style.visibility = "hidden";
 }
 
-window.saveChanges = function () {
-    resetGame();
-    filterclass.disableSaveButton()
+ window.saveChanges = function () {
+    filterclass.checkFilteredMonsters(monsters); // updates this.monsters to filtered
+    filterclass.saveFilterState().then(() => {
+        resetGame();
+        filterclass.disableSaveButton();
+    });
+}
+
+window.resetFilter = function () {
+    filterclass.resetFilter();
+}
+
+function disableFilter() {
+    closeFilter()
+    filterEnabled = false
+    const tooltip = document.createElement("div");
+    tooltip.innerHTML = `                
+                <div id="tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block border border-white bg-gray-800 text-white text-sm px-3 py-2 rounded whitespace-nowrap">
+                    Filter is disabled once a game starts.
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>`
+    filterDiv.appendChild(tooltip);
+
+    filterButton.setAttribute("onclick", "");
+}
+
+function enableFilter() {
+    filterEnabled = true
+    const tooltip = document.getElementById("tooltip");
+    tooltip.remove()
+
+    filterButton.setAttribute("onclick", "instanceFilterMenu()")
 }

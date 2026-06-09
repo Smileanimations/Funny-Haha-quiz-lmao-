@@ -1,6 +1,6 @@
 function openDB() {
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open('funny-haha-quiz', 3);
+        const request = indexedDB.open('funny-haha-quiz', 7);
         request.onsuccess = function(event) {
             resolve(event.target.result);
         };

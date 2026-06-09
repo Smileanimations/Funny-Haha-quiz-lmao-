@@ -10,11 +10,11 @@ function openDB() {
     });
 }
 
-export async function getGames() {
+export async function updateFilteredState(filteredMonsters) {
     const db = await openDB();
     return new Promise((resolve, reject) => {
-        const get = db.transaction('games', 'readonly').objectStore('games');
-        const request = get.getAll();
+        const store = db.transaction('filtered_monsters', 'readwrite').objectStore('filtered_monsters');
+        const request = store.put({id: 1, filtered_monsters: filteredMonsters });
         request.onsuccess = function() {
             resolve(request.result);
         };
@@ -24,16 +24,16 @@ export async function getGames() {
     });
 }
 
-export async function updateGames(monsterName, attempts, gaveUp) {
+export async function loadFilteredState() {
     const db = await openDB();
     return new Promise((resolve, reject) => {
-        const store = db.transaction('games', 'readwrite').objectStore('games');
-        const request = store.add({ monster_name: monsterName, attempts: attempts, gave_up: gaveUp ? 1 : 0, timestamp: Date.now() });
+        const store = db.transaction('filtered_monsters', 'readonly').objectStore('filtered_monsters');
+        const request = store.get(1);
         request.onsuccess = function() {
             resolve(request.result);
         };
         request.onerror = function() {
             reject(request.error);
-        }; 
+        };
     });
 }

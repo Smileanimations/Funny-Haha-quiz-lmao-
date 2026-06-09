@@ -2,17 +2,24 @@ let db;
 
 function initIndexedDB() {
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open('funny-haha-quiz', 3);
+        const request = indexedDB.open('funny-haha-quiz', 7);
         request.onupgradeneeded = function(event) {
             db = event.target.result;
             if (!db.objectStoreNames.contains('stats')) {
+                console.log("Creating stats store")
                 createStatsStore(db);
             }
             if (!db.objectStoreNames.contains('games')) {
+                console.log("Creating games store")
                 createGamesStore(db);
             }
             if (!db.objectStoreNames.contains('monsters_guessed')) {
+                console.log("Creating monsters store")
                 createMonstersStore(db);
+            }
+            if (!db.objectStoreNames.contains('filtered_monsters')) {
+                console.log("Creating filter store")
+                createFilterStore(db);
             }
         };
 
@@ -58,6 +65,11 @@ function createMonstersStore(db) {
     monstersStore.createIndex('monster_id', 'monster_id', { unique: true });
     monstersStore.createIndex('name', 'name', { unique: false });
     monstersStore.createIndex('attempts', 'attempts', { unique: false });
+}
+
+function createFilterStore(db) {
+    const filterStore = db.createObjectStore('filtered_monsters', { keyPath: 'id', autoIncrement: true });
+    filterStore.createIndex(`filtered_monsters`, `filtered_monsters`, { unique: false });
 }
 
 export function getStats() {
