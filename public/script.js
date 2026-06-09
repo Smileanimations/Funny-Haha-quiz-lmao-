@@ -61,6 +61,7 @@ function getRandomMonster(monsters) {
 // Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function () {
     resetbutton.setAttribute("class", "bg-gray-700 text-gray-300 px-6 py-2 rounded-full");
+    resetButton.setAttribute("onclick", "");
     resetbutton.innerHTML = "Give Up";
     backgroundColor = "green";
     guessDiv.innerHTML = '';
@@ -244,6 +245,9 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
 
     mainscreen.appendChild(victoryDiv);
     enableFilter()
+
+    
+
     insertStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 
