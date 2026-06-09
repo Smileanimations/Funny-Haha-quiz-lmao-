@@ -303,10 +303,12 @@ async function createFilter() {
 
 window.instanceFilterMenu = function () {
     filterContainer.style.visibility = "visible";
+    filterButton.setAttribute("onclick", "closeFilter()")
 }
 
 window.closeFilter = function () {
     filterContainer.style.visibility = "hidden";
+    filterButton.setAttribute("onclick", "instanceFilterMenu()")
 }
 
  window.saveChanges = function () {
