@@ -22,7 +22,6 @@ app.use('/data', express.static(dataPath));
 app.use('/images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
-app.use('/about', express.static(aboutPath));
 
 app.get('/games', (req, res) => {
     const games = getGames();
