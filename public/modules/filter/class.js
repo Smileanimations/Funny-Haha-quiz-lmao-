@@ -1,10 +1,9 @@
-import { updateFilteredMonsters } from "/models/filterModel.js";
+import { updateFilteredMonsters, loadFilteredMonsters } from "/models/filterModel.js";
 
 export class FilterContainerClass {
 
     
     constructor(monsters) {
-        this.monsters = monsters;
         this.originalMonsters = monsters;
         this.filterContainer;
         this.itemlist;
@@ -12,13 +11,38 @@ export class FilterContainerClass {
         this.checkboxes = new Map();
         this.values = [];
 
-        this.monsters.forEach((monster) => {
+        this.originalMonsters.forEach((monster) => {
             Object.keys(monster).forEach(key => {
                 if (!this.monsterCategories.includes(key)) {
                     this.monsterCategories.push(key);
                 }
             })
         })
+    }
+
+    async init() {
+        const loaded = await this.loadSavedState();
+        if (loaded && loaded.filtered_monsters) {
+            this.savedFilterState = loaded.filtered_monsters;
+        }
+        this.monsters = this.originalMonsters;
+    }
+
+    async loadSavedState() {
+        const filterState = await loadFilteredMonsters();
+        if (filterState) {
+            return filterState;
+        } else {
+            return null;
+        }
+    }
+
+    async saveFilterState() {
+        const filterState = {};
+        this.checkboxes.forEach((checkbox, key) => {
+            filterState[key] = checkbox.checked;
+        });
+        await updateFilteredMonsters(filterState);
     }
 
     // Method to build the filter container
@@ -38,13 +62,16 @@ export class FilterContainerClass {
         `;
 
         console.log("Filter Container Created");
-        this.setFilter(this.monsters, this.monsterCategories);
+        this.setFilter(this.originalMonsters, this.monsterCategories);
 
         this.filterContainer.addEventListener('change', (event) => {
             if (event.target.type === 'checkbox') {
                 this.handleCheckboxChange(event.target);
             }
         });
+
+        this.setCheckboxes();
+
         return this.filterContainer;
     }
 
@@ -83,24 +110,26 @@ export class FilterContainerClass {
             checkbox.value = checkbox.checked;
             this.values.push(checkbox)
         }
-        console.log(this.checkboxes)
         this.enableSaveButton()
     }
 
-    // Method to set the values of the checkboxes based on the items in the filter
-    // 
-    // @param {Array} checkboxes are all the checkboxes 
-    // @param {Array} items are all the categories than can be filtered
-    checkboxValues(checkboxes, items) {
-        checkboxes.forEach(checkbox => {
-            if (!checkbox.id.includes(items)) {
-                checkbox.value = true;
+    setCheckboxes() {
+        if (this.savedFilterState) {
+            this.checkboxes.forEach((checkbox, key) => {
+                if (this.savedFilterState[key] !== undefined) {
+                    checkbox.checked = this.savedFilterState[key];
+                    checkbox.value = this.savedFilterState[key];
+                    if (!this.savedFilterState[key]) {
+                        this.values.push(checkbox); // so filterMonsters knows what's unchecked
+                    }
+                }
+            });
+        } else {
+            this.checkboxes.forEach((checkbox) => {
                 checkbox.checked = true;
-            } else {
-                checkbox.value = false;
-                checkbox.checked = false;
-            }
-        })
+                checkbox.value = true;
+            })
+        }
     }
 
     getCategoryItems(monsters, category) {
@@ -124,10 +153,10 @@ export class FilterContainerClass {
         let filteredmonsters = []
         this.values.forEach(checkbox => {
             monsters.forEach(monster => {
-                Object.keys(monster).forEach(key => {
-                    if (key !== 'id' && key !== 'name'){
+                Object.keys(monster).forEach(category => {
+                    if (category !== 'id' && category !== 'name'){
                         if (checkbox.checked == false) {
-                            if (monster[key].toString().split(", ").includes(checkbox.name)) {
+                            if (monster[category].toString().split(", ").includes(checkbox.name)) {
                                 if (!removedmonsters.includes(monster)) {
                                     removedmonsters.push(monster)
                                 }
@@ -145,19 +174,12 @@ export class FilterContainerClass {
     //
     // @monsters are all the monsters in the json file
     checkFilteredMonsters(monsters) {
-        let filteredmonsters = this.filterMonsters(monsters)
+        let filteredmonsters = this.filterMonsters(monsters);
         if (filteredmonsters.length > 0) {
-            this.originalMonsters = filteredmonsters
+            this.monsters = filteredmonsters
             if (document.getElementById("buttons").querySelector("p")) {
                 document.getElementById("buttons").querySelector("p").remove()
             }
-
-            try {
-                updateFilteredMonsters(filteredmonsters)
-            } catch (error) {
-                console.error("Error updating filtered monsters: ", error);
-            }
-
             return filteredmonsters
         } else {
             if (document.getElementById("buttons").querySelector("p")) {
@@ -199,7 +221,6 @@ export class FilterContainerClass {
                         `;
                         this.keyFilter.querySelector("#grid").appendChild(keyitem);
                         this.checkboxes.set(item, keyitem.querySelector('input'));
-                        this.checkboxValues(this.checkboxes, maxItems)
                     });
                     itemlist.appendChild(this.keyFilter);
                 }

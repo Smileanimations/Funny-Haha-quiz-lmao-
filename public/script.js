@@ -12,7 +12,6 @@ let monsters = [];
 let guessedMonsters = [];
 let attempts = 0;
 let backgroundColor = "green";
-let filteredMonsters = [];
 
 const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
@@ -38,11 +37,10 @@ fetch("./Data/monsters.json")
         }
         return response.json();
     })
-    .then(data => {
+    .then(async data => {
         monsters = data.monsters;
-        createFilter();
-        // Imports the searchBarClass from the class.js file and creates a new instance of it.
-        searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);
+        await createFilter();
+        searchbar = new searchBarClass(document.getElementById("search-bar"), searchbarDiv, attachDiv, monsters);   // Imports the searchBarClass from the class.js file and creates a new instance of it.
         resetGame(monsters)
     })
     .catch(error => {
@@ -53,7 +51,7 @@ fetch("./Data/monsters.json")
 // 
 //param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
-    randomMonster = filteredMonsters[Math.floor(Math.random() * filteredMonsters.length)];
+    randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
     return randomMonster;
 }
 
@@ -65,10 +63,10 @@ window.resetGame = function () {
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
 
-    filteredMonsters = filterclass.checkFilteredMonsters(monsters);
-    getRandomMonster(monsters);
+    const filteredMonsters = filterclass.monsters ?? monsters;
+    getRandomMonster(filteredMonsters);
     searchbar.updateMonsters(filteredMonsters);
-    removevictoryScreen();
+    removeVictoryScreen();
 
     if (searchbar) {
         searchbar.searchBar.disabled = false;
@@ -230,7 +228,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
             </div>
             <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
                 <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-                <button onclick="removevictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+                <button onclick="removeVictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
             </div>
             <div class="absolute inset-x-0 bottom-0 h-20 bg-${backgroundColor}-500 rounded-b-3xl">
             </div>
@@ -242,7 +240,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
 }
 
 // Function that removes the victory screen.	
-window.removevictoryScreen = function () {
+window.removeVictoryScreen = function () {
     if (victoryDiv) {
         victoryDiv.remove();
     }
@@ -280,12 +278,15 @@ async function insertStats(attempts, gaveUp, monsterName, guessedMonsters) {
 
 // \/ Everything under this line deals with the filter \/
 
-function createFilter() {
+async function createFilter() {
     // Imports the FilterContainerClass from the class.js file and creates a new instance of it.
     filterclass = new FilterContainerClass(monsters);
+    await filterclass.init()
+
     filterContainer = filterclass.buildContainer();
     body.appendChild(filterContainer);
     filterContainer.style.visibility = "hidden"
+    filterclass.monsters = filterclass.checkFilteredMonsters(filterclass.originalMonsters)
 }
 
 window.instanceFilterMenu = function () {
@@ -296,9 +297,12 @@ window.closeFilter = function () {
     filterContainer.style.visibility = "hidden";
 }
 
-window.saveChanges = function () {
-    resetGame();
-    filterclass.disableSaveButton()
+ window.saveChanges = function () {
+    filterclass.checkFilteredMonsters(monsters); // updates this.monsters to filtered
+    filterclass.saveFilterState().then(() => {
+        resetGame();
+        filterclass.disableSaveButton();
+    });
 }
 
 window.resetFilter = function () {

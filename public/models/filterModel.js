@@ -10,12 +10,13 @@ function openDB() {
     });
 }
 
-export async function updateFilteredMonsters(filteredMonsters) {
+export async function updateFilteredState(filteredMonsters) {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const store = db.transaction('filtered_monsters', 'readwrite').objectStore('filtered_monsters');
         const request = store.put({id: 1, filtered_monsters: filteredMonsters });
         request.onsuccess = function() {
+            console.log("Filtered monsters updated in IndexedDB: ", filteredMonsters);
             resolve(request.result);
         };
         request.onerror = function() {
@@ -24,7 +25,7 @@ export async function updateFilteredMonsters(filteredMonsters) {
     });
 }
 
-export async function loadFilteredMonsters() {
+export async function loadFilteredState() {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const store = db.transaction('filtered_monsters', 'readonly').objectStore('filtered_monsters');
