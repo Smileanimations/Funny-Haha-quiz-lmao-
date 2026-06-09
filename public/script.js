@@ -12,6 +12,7 @@ let monsters = [];
 let guessedMonsters = [];
 let attempts = 0;
 let backgroundColor = "green";
+let filterEnabled = true
 
 const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
@@ -22,9 +23,11 @@ let victoryDiv;
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 const guessDiv = document.getElementById("guesses");
+const filterDiv = document.getElementById("filter-div");
 const guessDivBackground = document.getElementById("guessbackground")
 const attemptsElement = document.getElementById("attempts");
 const resetButton = document.getElementById("resetbutton");
+const filterButton = document.getElementById("filterbutton")
 
 guessDivBackground.style.visibility = "hidden";
 
@@ -152,6 +155,10 @@ function compareElement(monster, randommonster) {
 window.monsterPressed = function (monster) {
     attempts++;
 
+    if (filterEnabled) {
+        disableFilter()
+    }
+
     if (attempts >= 5) {
         enableResetButton();
     }
@@ -236,6 +243,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
     `
 
     mainscreen.appendChild(victoryDiv);
+    enableFilter()
     insertStats(attempts, gaveUp, monster.name, guessedMonsters);
 }
 
@@ -307,4 +315,26 @@ window.closeFilter = function () {
 
 window.resetFilter = function () {
     filterclass.resetFilter();
+}
+
+function disableFilter() {
+    closeFilter()
+    filterEnabled = false
+    const tooltip = document.createElement("div");
+    tooltip.innerHTML = `                
+                <div id="tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block border border-white bg-gray-800 text-white text-sm px-3 py-2 rounded whitespace-nowrap">
+                    Filter is disabled once a game starts.
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>`
+    filterDiv.appendChild(tooltip);
+
+    filterButton.setAttribute("onclick", "");
+}
+
+function enableFilter() {
+    filterEnabled = true
+    const tooltip = document.getElementById("tooltip");
+    tooltip.remove()
+
+    filterButton.setAttribute("onclick", "instanceFilterMenu()")
 }
