@@ -16,7 +16,6 @@ export async function updateFilteredState(filteredMonsters) {
         const store = db.transaction('filtered_monsters', 'readwrite').objectStore('filtered_monsters');
         const request = store.put({id: 1, filtered_monsters: filteredMonsters });
         request.onsuccess = function() {
-            console.log("Filtered monsters updated in IndexedDB: ", filteredMonsters);
             resolve(request.result);
         };
         request.onerror = function() {

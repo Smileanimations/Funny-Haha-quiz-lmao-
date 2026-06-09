@@ -1,4 +1,4 @@
-import { updateFilteredMonsters, loadFilteredMonsters } from "/models/filterModel.js";
+import { updateFilteredState, loadFilteredState } from "/models/filterModel.js";
 
 export class FilterContainerClass {
 
@@ -29,7 +29,7 @@ export class FilterContainerClass {
     }
 
     async loadSavedState() {
-        const filterState = await loadFilteredMonsters();
+        const filterState = await loadFilteredState();
         if (filterState) {
             return filterState;
         } else {
@@ -42,7 +42,7 @@ export class FilterContainerClass {
         this.checkboxes.forEach((checkbox, key) => {
             filterState[key] = checkbox.checked;
         });
-        await updateFilteredMonsters(filterState);
+        await updateFilteredState(filterState);
     }
 
     // Method to build the filter container
