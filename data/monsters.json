@@ -278,7 +278,7 @@
     "species": "Rare Species",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: 4,  MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Sunbreak"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Sunbreak"
    },
    {
     "id": 29,
@@ -799,7 +799,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH 4 Ultimate"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 81,
@@ -899,7 +899,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 91,
