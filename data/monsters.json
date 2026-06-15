@@ -8,7 +8,7 @@
     "species": "Subspecies",
     "element": "Dragon",
     "ailment": "No Ailment",
-    "game": "MH: G"
+    "game": "MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite"
    },
    {
     "id": 2,
@@ -18,7 +18,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: World, MH: Iceborne"
    },
    {
     "id": 3,
@@ -28,7 +28,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Poison, Sleep",
-    "game": "Monster Hunter"
+    "game": "Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 4,
@@ -38,7 +38,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game": "MH: G"
+    "game": "MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: 4 Ultimate, MH: World, MH: Iceborne"
    },
    {
     "id": 5,
@@ -48,7 +48,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "Sleep",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 6,
@@ -58,7 +58,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 7,
@@ -68,7 +68,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Paralysis",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 8,
@@ -78,7 +78,7 @@
     "species": "Variant",
     "element": "Fire, Dragon",
     "ailment": "Blast",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: GU"
    },
    {
     "id": 9,
@@ -88,7 +88,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4 Ultimate, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 10,
@@ -98,7 +98,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: GU, MH: Iceborne"
    },
    {
     "id": 11,
@@ -108,7 +108,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Paralysis",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 12,
@@ -118,7 +118,7 @@
     "species": "Rare Species",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Sunbreak"
    },
    {
     "id": 13,
@@ -128,7 +128,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Sleep",
-    "game": "Monster Hunter"
+    "game": "Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: GU, MH: Wilds"
    },
    {
     "id": 14,
@@ -138,7 +138,7 @@
     "species": "Subspecies",
     "element": "Water",
     "ailment": "Sleep",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 3 Ultimate"
    },
    {
     "id": 15,
@@ -148,7 +148,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Wilds"
    },
    {
     "id": 16,
@@ -158,7 +158,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 17,
@@ -168,7 +168,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "Paralysis",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 18,
@@ -178,7 +178,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "Paralysis",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne"
    },
    {
     "id": 19,
@@ -188,7 +188,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: GU"
    },
    {
     "id": 20,
@@ -198,7 +198,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate"
    },
    {
     "id": 21,
@@ -208,7 +208,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: World, MH: Iceborne"
    },
    {
     "id": 22,
@@ -218,7 +218,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Sleep",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 3 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 23,
@@ -228,7 +228,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 24,
@@ -238,7 +238,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak, MH: Wilds"
    },
    {
     "id": 25,
@@ -248,7 +248,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak, MH: Wilds"
    },
    {
     "id": 26,
@@ -258,17 +258,17 @@
     "species": "Subspecies",
     "element": "Thunder",
     "ailment": "Paralysis",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 27,
     "name": "Scarred Yian Garuga",
-    "generations": 1,
+    "generations": 5,
     "class": "Bird Wyvern",
     "species": "Variant",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Freedom"
+    "game":"MH: Iceborne"
    },
    {
     "id": 28,
@@ -278,7 +278,7 @@
     "species": "Rare Species",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: 4,  MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Sunbreak"
    },
    {
     "id": 29,
@@ -288,7 +288,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 30,
@@ -298,7 +298,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: G"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate"
    },
    {
     "id": 31,
@@ -308,7 +308,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"Monster Hunter"
+    "game":"Monster Hunter, MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Wilds"
    },
    {
     "id": 32,
@@ -318,7 +318,7 @@
     "species": "Original",
     "element": "Fire, Dragon",
     "ailment": "Defense Down",
-    "game": "MH: Freedom 2"
+    "game": "MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 33,
@@ -328,7 +328,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game": "MH: Dos"
+    "game": "MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Generations, MH: GU, MH: Wilds"
    },
    {
     "id": 34,
@@ -338,7 +338,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: Generations, MH: GU"
    },
    {
     "id": 35,
@@ -348,7 +348,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 36,
@@ -358,7 +358,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Soiled",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: GU, MH: Wilds"
    },
    {
     "id": 37,
@@ -378,7 +378,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Sunbreak"
    },
    {
     "id": 39,
@@ -388,7 +388,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "Soiled",
-    "game": "MH: Freedom Unite"
+    "game": "MH: Freedom Unite, MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 40,
@@ -398,7 +398,7 @@
     "species": "Variant",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game": "MH: Freedom Unite"
+    "game": "MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Sunbreak"
    },
    {
     "id": 41,
@@ -408,7 +408,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Freedom 2"
+    "game":"MH: Freedom 2, MH: Freedom Unite, MH: GU"
    },
    {
     "id": 42,
@@ -418,7 +418,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep",
-    "game": "MH: Dos"
+    "game": "MH: Freedom Unite"
    },
    {
     "id": 43,
@@ -428,7 +428,7 @@
     "species": "Original",
     "element": "Dragon",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 44,
@@ -438,7 +438,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Freedom Unite, MH: Generations, MH: GU, MH: World, MH: Iceborne"
    },
    {
     "id": 45,
@@ -448,7 +448,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: World, MH: Iceborne"
    },
    {
     "id": 46,
@@ -458,7 +458,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Freedom Unite"
+    "game":"MH: Freedom Unite, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 47,
@@ -468,7 +468,7 @@
     "species": "Subspecies",
     "element": "Water",
     "ailment": "No Ailment",
-    "game": "MH: Freedom Unite"
+    "game": "MH: Freedom Unite, MH: 4 Ultimate"
    },
    {
     "id": 48,
@@ -478,7 +478,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 49,
@@ -488,7 +488,7 @@
     "species": "Variant",
     "element": "Ice",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate"
     
    },
    {
@@ -499,7 +499,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite"
    },
    {
     "id": 51,
@@ -509,7 +509,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Bleed",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: Generations, MH: GU, MH: Sunbreak"
    },
    {
     "id": 52,
@@ -519,7 +519,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Blast",
-    "game": "MH: Dos"
+    "game": "MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 53,
@@ -539,7 +539,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Freedom 2"
+    "game":"MH: Freedom 2, MH: Freedom Unite, MH: Portable 3rd, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 55,
@@ -549,7 +549,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Freedom 2"
+    "game":"MH: Freedom Unite, MH: Portable 3rd, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 56,
@@ -569,7 +569,7 @@
     "species": "Variant",
     "element": "Thunder, Dragon",
     "ailment": "No Ailment",
-    "game":"MH: Dos"
+    "game":"MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4 Ultimate, MH: GU"
    },
    {
     "id": 58,
@@ -584,12 +584,12 @@
    {
     "id": 59,
     "name": "Yian Garuga",
-    "generations": 2,
+    "generations": 1,
     "class": "Bird Wyvern",
     "species": "Original",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Dos"
+    "game":"MH: G, MH: Freedom, MH: Dos, MH: Freedom 2, MH: Freedom Unite, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 60,
@@ -609,7 +609,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game": "MH: Tri"
+    "game": "MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 62,
@@ -619,7 +619,7 @@
     "species": "Original",
     "element": "Dragon, Fire, Ice, Thunder, Water",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Iceborne"
    },
    {
     "id": 63,
@@ -629,7 +629,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game": "MH: Portable 3rd"
+    "game": "MH: Portable 3rd, MH: Generations, MH: GU, MH: Sunbreak"
    },
    {
     "id": 64,
@@ -639,7 +639,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 65,
@@ -649,7 +649,7 @@
     "species": "Subspecies",
     "element": "Thunder",
     "ailment": "Paralysis",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 66,
@@ -659,7 +659,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: GU, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 67,
@@ -669,7 +669,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Mudded",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: GU, MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 68,
@@ -679,7 +679,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Blast",
-    "game":"MH: 3 Ultimate"
+    "game":"MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne"
    },
    {
     "id": 69,
@@ -689,7 +689,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 4, MH: 4 Ultimate, MH: Iceborne"
    },
    {
     "id": 70,
@@ -699,7 +699,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: 3 Ultimate"
    },
    {
     "id": 71,
@@ -709,7 +709,7 @@
     "species": "Subspecies",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 72,
@@ -719,7 +719,7 @@
     "species": "Original",
     "element": "Dragon",
     "ailment": "Defense Down",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne"
    },
    {
     "id": 73,
@@ -739,7 +739,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 75,
@@ -749,7 +749,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 76,
@@ -759,7 +759,7 @@
     "species": "Subspecies",
     "element": "Ice, Water",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 77,
@@ -769,7 +769,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Paralysis",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: 3 Ultimate"
    },
    {
     "id": 78,
@@ -789,7 +789,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 80,
@@ -799,7 +799,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH 4 Ultimate"
    },
    {
     "id": 81,
@@ -809,7 +809,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 82,
@@ -819,7 +819,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 83,
@@ -849,7 +849,7 @@
     "species": "Subspecies",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 86,
@@ -859,7 +859,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 87,
@@ -869,7 +869,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Wilds"
    },
    {
     "id": 88,
@@ -879,7 +879,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 89,
@@ -889,7 +889,7 @@
     "species": "Rare Species",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: 3 Ultimate"
+    "game":"MH: 3 Ultimate, MH: Sunbreak"
    },
    {
     "id": 90,
@@ -899,7 +899,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 91,
@@ -909,7 +909,7 @@
     "species": "Subspecies",
     "element": "Water",
     "ailment": "Poison",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 92,
@@ -919,7 +919,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Defense Down",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 93,
@@ -929,7 +929,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 94,
@@ -949,7 +949,7 @@
     "species": "Subspecies",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 96,
@@ -959,7 +959,7 @@
     "species": "Variant",
     "element": "Dragon",
     "ailment": "Defense Down",
-    "game":"MH: Portable 3rd"
+    "game":"MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne"
    },
    {
     "id": 97,
@@ -969,7 +969,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "Soiled",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate"
    },
    {
     "id": 98,
@@ -979,7 +979,7 @@
     "species": "Subspecies",
     "element": "Dragon",
     "ailment": "No Ailment",
-    "game":"MH: 3 Ultimate"
+    "game":"MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Iceborne"
    },
    {
     "id": 99,
@@ -989,7 +989,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Sleep",
-    "game":"MH: Tri"
+    "game":"MH: Tri, MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: World, MH: Iceborne"
    },
    {
     "id": 100,
@@ -999,7 +999,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Soiled, Paralysis",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: Generations, MH: GU, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 101,
@@ -1009,7 +1009,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Portable 3rd"
+    "game":"MH: Portable 3rd, MH: 3 Ultimate, MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 102,
@@ -1039,7 +1039,7 @@
     "species": "Variant",
     "element": "No Element",
     "ailment": "Frenzy",
-    "game":"MH: 4 Ultimate"
+    "game":"MH: 4 Ultimate, MH: GU, MH: Sunbreak"
    },
    {
     "id": 105,
@@ -1049,7 +1049,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game": "MH: 4"
+    "game": "MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 106,
@@ -1059,7 +1059,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Paralysis",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 107,
@@ -1089,7 +1089,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Tarred",
-    "game":"MH: 4 Ultimate"
+    "game":"MH: 4 Ultimate, MH: Wilds"
    },
    {
     "id": 110,
@@ -1099,7 +1099,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Frenzy",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Sunbreak, MH: Wilds"
    },
    {
     "id": 111,
@@ -1109,7 +1109,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 112,
@@ -1119,7 +1119,7 @@
     "species": "Rare Species",
     "element": "No Element",
     "ailment": "Blast",
-    "game": "MH: 4"
+    "game": "MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 113,
@@ -1129,7 +1129,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Paralysis",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 114,
@@ -1139,7 +1139,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep, Poison, Webbed",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Wilds"
    },
    {
     "id": 115,
@@ -1149,7 +1149,7 @@
     "species": "Subspecies",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 116,
@@ -1159,7 +1159,7 @@
     "species": "Variant",
     "element": "No Element",
     "ailment": "Blast",
-    "game":"MH: 4 Ultimate"
+    "game":"MH: 4 Ultimate, MH: GU, MH: Iceborne"
    },
    {
     "id": 117,
@@ -1169,7 +1169,7 @@
     "species": "Subspecies",
     "element": "Fire",
     "ailment": "Sleep, Poison",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate"
    },
    {
     "id": 118,
@@ -1179,7 +1179,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Defense Down",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 119,
@@ -1189,7 +1189,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Soiled",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 120,
@@ -1199,7 +1199,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Bleed",
-    "game":"MH: 4 Ultimate"
+    "game":"MH: 4 Ultimate, MH: Generations, MH: GU, MH: Sunbreak, MH: Wilds"
    },
    {
     "id": 121,
@@ -1209,7 +1209,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Frenzy",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU, MH: Sunbreak"
    },
    {
     "id": 122,
@@ -1239,7 +1239,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 125,
@@ -1269,7 +1269,7 @@
     "species": "Original",
     "element": "Ice, Water",
     "ailment": "Snowman",
-    "game":"MH: 4"
+    "game":"MH: 4, MH: 4 Ultimate, MH: Generations, MH: GU"
    },
    {
     "id": 128,
@@ -1289,7 +1289,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "Paralysis",
-    "game": "MH: Generations"
+    "game": "MH: Generations, MH: GU, MH: Sunbreak"
    },
    {
     "id": 130,
@@ -1319,7 +1319,7 @@
     "species": "Deviant",
     "element": "Fire",
     "ailment": "Sleep",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 133,
@@ -1329,7 +1329,7 @@
     "species": "Deviant",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 134,
@@ -1339,7 +1339,7 @@
     "species": "Deviant",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 135,
@@ -1349,7 +1349,7 @@
     "species": "Deviant",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 136,
@@ -1359,7 +1359,7 @@
     "species": "Deviant",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 137,
@@ -1379,7 +1379,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 139,
@@ -1389,7 +1389,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU, MH: Iceborne"
    },
    {
     "id": 140,
@@ -1399,7 +1399,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 141,
@@ -1409,7 +1409,7 @@
     "species": "Deviant",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 142,
@@ -1419,7 +1419,7 @@
     "species": "Deviant",
     "element": "Fire",
     "ailment": "Blast",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 143,
@@ -1429,7 +1429,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep, Confusion",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 144,
@@ -1439,7 +1439,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "Bubble",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU, MH: Rise, MH: Sunbreak, MH: Wilds"
    },
    {
     "id": 145,
@@ -1449,7 +1449,7 @@
     "species": "Original",
     "element": "Dragon",
     "ailment": "Mucus, Boned",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 146,
@@ -1469,7 +1469,7 @@
     "species": "Deviant",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 148,
@@ -1489,7 +1489,7 @@
     "species": "Deviant",
     "element": "No Element",
     "ailment": "Bleed",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 150,
@@ -1499,7 +1499,7 @@
     "species": "Deviant",
     "element": "Ice",
     "ailment": "Snowman",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 151,
@@ -1519,7 +1519,7 @@
     "species": "Deviant",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 153,
@@ -1529,7 +1529,7 @@
     "species": "Deviant",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Generations"
+    "game":"MH: Generations, MH: GU"
    },
    {
     "id": 154,
@@ -1559,7 +1559,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 157,
@@ -1579,7 +1579,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 159,
@@ -1619,7 +1619,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Blast",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 163,
@@ -1659,7 +1659,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Paralysis",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 167,
@@ -1669,7 +1669,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 168,
@@ -1679,7 +1679,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 169,
@@ -1689,7 +1689,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 170,
@@ -1699,7 +1699,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 171,
@@ -1709,7 +1709,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 172,
@@ -1749,7 +1749,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Bleed",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 176,
@@ -1759,7 +1759,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 177,
@@ -1769,7 +1769,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 178,
@@ -1779,7 +1779,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 179,
@@ -1839,7 +1839,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne, MH: Rise, MH: Sunbreak"
    },
    {
     "id": 185,
@@ -1849,7 +1849,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: World"
+    "game":"MH: World, MH: Iceborne"
    },
    {
     "id": 186,
@@ -1869,7 +1869,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "No Ailment",
-    "game":"MH: Iceborne"
+    "game":"MH: Iceborne, MH: Sunbreak"
    },
    {
     "id": 188,
@@ -1909,7 +1909,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "No Ailment",
-    "game": "MH: Rise"
+    "game": "MH: Rise, MH: Sunbreak"
    },
    {
     "id": 192,
@@ -1919,7 +1919,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 193,
@@ -1929,7 +1929,7 @@
     "species": "Apex",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 194,
@@ -1939,7 +1939,7 @@
     "species": "Apex",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 195,
@@ -1949,7 +1949,7 @@
     "species": "Apex",
     "element": "Fire",
     "ailment": "Hellfire",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 196,
@@ -1959,7 +1959,7 @@
     "species": "Apex",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 197,
@@ -1969,7 +1969,7 @@
     "species": "Apex",
     "element": "Fire",
     "ailment": "Poison",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 198,
@@ -1979,7 +1979,7 @@
     "species": "Apex",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 199,
@@ -1999,7 +1999,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Poison, Paralysis",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 201,
@@ -2019,7 +2019,7 @@
     "species": "Variant",
     "element": "Dragon",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 203,
@@ -2069,7 +2069,7 @@
     "species": "Original",
     "element": "Ice",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 208,
@@ -2079,7 +2079,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 209,
@@ -2109,7 +2109,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Hellfire",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 212,
@@ -2129,7 +2129,7 @@
     "species": "Variant",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 214,
@@ -2159,7 +2159,7 @@
     "species": "Original",
     "element": "Fire",
     "ailment": "Webbed",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 217,
@@ -2229,7 +2229,7 @@
     "species": "Original",
     "element": "No Element",
     "ailment": "Sleep",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 224,
@@ -2239,7 +2239,7 @@
     "species": "Original",
     "element": "Water",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 225,
@@ -2249,7 +2249,7 @@
     "species": "Original",
     "element": "Thunder",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 226,
@@ -2269,7 +2269,7 @@
     "species": "Original",
     "element": "Dragon",
     "ailment": "No Ailment",
-    "game":"MH: Rise"
+    "game":"MH: Rise, MH: Sunbreak"
    },
    {
     "id": 228,

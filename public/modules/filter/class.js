@@ -48,7 +48,7 @@ export class FilterContainerClass {
     // Method to build the filter container
     buildContainer() {
         this.filterContainer = document.createElement("div");
-        this.filterContainer.setAttribute("class", "fixed bg-white inset-y-0 flex items-start h-screen w-1/3 z-20 overflow-auto");
+        this.filterContainer.setAttribute("class", "fixed bg-white inset-y-0 flex items-start h-screen w-1/2 z-20 overflow-auto");
         this.filterContainer.innerHTML = `
             <div class="p-6 rounded-lg h-full w-full">
                 <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
@@ -154,7 +154,7 @@ export class FilterContainerClass {
         this.values.forEach(checkbox => {
             monsters.forEach(monster => {
                 Object.keys(monster).forEach(category => {
-                    if (category !== 'id' && category !== 'name'){
+                    if (category !== 'id' && category !== 'name' && category !== 'game'){
                         if (checkbox.checked == false) {
                             if (monster[category].toString().split(", ").includes(checkbox.name)) {
                                 if (!removedmonsters.includes(monster)) {
@@ -167,7 +167,35 @@ export class FilterContainerClass {
             })
         })
         filteredmonsters = monsters.filter(monster => !removedmonsters.includes(monster));
+        filteredmonsters = this.filterGame(filteredmonsters)
+
         return filteredmonsters
+    }
+
+    filterGame(monsters) {
+        const removedMonsters = []
+        monsters.forEach(monster => {
+            Object.keys(monster).forEach(category => {
+                if (category == 'game') {
+                    let games = monster[category].toString().split(", ")
+                    let checkboxValues = 0
+                    this.values.forEach(checkbox => {
+                        if (games.includes(checkbox.name)) {
+                            if (checkbox.checked == false) {
+                                checkboxValues++
+                            }
+                        }
+                    })
+                    if (checkboxValues == games.length) {
+                        removedMonsters.push(monster)
+                    }
+                }
+            })
+        })
+        if (removedMonsters.length > 0) {
+            return monsters.filter(monster => !removedMonsters.includes(monster))
+        }
+        return monsters
     }
 
     // Method to check if the filtered monsters are more than 0, if not it will show an error message and return the original monsters
