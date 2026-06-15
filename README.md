@@ -6,6 +6,8 @@
 
 Monster Hunter Guessing Game is a passion project I made because I am a big fan of the franchise Monster Hunter and saw other fandoms create "guessing games" along the likes of this one and wanted to try it myself.
 
+This project can now also be visited on https://monstieguesser.com
+
 It is entirely client side, built with Javascript and Node. It currently has 2 stand-alone games:
 
 **Monstie Guesser** - A Wordle-style guessing game where a random monster is selected on load and you narrow it down using hints like generation, monster type, species, element, and ailment. Colour-coded feedback (green, red, and yellow for partial matches) guides you to the answer, with no guess limit and the option to give up whenever the hunt gets too tough.
