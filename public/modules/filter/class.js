@@ -2,7 +2,9 @@ import { updateFilteredState, loadFilteredState } from "/models/filterModel.js";
 
 export class FilterContainerClass {
 
-    
+    // Constructor for the FilterContainerClass
+    //
+    // @param {Array} monsters are all the monsters in the json file
     constructor(monsters) {
         this.originalMonsters = monsters;
         this.filterContainer;
@@ -20,6 +22,7 @@ export class FilterContainerClass {
         })
     }
 
+    // Method to initialize the filter container and load saved state
     async init() {
         const loaded = await this.loadSavedState();
         if (loaded && loaded.filtered_monsters) {
@@ -28,6 +31,7 @@ export class FilterContainerClass {
         this.monsters = this.originalMonsters;
     }
 
+    // Method to load the saved filter state from the model
     async loadSavedState() {
         const filterState = await loadFilteredState();
         if (filterState) {
@@ -37,6 +41,7 @@ export class FilterContainerClass {
         }
     }
 
+    // Method to save the current filter state to the model
     async saveFilterState() {
         const filterState = {};
         this.checkboxes.forEach((checkbox, key) => {
@@ -89,6 +94,7 @@ export class FilterContainerClass {
         savebutton.disabled = true
     }
 
+    // Method to reset the filter to its default state
     resetFilter() {
         this.checkboxes.forEach(checkbox => {
             checkbox.value = true
@@ -113,6 +119,9 @@ export class FilterContainerClass {
         this.enableSaveButton()
     }
 
+
+    // Method to set the checkboxes based on the saved filter state
+    // If there is no saved filter state, all checkboxes will be checked by default
     setCheckboxes() {
         if (this.savedFilterState) {
             this.checkboxes.forEach((checkbox, key) => {
@@ -132,6 +141,10 @@ export class FilterContainerClass {
         }
     }
 
+    // Method that gets all monster category items and returns them in an array
+    //
+    // @param {Array} monsters are all the monsters in the json file
+    // @param {String} category is the category that is being filtered
     getCategoryItems(monsters, category) {
         let maxItems = []
         monsters.forEach(monster => {
@@ -172,6 +185,9 @@ export class FilterContainerClass {
         return filteredmonsters
     }
 
+    // Method that filters the monsters based on the game checkbox values
+    //
+    // @param {Array} monsters are all the filtered monsters
     filterGame(monsters) {
         const removedMonsters = []
         monsters.forEach(monster => {
