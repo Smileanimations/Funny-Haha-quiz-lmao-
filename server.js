@@ -8,19 +8,14 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const publicPath = path.join(__dirname, 'public');
 const hunterPath = path.join(__dirname, 'masterhunter');
-const statsPath = path.join(__dirname, 'statistics');
-const aboutPath = path.join(__dirname, 'about');
-const modulesPath = path.join(__dirname, 'modules');
 const dataPath = path.join(__dirname, 'data');
 const imagePath = path.join(__dirname, 'images');
 
 app.use(express.json());
 app.use(express.static(publicPath));
-app.use('/modules', express.static(modulesPath));
 app.use('/data', express.static(dataPath));
 app.use('/images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
-app.use('/statistics', express.static(statsPath));
   
 app.get(['/masterhunter'], (req, res) => {
     res.sendFile(path.join(hunterPath, 'masterhunter.html'));
