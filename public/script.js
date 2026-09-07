@@ -22,7 +22,7 @@ let victoryDiv;
 
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
-const guessDiv = document.getElementById("guesses");
+const guessDiv = document.getElementById("guessbackground");
 const filterDiv = document.getElementById("filter-div");
 const guessDivBackground = document.getElementById("guessbackground")
 const attemptsElement = document.getElementById("attempts");
@@ -55,12 +55,15 @@ fetch("./data/monsters.json")
 //param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    console.log("Random monster: " + randomMonster.name);
     return randomMonster;
 }
 
 // Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function () {
-    resetbutton.setAttribute("class", "bg-gray-700 text-gray-300 px-6 py-2 rounded-full");
+    resetbutton.classList.remove("reset-button-enabled");
+    resetbutton.classList.remove("bg-green");
+    resetbutton.classList.add("reset-button-disabled");
     resetButton.setAttribute("onclick", "");
     resetbutton.innerHTML = "Give Up";
     backgroundColor = "green";
@@ -89,7 +92,9 @@ window.giveUp = function () {
 }
 
 function enableResetButton() {
-    resetButton.setAttribute("class", "bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600");
+    resetButton.classList.remove("reset-button-disabled");
+    resetButton.classList.add("reset-button-enabled");
+    resetButton.classList.add("bg-red")
     resetButton.setAttribute("onclick", "giveUp()");
     resetButton.innerHTML = "Give Up";
 }
@@ -154,6 +159,12 @@ function compareElement(monster, randommonster) {
 //
 // @param {Object} monster is the monster that was pressed.
 window.monsterPressed = function (monster) {
+    let bottomBorder = "";
+    const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
+    guessedMonsters.push(monsterguess[0]);
+    const monsterMatch = monsterguess[0];
+    const compareResults = compareMonster(monsterMatch);
+
     attempts++;
 
     if (filterEnabled) {
@@ -165,38 +176,31 @@ window.monsterPressed = function (monster) {
     }
 
     guessDivBackground.style.visibility = "visible";
-    let bottomBorder = "";
-    const monsterguess = monsters.filter((monsterguess) => monsterguess.name === monster);
-    guessedMonsters.push(monsterguess[0]);
-
     searchbar.removeResults();
     searchbar.searchBar.value = "";
 
-    const monsterMatch = monsterguess[0];
-    const compareResults = compareMonster(monsterMatch);
-
     if (compareResults.every((result) => result.includes("green")) && monsterMatch != randomMonster) {
-        bottomBorder = "border-b-4 border-yellow-500"
+        bottomBorder = "yellow-border";
     } else if (monsterMatch === randomMonster) {
         victoryScreen(monsterMatch, backgroundColor);
     }
 
     const guessElement = document.createElement("div");
     guessElement.setAttribute("class",
-        "flex items-center bg-gray-600 p-4 rounded-lg w-full");
+        "guesses");
     guessElement.innerHTML = `
-        <div class="w-20 h-20 object-cover">
-            <img src="/images/icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" class="object-contain rounded-full" onerror="this.onerror=null; this.src='/images/icons/Default_${monsterMatch.generations}_Icon.webp';"  />
+        <div class="guess-image">
+            <img src="/images/icons/${monster.replace(/ /g, '_')}_Icon.webp" alt="Monster Image" onerror="this.onerror=null; this.src='/images/icons/Default_${monsterMatch.generations}_Icon.webp';"  />
         </div>
 
         <div>
-            <h3 class="text-2xl font-bold ${bottomBorder}">${monsterMatch.name}</h3>
-            <div class="flex items-center space-x-2 mt-2">
-                <span class="px-3 py-1 bg-${compareResults[0]}-500 rounded-full text-sm font-bold">Gen ${monsterMatch.generations}</span>
-                <span class="px-3 py-1 bg-${compareResults[1]}-500 rounded-full text-sm font-bold">${monsterMatch.class}</span>
-                <span class="px-3 py-1 bg-${compareResults[2]}-500 rounded-full text-sm font-bold">${monsterMatch.species}</span>
-                <span class="px-3 py-1 bg-${compareResults[3]}-500 rounded-full text-sm font-bold">${monsterMatch.element}</span>
-                <span class="px-3 py-1 bg-${compareResults[4]}-500 rounded-full text-sm font-bold">${monsterMatch.ailment}</span>
+            <h3 class="bold ${bottomBorder}">${monsterMatch.name}</h3>
+            <div>
+                <span class="hints bg-${compareResults[0]} bold">Gen ${monsterMatch.generations}</span>
+                <span class="hints bg-${compareResults[1]} bold">${monsterMatch.class}</span>
+                <span class="hints bg-${compareResults[2]} bold">${monsterMatch.species}</span>
+                <span class="hints bg-${compareResults[3]} bold">${monsterMatch.element}</span>
+                <span class="hints bg-${compareResults[4]} bold">${monsterMatch.ailment}</span>
             </div>
         </div>
     `
@@ -216,35 +220,37 @@ window.monsterPressed = function (monster) {
 function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
-    resetbutton.setAttribute("class", "bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600");
+    resetbutton.classList.remove("reset-button-disabled");
+    resetbutton.classList.remove("bg-red");
+    resetbutton.classList.add("reset-button-enabled");
+    resetbutton.classList.add("bg-green")
     resetbutton.setAttribute("onclick", "resetGame()");
     resetbutton.innerHTML = "Play Again";
 
     victoryDiv = document.createElement("div");
 
     victoryDiv.setAttribute("class",
-        "absolute justify-center items-center"
-    )
+        "victory-screen"
+    );
 
     victoryDiv.innerHTML = `
-        <div class="rounded-3xl bg-white w-[800px] h-[600px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-            <div class="flex flex-col justify-center items-center">
-                <h1 class="text-center text-black text-2xl font-medium">And the monster was...</h1>
-                <img class="size-64 object-contain mt-12" src="/images/renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/images/renders/default.webp';"></img>
-                <h2 class="text-4xl font-medium antialiased text-black py-4">${monster.name}</h2>
-                <h3 class="text-2xl font medium antialiased text-black py-2">${monster.class}</h3>
+        <div class="victory-screen-div">
+            <div class="victory-screen-content">
+                <h1 class="victory-screen-text">And the monster was...</h1>
+                <img src="/images/renders/${monster.name.replace(/ /g, '_')}_Render.webp" onerror="this.onerror=null; this.src='/images/renders/default.webp';"></img>
+                <h2 class="victory-screen-text">${monster.name}</h2>
+                <h3 class="victory-screen-text">${monster.class}</h3>
             </div>
-            <div class="absolute inset-x-0 bottom-20 flex justify-around items-center h-16">
-                <button onclick="resetGame()" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600" id="retryButton">Retry</button>
-                <button onclick="removeVictoryScreen()" class="bg-gray-500 text-white px-6 py-2 rounded-full hover:bg-gray-600" id="showResultsButton">Show Results</button>
+            <div class="victory-screen-buttons">
+                <button onclick="resetGame()" class="bg-green" id="retryButton">Retry</button>
+                <button onclick="removeVictoryScreen()" class="bg-gray-500" id="showResultsButton">Show Results</button>
             </div>
-            <div class="absolute inset-x-0 bottom-0 h-20 bg-${backgroundColor}-500 rounded-b-3xl">
-            </div>
+            <div class="victory-screen-bar bg-${backgroundColor}"></div>
         </div>
     `
 
     mainscreen.appendChild(victoryDiv);
-    enableFilter()
+    enableFilter();
 
     
 

@@ -2,6 +2,9 @@
     --color-background: #1e2939;
     --color-text: #ffffff;
     --color-link: #ffffff;
+    --color-yellow: #f0b100;
+    --color-green: #00c950;
+    --color-red: #fb2c36;
 }
 
 *, *::before, *::after {
