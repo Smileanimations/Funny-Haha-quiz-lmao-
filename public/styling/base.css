@@ -1,0 +1,26 @@
+:root {
+    --color-background: #1e2939;
+    --color-text: #ffffff;
+    --color-link: #ffffff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
