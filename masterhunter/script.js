@@ -13,7 +13,7 @@ let monstercount = document.getElementById("monstercount");
 let table = document.getElementById("table");
 let griddiv = document.getElementById("grid");
 
-fetch("../Data/monsters.json")
+fetch("../data/monsters.json")
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

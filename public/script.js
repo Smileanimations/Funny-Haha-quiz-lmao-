@@ -32,7 +32,7 @@ const filterButton = document.getElementById("filterbutton")
 guessDivBackground.style.visibility = "hidden";
 
 // Fetch the JSON file
-fetch("./Data/monsters.json")
+fetch("./data/monsters.json")
 
     .then(response => {
         if (!response.ok) {

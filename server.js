@@ -1,7 +1,6 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { create } from 'domain';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,17 +21,7 @@ app.use('/data', express.static(dataPath));
 app.use('/images', express.static(imagePath));
 app.use('/masterhunter', express.static(hunterPath));
 app.use('/statistics', express.static(statsPath));
-
-app.get('/games', (req, res) => {
-    const games = getGames();
-    res.json(games);
-});
-
-app.get('/monsters-guessed', (req, res) => {
-    const monsters = getMonsters();
-    res.json(monsters);
-});
-    
+  
 app.get(['/masterhunter'], (req, res) => {
     res.sendFile(path.join(hunterPath, 'masterhunter.html'));
 });
