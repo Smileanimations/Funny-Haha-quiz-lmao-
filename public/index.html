@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Monster Hunter Guessing Game</title>
     <script src="./indexeddb.js" type="module" defer></script>
     <script src="./models/statsModel.js" type="module" defer></script>
@@ -32,7 +31,7 @@
                 <input id="search-bar" type="text" placeholder="Your Guess..." class="search-bar" />
                 <div id="result" class="results"></div>
             </div>
-            <div id="filter-div" class="">
+            <div id="filter-div" class="filter-div">
                 <button id="filterbutton" onclick="instanceFilterMenu()" class="filter-button">Filter</button>
             </div>
             <button id="resetbutton" class="reset-button">Give Up</button>

@@ -243,7 +243,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
             </div>
             <div class="victory-screen-buttons">
                 <button onclick="resetGame()" class="bg-green" id="retryButton">Retry</button>
-                <button onclick="removeVictoryScreen()" class="bg-gray-500" id="showResultsButton">Show Results</button>
+                <button onclick="removeVictoryScreen()" id="showResultsButton">Show Results</button>
             </div>
             <div class="victory-screen-bar bg-${backgroundColor}"></div>
         </div>
@@ -334,9 +334,8 @@ function disableFilter() {
     filterEnabled = false
     const tooltip = document.createElement("div");
     tooltip.innerHTML = `                
-                <div id="tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block border border-white bg-gray-800 text-white text-sm px-3 py-2 rounded whitespace-nowrap">
-                    Filter is disabled once a game starts.
-                    <div class="tooltip-arrow" data-popper-arrow></div>
+                <div id="tooltip" class="tooltip" role="tooltip">
+                    <span class="tooltip-text">Filter is disabled once a game starts.</span>
                 </div>`
     filterDiv.appendChild(tooltip);
 
