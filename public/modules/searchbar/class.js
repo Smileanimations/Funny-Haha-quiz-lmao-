@@ -42,7 +42,7 @@ export class searchBarClass {
     // Method to show a message when no results are found
     shownotFound() {
         this.attachDiv.innerHTML = `
-        <div class="text-black w-80">No Results</div>`
+        <div class="result">No Results</div>`
     }
 
     // Method that creates a button for each monster that is found in the search results, it also adds an event listener to each button that will call the monsterPressed function when clicked
@@ -51,15 +51,14 @@ export class searchBarClass {
     createElement(monster) {
         const newDiv = document.createElement("Button");
         newDiv.setAttribute('onclick', `monsterPressed('${monster.name}')`)
-        newDiv.setAttribute("class", "flex py-4 hover:bg-gray-300 hover:rounded-lg w-80");
+        newDiv.setAttribute("class", "result");
         newDiv.innerHTML = `
             <img
-                class="max-w-[55px] max-h-[55px] float-left" 
                 src="/images/icons/${monster.name.replace(/ /g, '_')}_Icon.webp" 
                 alt="${monster.name}" 
                 onerror="this.onerror=null; this.src='/images/icons/Default_${monster.generations}_Icon.webp';" 
             />
-            <span class="text-black pl-4">${monster.name}</span>
+            <span>${monster.name}</span>
 
         `        
         this.attachDiv.appendChild(newDiv);

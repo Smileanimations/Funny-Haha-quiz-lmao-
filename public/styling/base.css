@@ -1,7 +1,7 @@
 :root {
     --color-background: #1e2939;
-    --color-text: #ffffff;
-    --color-link: #ffffff;
+    --color-white: #ffffff;
+    --color-black: #000000;
     --color-yellow: #f0b100;
     --color-green: #00c950;
     --color-red: #fb2c36;
@@ -19,7 +19,7 @@ body {
     background-color: var(--color-background);
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
-    color: var(--color-text);
+    color: var(--color-white);
 }
 
 button, input, select, textarea {
