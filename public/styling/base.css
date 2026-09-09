@@ -4,7 +4,12 @@
     --color-black: #000000;
     --color-yellow: #f0b100;
     --color-green: #00c950;
+    --color-green-alt: #00a63e;
     --color-red: #fb2c36;
+    --color-red-alt: #e7000b;
+    --color-gray: #71717b;
+    --color-gray-alt: #52525c;
+    --color-light-gray: #9f9fa9;
 }
 
 *, *::before, *::after {

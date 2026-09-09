@@ -1,0 +1,85 @@
+h3 {
+    padding-top: 2rem;
+}
+
+.bg-red {
+    background-color: var(--color-red);
+}
+
+.filter {
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    height: 100vh;
+    width: 50%;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 2rem;
+}
+
+.filter button {
+    margin-top: 2rem;
+    margin: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 3px;
+    color: var(--color-white);
+}
+
+.filter-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.reset-filter-button {
+    background-color: var(--color-gray);
+    border: 2px solid var(--color-gray);
+}
+
+.reset-filter-button:hover {
+    background-color: var(--color-gray-alt);
+    border: 2px solid var(--color-gray-alt);
+}
+
+.save-changes-button-enabled {
+    background-color: var(--color-green);
+    border: 2px solid var(--color-green);
+}
+
+.save-changes-button-enabled:hover {
+    background-color: var(--color-green-alt);
+    border: 2px solid var(--color-green-alt);   
+}
+
+.save-changes-button-disabled {
+    background-color: var(--color-light-gray);
+    border: 2px solid var(--color-light-gray);
+}
+
+.close-filter-button {
+    background-color: var(--color-red);
+    border: 2px solid var(--color-red);
+}
+
+.close-filter-button:hover {
+    background-color: var(--color-red-alt);
+    border: 2px solid var(--color-red-alt);
+}
+
+.checkbox-layout {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.checkbox-div {
+    display: flex;
+    padding: 0.2rem;
+}
+
+.checkbox-div label {
+    padding-left: 0.5rem;
+}
+
+
