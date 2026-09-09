@@ -42,6 +42,7 @@ main {
     border-radius: 0.5rem;
     background-color: #4b5563;
     color: var(--color-text);
+    border: 2px solid #4b5563;
     outline: none;
 }
 
@@ -80,8 +81,43 @@ main {
     background-color: #374151;
 }
 
+.filter-div {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-div:hover .tooltip .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.5rem;;
+    color: var(--color-text);
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0.25rem;
+    color: var(--color-text);
+    padding: 0.5rem;
+    background-color: #374151;
+    transition: opacity 0.3s;
+}
+
 .reset-button {
     padding: 0.75rem 1.5rem;
+    border: 0px solid var(--color-text);
     border-radius: 9999px;
     margin-top: 1rem;
 }
@@ -126,14 +162,7 @@ main {
     border-bottom: 4px solid var(--color-yellow);
 }
 
-.guess img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.guess-image {
+.guess-image img {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -148,7 +177,7 @@ main {
 
 .victory-screen {
     position: fixed;
-    inset: 0; /* shorthand for top/left/right/bottom: 0 */
+    inset: 0; 
     background-color: #000000cc;
     display: flex;
     justify-content: center;
@@ -157,7 +186,7 @@ main {
 }
 
 .victory-screen-div {
-    position: relative; /* only needed now for the bar at the bottom */
+    position: relative; 
     background-color: #ffffff;
     width: 50%;
     height: 80%;
@@ -174,12 +203,13 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    /* no position, no top — just a normal flex child now */
+    color: #000000
+    
 }
 
 .victory-screen-div img {
     max-width: 60%;
-    max-height: 40vh; /* scales with viewport instead of a fixed 400px */
+    max-height: 40vh; 
     width: auto;
     height: auto;
     object-fit: contain;
@@ -194,13 +224,15 @@ main {
 
 .victory-screen-buttons button {
     padding: 0.75rem 1.5rem;
+    border: 0px solid var(--color-text);
+    color: var(--color-text);
     border-radius: 9999px;
     font-size: 1.125rem;
     cursor: pointer;
 }
 
 .victory-screen-bar {
-    position: absolute; /* this one's legit — it's a decorative overlay */
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;

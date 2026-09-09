@@ -13,13 +13,10 @@ let guessedMonsters = [];
 let attempts = 0;
 let backgroundColor = "green";
 let filterEnabled = true
+let victoryDiv;
 
 const body = document.getElementById("body");
 const mainscreen = document.getElementById("mainscreen");
-
-
-let victoryDiv;
-
 const attachDiv = document.getElementById("result");
 const searchbarDiv = document.getElementById("search-bar-div");
 const guessDiv = document.getElementById("guessbackground");
@@ -52,7 +49,7 @@ fetch("./data/monsters.json")
 
 // Function that gets a random monster from the monsters array.
 // 
-//param {Array} @monsters is the list of every monster that is in the JSON file.
+// param {Array} @monsters is the list of every monster that is in the JSON file.
 function getRandomMonster(monsters) {
     randomMonster = monsters[Math.floor(Math.random() * monsters.length)];
     console.log("Random monster: " + randomMonster.name);
@@ -61,11 +58,11 @@ function getRandomMonster(monsters) {
 
 // Function that clears the the search bar and results and pick a new random monster.
 window.resetGame = function () {
-    resetbutton.classList.remove("reset-button-enabled");
-    resetbutton.classList.remove("bg-green");
-    resetbutton.classList.add("reset-button-disabled");
+    resetButton.classList.remove("reset-button-enabled");
+    resetButton.classList.remove("bg-green");
+    resetButton.classList.add("reset-button-disabled");
     resetButton.setAttribute("onclick", "");
-    resetbutton.innerHTML = "Give Up";
+    resetButton.innerHTML = "Give Up";
     backgroundColor = "green";
     guessDiv.innerHTML = '';
     guessDivBackground.style.visibility = "hidden";
@@ -220,12 +217,12 @@ window.monsterPressed = function (monster) {
 function victoryScreen(monster, backgroundColor, gaveUp = false) {
     searchbar.searchBar.disabled = true;
 
-    resetbutton.classList.remove("reset-button-disabled");
-    resetbutton.classList.remove("bg-red");
-    resetbutton.classList.add("reset-button-enabled");
-    resetbutton.classList.add("bg-green")
-    resetbutton.setAttribute("onclick", "resetGame()");
-    resetbutton.innerHTML = "Play Again";
+    resetButton.classList.remove("reset-button-disabled");
+    resetButton.classList.remove("bg-red");
+    resetButton.classList.add("reset-button-enabled");
+    resetButton.classList.add("bg-green")
+    resetButton.setAttribute("onclick", "resetGame()");
+    resetButton.innerHTML = "Play Again";
 
     victoryDiv = document.createElement("div");
 
@@ -243,7 +240,7 @@ function victoryScreen(monster, backgroundColor, gaveUp = false) {
             </div>
             <div class="victory-screen-buttons">
                 <button onclick="resetGame()" class="bg-green" id="retryButton">Retry</button>
-                <button onclick="removeVictoryScreen()" class="bg-gray-500" id="showResultsButton">Show Results</button>
+                <button onclick="removeVictoryScreen()" id="showResultsButton">Show Results</button>
             </div>
             <div class="victory-screen-bar bg-${backgroundColor}"></div>
         </div>
@@ -334,9 +331,8 @@ function disableFilter() {
     filterEnabled = false
     const tooltip = document.createElement("div");
     tooltip.innerHTML = `                
-                <div id="tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block border border-white bg-gray-800 text-white text-sm px-3 py-2 rounded whitespace-nowrap">
-                    Filter is disabled once a game starts.
-                    <div class="tooltip-arrow" data-popper-arrow></div>
+                <div id="tooltip" class="tooltip" role="tooltip">
+                    <span class="tooltip-text">Filter is disabled once a game starts.</span>
                 </div>`
     filterDiv.appendChild(tooltip);
 

@@ -22,6 +22,12 @@ body {
     color: var(--color-text);
 }
 
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
 a {
     color: var(--color-link);
     text-decoration: none;
