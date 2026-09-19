@@ -1,5 +1,6 @@
 :root {
     --color-background: #1e2939;
+    --color-background-alt: #111827;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-yellow: #f0b100;
@@ -23,7 +24,6 @@ body {
     flex-direction: column;
     background-color: var(--color-background);
     font-family: 'Arial', sans-serif;
-    min-height: 100vh;
     color: var(--color-white);
 }
 
