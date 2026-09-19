@@ -53,15 +53,15 @@ export class FilterContainerClass {
     // Method to build the filter container
     buildContainer() {
         this.filterContainer = document.createElement("div");
-        this.filterContainer.setAttribute("class", "fixed bg-white inset-y-0 flex items-start h-screen w-1/2 z-20 overflow-auto");
+        this.filterContainer.setAttribute("class", "filter");
         this.filterContainer.innerHTML = `
-            <div class="p-6 rounded-lg h-full w-full">
-                <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
-                <div id="filteritems"></div>
+            <div class="">
+                <h2 class="bold">Filter Options</h2>
+                <div id="filteritems" class="filter-items"></div>
                 <div id="buttons">
-                    <button onclick="closeFilter()" class="mt-4 border-2 border-red-500 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Close</button>
-                    <button onclick="resetFilter()" class="mt-4 border-2 border-gray-500 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Reset Filter</button>
-                    <button onclick="saveChanges()" class="mt-4 text-black border-2 border-green-500 px-4 py-2 rounded" id="savebutton" disabled>Save Changes</button>
+                    <button onclick="closeFilter()" class="close-filter-button">Close</button>
+                    <button onclick="resetFilter()" class="reset-filter-button">Reset Filter</button>
+                    <button onclick="saveChanges()" class="save-changes-button-disabled" id="savebutton" disabled>Save Changes</button>
                 </div>
             </div> 
         `;
@@ -82,15 +82,17 @@ export class FilterContainerClass {
 
     // Method to enable the save button
     enableSaveButton() {
-        const savebutton = document.getElementById("savebutton")
-        savebutton.setAttribute("class", "mt-4 border-2 border-green-500 text-white bg-green-500 px-4 py-2 rounded hover:bg-green-600")
+        const savebutton = document.getElementById("savebutton");
+        savebutton.classList.remove("save-changes-button-disabled");
+        savebutton.classList.add("save-changes-button-enabled");
         savebutton.disabled = false
     }
 
     // Method to disable the save button
     disableSaveButton() {
-        const savebutton = document.getElementById("savebutton")
-        savebutton.setAttribute("class", "mt-4 text-black border-2 border-green-500 px-4 py-2 rounded")
+        const savebutton = document.getElementById("savebutton");
+        savebutton.classList.remove("save-changes-button-enabled");
+        savebutton.classList.add("save-changes-button-disabled");
         savebutton.disabled = true
     }
 
@@ -251,16 +253,16 @@ export class FilterContainerClass {
                 if (itemlist) {
                     this.keyFilter = document.createElement("div");
                     this.keyFilter.setAttribute("id", "ailment-filter")
-                    this.keyFilter.setAttribute("class", "py-6 ")
+                    this.keyFilter.setAttribute("class", "")
                     this.keyFilter.innerHTML = `
-                    <h3 class="text-lg font-semibold">${category.charAt(0).toUpperCase()}${category.slice(1)}:</h3>
-                    <div class="grid grid-cols-4" id="grid"></div>
+                    <h3 class="bold">${category.charAt(0).toUpperCase()}${category.slice(1)}:</h3>
+                    <div class="checkbox-layout" id="grid"></div>
                     `
                     maxItems.forEach(item => {
                         let keyitem = document.createElement("div")
-                        keyitem.setAttribute("class", "flex items-center")
+                        keyitem.setAttribute("class", "checkbox-div")
                         keyitem.innerHTML = ` 
-                        <input type="checkbox" class="flex mr-2" id="${item}" name="${item}" value="${item}">
+                        <input type="checkbox" class="checkbox" id="${item}" name="${item}" value="${item}">
                         <label for="${item}">${item}</label>
                         `;
                         this.keyFilter.querySelector("#grid").appendChild(keyitem);
