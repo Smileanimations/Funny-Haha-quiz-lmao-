@@ -27,18 +27,6 @@ const resetButton = document.getElementById("resetbutton");
 const filterButton = document.getElementById("filterbutton")
 
 guessDivBackground.style.visibility = "hidden";
-
-
-fetch("./modules/nav-bar/nav-bar.html")
-    .then(response => response.text())
-    .then(html => {
-        const navbar = document.createElement('header')
-        navbar.innerHTML = html;
-        body.prepend(navbar);
-    })
-    .catch(error => {
-        console.log("Error fetching component:", error)
-    })
     
 // Fetch the JSON file
 fetch("./data/monsters.json")

@@ -1,0 +1,9 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-background-alt);
+    bottom: 0;
+}
