@@ -7,3 +7,7 @@
     background-color: var(--color-background-alt);
     bottom: 0;
 }
+
+.footer-container a {
+    text-decoration: underline;
+}
