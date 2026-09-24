@@ -5,3 +5,4 @@
 - Update outdated Javascript functions
 - Work on Item Guessing Game
 - Clean up code
+- Work on Geoguesser
